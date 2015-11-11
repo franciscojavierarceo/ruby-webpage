@@ -3,10 +3,10 @@
   <channel>
     <title>francisco javier arceo</title>
     <description></description>
-    <link>http://franciscojavierarceo.github.io/</link>
-    <atom:link href="http://franciscojavierarceo.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 10 Nov 2015 20:49:15 -0500</pubDate>
-    <lastBuildDate>Tue, 10 Nov 2015 20:49:15 -0500</lastBuildDate>
+    <link>https://franciscojavierarceo.github.io/</link>
+    <atom:link href="https://franciscojavierarceo.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 10 Nov 2015 23:09:22 -0500</pubDate>
+    <lastBuildDate>Tue, 10 Nov 2015 23:09:22 -0500</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
@@ -14,8 +14,8 @@
         <description>&lt;p&gt;&lt;a href=&quot;http://stephenrra.github.io/presentation&quot;&gt;Check out our presentation&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 07 May 2015 00:00:00 -0400</pubDate>
-        <link>http://franciscojavierarceo.github.io/2015/05/07/influence</link>
-        <guid isPermaLink="true">http://franciscojavierarceo.github.io/2015/05/07/influence</guid>
+        <link>https://franciscojavierarceo.github.io/2015/05/07/influence</link>
+        <guid isPermaLink="true">https://franciscojavierarceo.github.io/2015/05/07/influence</guid>
       </item>
     
       <item>
@@ -197,8 +197,8 @@ heatmap.2&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&q
 &lt;p&gt;&lt;img src=&quot;/images/heatmap_v4key.png&quot; alt=&quot;heatmap final&quot;&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 24 Mar 2015 00:00:00 -0400</pubDate>
-        <link>http://franciscojavierarceo.github.io/2015/03/24/stephen-ra-critique</link>
-        <guid isPermaLink="true">http://franciscojavierarceo.github.io/2015/03/24/stephen-ra-critique</guid>
+        <link>https://franciscojavierarceo.github.io/2015/03/24/stephen-ra-critique</link>
+        <guid isPermaLink="true">https://franciscojavierarceo.github.io/2015/03/24/stephen-ra-critique</guid>
       </item>
     
       <item>
@@ -338,8 +338,8 @@ gg
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/stat4701-edav-d3/stat4701-edav-d3.github.com/master/remark-develop/img/googlemap.jpg&quot; alt=&quot;googlemap&quot;&gt;  &lt;/p&gt;
 </description>
         <pubDate>Thu, 05 Mar 2015 00:00:00 -0500</pubDate>
-        <link>http://franciscojavierarceo.github.io/2015/03/05/flu</link>
-        <guid isPermaLink="true">http://franciscojavierarceo.github.io/2015/03/05/flu</guid>
+        <link>https://franciscojavierarceo.github.io/2015/03/05/flu</link>
+        <guid isPermaLink="true">https://franciscojavierarceo.github.io/2015/03/05/flu</guid>
       </item>
     
   </channel>

@@ -1,2 +1,2 @@
-## http://franciscojavierarceo.github.io
+## franciscojavierarceo.github.io
 
