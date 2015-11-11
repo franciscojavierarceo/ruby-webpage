@@ -24,9 +24,9 @@ recovery and quality. GitHub Markdown (formatted) pages are really great because
 
 
 ## Universities I've attended
-![Columbia](https://raw.githubusercontent.com/franciscojavierarceo/franciscojavierarceo.github.io/master/assets/images/Columbia-University.png)   
-![Clemson](https://raw.githubusercontent.com/franciscojavierarceo/franciscojavierarceo.github.io/master/assets/images/clemson-university.png)   
-![Illinois State](https://raw.githubusercontent.com/franciscojavierarceo/franciscojavierarceo.github.io/master/assets/images/illinois-state.png)   
+![Columbia University](https://raw.githubusercontent.com/franciscojavierarceo/franciscojavierarceo.github.io/master/assets/images/Columbia-University.jpg)   
+![Clemson University](https://raw.githubusercontent.com/franciscojavierarceo/franciscojavierarceo.github.io/master/assets/images/clemson-university.png)   
+![Illinois State University](https://raw.githubusercontent.com/franciscojavierarceo/franciscojavierarceo.github.io/master/assets/images/illinois-state.png)   
 
 ---
 ## Python Code
