@@ -25,13 +25,6 @@ permalink: /:categories/:year/:month/:day/:title
 
 # social icons and sharing options
 social:
-  - icon:	twitter
-    url:	https://twitter.com/batmanfran
-    desc: Follow me on twitter
-    share_url: http://twitter.com/share
-    share_title: ?text=
-    share_link: "&url="
-
   - icon:	facebook
     url:	
     desc: 
