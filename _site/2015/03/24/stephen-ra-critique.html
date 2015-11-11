@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>A measly critique</title>
+  <meta name="description" content="" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="canonical" href="https://franciscojavierarceo.github.io/2015/03/24/stephen-ra-critique">
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+<!--  <link rel="stylesheet" href=""> -->
+  <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+
+<!-- IndieWeb-ifying my site -->
+
+  <link rel="me" href="https://twitter.com/audreywatters" />
+  <link rel="me" href="https://github.com/audreywatters" />
+  <link rel="me" href="https://google.com/+audreywatters" />
+  <link rel="me" href="https://www.flickr.com/photos/surreal_badger/" />
+  <link rel="me" href="mailto:mail@audreywatters.com" />
+  <link rel="me" href="http://hackeducation.com" />
+  <link rel="me" href="http://aud.life" />
+  <link rel="me" href="http://techgypsi.es" />
+  <link rel="me" href="https://keybase.io/audreywatters" />
+  <link rel="me" href="https://twitter.com/hackeducation" />
+
+<!--Open Graph Stuff Take 2-->  
+
+
+
+  <!-- Blog Post -->
+  <meta property="og:title" content="A measly critique" />
+  <meta property="og:url" content="https://franciscojavierarceo.github.io/2015/03/24/stephen-ra-critique" />
+  <meta property="og:image" content="https://franciscojavierarceo.github.io" />
+  
+
+</head>
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+
+<!-- removed the header because it wasn't useful -->
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="noarticleimage">
+          <div class="post-meta">
+            <h1 class="post-title">A measly critique</h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person"></h4>
+              on
+              <time datetime="2015-03-24T00:00:00-04:00">24 Mar 2015</time>
+              <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <p>During the first week of February, <a href="http://www.github/nygeog">Danny Sheehan</a> and I were pitching around a few ideas for datasets that would be worth looking at and utilizing for a capstone demo for our <a href="http://stat4701-edav-d3.github.io/">in-class presentation on mapping in D3.js</a>. We both recalled these <a href="http://www.nytimes.com/interactive/2015/02/02/us/measles-facts.html">terrific visualizations</a> by Johnathan Corum, Josh Keller, Haeyoun Park, and Archie Tse of the New York Times that illustrated the severity and distribution of measles cases in the United States for this year:</p>
+
+<p><img src="/images/cases-map-1050.png" alt="cases map" title="NYT Measles Viz">
+<strong>Source</strong>: &quot;Facts About The Measles Outbreak&quot; <cite>The New York Times</cite>, Feb 2, 2015</p>
+
+<p>The timing of these visualizations was more or less perfect. They are, in some ways, an elegant data-driven riposte to the current <a href="http://news.nationalgeographic.com/news/2015/02/150206-measles-vaccine-disney-outbreak-polio-health-science-infocus/">anti-vaxxer zeitgeist</a> by reflecting the unusually high number of measles cases this year: the numbers of cases in January alone were higher than many of the annual case totals for the years since 2000. Having read that this year&#39;s flu vaccine has only been <a href="http://www.nytimes.com/aponline/2015/01/15/health/ap-us-med-flu-vaccine.html">23% effective</a> (in part due to a failure to predict the H3N2 strain of the virus) and wanting to do something in a similar vein (<s>no</s> OK, pun intended) of public health, we decided to use Google&#39;s interesting, if <a href="http://www.sciencemag.org/content/343/6176/1203.full">flawed</a>, Flu Trends data to motivate a <a href="http://stat4701-edav-d3.github.io/viz/cities/cities.html">dynamic visualization of city flu trends in the United States</a>. </p>
+
+<h3>The Visualization</h3>
+
+<p>Given all this media attention in the last year to the Ebola outbreak in West Africa as well as MERS and the flu and measles cases, I thought this post would be a great opportunity to revisit the lauded <a href="http://graphics.wsj.com/infectious-diseases-and-vaccines/">Wall Street Journal&#39;s measles visualization</a> from the mini-assignment earlier in the semester and see what what kind of improvements or tweaks could be added to it.</p>
+
+<p><img src="/images/wsjmeasles.png" alt="original viz">
+<strong>Source</strong>: &quot;Battling Infectious Diseases in the 20th Century (Tycho Project CDC Data)&quot; <cite>The Wall Street Journal</cite>, Feb 11, 2015</p>
+
+<h3>The Critique</h3>
+
+<p>Given the popularity and exposure of the WSJ&#39;s sets of infectious diseases visualizations and having made its rounds on the interwebs, it comes as little surprise that remaking these graphics has not exactly been <em>terra incognita</em>. For example, <a href="http://robslink.com/">Robert Allison</a>, a notable expert in viz using SAS/GRAPH, recreated the <a href="http://blogs.sas.com/content/sastraining/2015/02/17/how-to-make-infectious-diseases-look-better/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+sasblogs+%28SAS+Blogs%29">plot</a>. And it has since had the inevitable remake <a href="http://www.r-bloggers.com/recreating-the-vaccination-heatmaps-in-r/">using ggplot2</a>). While everyone is queuing up with their own take, I wanted to point out a few of the issues I&#39;ve had with the original as well as subsequent visualizations within a Tufte-esque framework:</p>
+
+<ol>
+<li><p><strong> The labels.</strong> First, and as I recall looking at briefly in class, is the lack of complete state labels along the left edge (only 17 state names are present). The lack of room for all the labels could certainly be addressed fair easily, in part, with abbreviations of state names.</p></li>
+<li><p><strong> Data-ink and chart junk.</strong> While there is an awful lot of information being crammed into this visualization, the original graphic and subsequent recreations have all preserved a feature that has bothered me from the outset -- the color progression/ramping of the data. From an intuitive standpoint, I felt this was particularly distracting since the ramping of the color was not necessarily obvious (a false color scheme) and I found myself referring to the gradient key more than I would have liked in looking at the data -- red to orange to yellow to blue and then low saturation. Seems fairly arbitrary. I was curious about delving more into this phenomenon and stumbled upon <a href="http://blog.visual.ly/subtleties-of-color-the-perfect-palette/">this enlightening blogpost</a> by Robert Simmon, a visual designer, on the subtleties of color interaction, palette, and perception. One particular excerpt seemed apropos to mention here:</p></li>
+</ol>
+
+<blockquote>
+<p>&quot;A palette should also minimize errors from the color shifts introduced by nearby areas of differing color or lightness, a phenomenon known as simultaneous contrast.&quot;</p>
+</blockquote>
+
+<ol>
+<li><p><strong> Simultaneous contrast.</strong> Going a bit further, I found that simultaneous contrast in visual effects occurs when the appearance of a patch of light (the &quot;test field&quot;) is affected by other light patches (&quot;inducing fields&quot;) that are nearby in space and time, respectively. This is notoriously tricky to get right in dynamic graphics, e.g., moving maps, in which symbols move from one background color to another. In the interactive WSJ viz, the simultaneous contrast effect seems to be compounded by the mouse hover where each data box immediately turns a light blue color which could be slightly confusing for some. I aim to change the rainbowish ramping of the original viz and ggplot2 remake so as to be less of a jarring simultaneous contrast transition for the reader. This improvement ought to be more along the lines of the SAS remake where the color progression is along a gradient of one color (red). Hopefully this promotes more focus on the substance, less focus on other stuff.</p></li>
+<li><p><strong> Graphical integrity (?).</strong> Lastly, one of the main things that bugged me about the original visualization (and one that has only been slightly mitigated in subsequent attempts) is the difficulty I had in distinguishing between missing data (NA) and zero values. As the Tycho Project <a href="http://www.tycho.pitt.edu/faq.php">points out</a>, there is indeed a difference:</p></li>
+</ol>
+
+<blockquote>
+<p>&quot;The &#39;-&#39; value indicates that there is no data for that particular week, disease, and location. The &#39;0&#39; value indicates a report of zero cases or deaths for that particular week, disease, and location.&quot;</p>
+</blockquote>
+
+<p>I&#39;m not implying that this is in anyway some sort of deliberate data obfuscation but the almost imperceptibly light gray color of missing data and the light purple/blue of the zero values makes interpretation that much more difficult. </p>
+
+<h3>The Tweak</h3>
+
+<p>The Tycho data is publicly accessible from <a href="http://www.tycho.pitt.edu/l1advanced.php">here</a>. I&#39;ll be also using the the enhanced heatmaps (<code>heatmaps.2()</code>) function from the <code>gplots</code> package.</p>
+
+<p>Diving in then, here are the preliminaries:</p>
+<div class="highlight"><pre><code class="language-r" data-lang="r"><span class="kn">require</span><span class="p">(</span>gplots<span class="p">)</span>
+<span class="kn">require</span><span class="p">(</span>RColorBrewer<span class="p">)</span>
+<span class="kp">setwd</span><span class="p">(</span><span class="s">&#39;~/Dropbox/Documents/Academics/Courses/Git/stephenrra.github.io/data/&#39;</span><span class="p">)</span>
+measles <span class="o">&lt;-</span> read.csv<span class="p">(</span><span class="s">&#39;MEASLES_Incidence_1928-2003_20150403094837.csv&#39;</span><span class="p">,</span> stringsAsFactors <span class="o">=</span> <span class="bp">F</span><span class="p">)</span>
+</code></pre></div>
+<p>Having read in the data, I can see that the data has been organized by weeks:</p>
+
+<p><img src="/images/weekdata.png" alt="measles data by week"></p>
+
+<p>Here, I want to calculate the average across a given year without consideration of the NA values. I wanted to purposefully avoid taking a yearly sum since simply summing the weekly data for a given year might induce a missing data bias that may be an under-reporting of the actual annual value. Therefore, I wanted to take the empirical mean and then multiply by 52 weeks to get the expected number of cases per 100,000 individuals per year.</p>
+<div class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># Replace missing values </span>
+measles<span class="p">[</span>measles <span class="o">==</span> <span class="s">&quot;-&quot;</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="kc">NA</span>
+<span class="kr">for</span> <span class="p">(</span>i <span class="kr">in</span> <span class="m">2</span><span class="o">:</span><span class="kp">NCOL</span><span class="p">(</span>measles<span class="p">))</span> <span class="p">{</span>
+  measles<span class="p">[,</span> i<span class="p">]</span> <span class="o">&lt;-</span> <span class="kp">as.numeric</span><span class="p">(</span>measles<span class="p">[,</span> i<span class="p">])</span>
+<span class="p">}</span>
+
+<span class="c1"># Taking the annual mean </span>
+measles <span class="o">&lt;-</span> measles<span class="p">[</span>measles<span class="o">$</span>YEAR<span class="o">&gt;=</span><span class="m">1930</span><span class="p">,]</span>
+y <span class="o">&lt;-</span> aggregate<span class="p">(</span>measles<span class="p">[,</span><span class="m">3</span><span class="o">:</span><span class="kp">NCOL</span><span class="p">(</span>measles<span class="p">)],</span> by<span class="o">=</span><span class="kt">list</span><span class="p">(</span>year<span class="o">=</span>measles<span class="p">[,</span><span class="m">1</span><span class="p">]),</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="m">52</span><span class="o">*</span><span class="kp">mean</span><span class="p">(</span>x<span class="p">,</span> na.rm <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span>
+
+<span class="kr">for</span> <span class="p">(</span>i <span class="kr">in</span> <span class="m">1</span><span class="o">:</span><span class="kp">NCOL</span><span class="p">(</span>y<span class="p">))</span> <span class="p">{</span>
+  y<span class="p">[</span><span class="kp">is.nan</span><span class="p">(</span>y<span class="p">[,</span> i<span class="p">]),</span> i<span class="p">]</span> <span class="o">&lt;-</span> <span class="kc">NA</span>
+<span class="p">}</span>
+
+y <span class="o">&lt;-</span> y<span class="p">[</span><span class="kp">order</span><span class="p">(</span>y<span class="o">$</span>year<span class="p">),]</span>
+
+<span class="c1"># Row labels by decade</span>
+row.labels <span class="o">&lt;-</span> <span class="kp">rep</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">,</span> <span class="m">72</span><span class="p">)</span>
+row.labels<span class="p">[</span><span class="kt">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">11</span><span class="p">,</span><span class="m">21</span><span class="p">,</span><span class="m">31</span><span class="p">,</span><span class="m">41</span><span class="p">,</span><span class="m">51</span><span class="p">,</span><span class="m">61</span><span class="p">,</span><span class="m">71</span><span class="p">)]</span> <span class="o">&lt;-</span> <span class="kt">c</span><span class="p">(</span><span class="s">&quot;1930&quot;</span><span class="p">,</span><span class="s">&quot;1940&quot;</span><span class="p">,</span><span class="s">&quot;1950&quot;</span><span class="p">,</span><span class="s">&quot;1960&quot;</span><span class="p">,</span><span class="s">&quot;1970&quot;</span><span class="p">,</span>
+                                           <span class="s">&quot;1980&quot;</span><span class="p">,</span><span class="s">&quot;1990&quot;</span><span class="p">,</span><span class="s">&quot;2000&quot;</span><span class="p">)</span>
+<span class="c1"># Initial color ramp palette </span>
+cols <span class="o">&lt;-</span> colorRampPalette<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="s">&quot;red&quot;</span><span class="p">,</span> <span class="s">&quot;blue&quot;</span><span class="p">))(</span><span class="m">100</span><span class="p">)</span>
+bks <span class="o">&lt;-</span> <span class="kp">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="kp">max</span><span class="p">(</span>y<span class="p">[,</span> <span class="m">-1</span><span class="p">],</span> na.rm <span class="o">=</span> <span class="kc">TRUE</span><span class="p">),</span> length.out <span class="o">=</span> <span class="m">101</span><span class="p">)</span>
+par<span class="p">(</span>cex.main<span class="o">=</span><span class="m">0.8</span><span class="p">)</span>
+
+<span class="c1"># Initial heatmap</span>
+heatmap.2<span class="p">(</span><span class="kp">as.matrix</span><span class="p">(</span><span class="kp">t</span><span class="p">(</span>y<span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="kp">NCOL</span><span class="p">(</span>y<span class="p">)])),</span> Rowv<span class="o">=</span><span class="kc">NULL</span><span class="p">,</span> Colv<span class="o">=</span><span class="kc">NULL</span><span class="p">,</span> 
+          dendrogram<span class="o">=</span><span class="s">&quot;none&quot;</span><span class="p">,</span> trace<span class="o">=</span><span class="s">&quot;none&quot;</span><span class="p">,</span> key<span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span>
+          labCol<span class="o">=</span>row.labels<span class="p">,</span> cexCol<span class="o">=</span><span class="m">1</span><span class="p">,</span> lhei<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.15</span><span class="p">,</span><span class="m">1</span><span class="p">),</span> lwid<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span><span class="m">1</span><span class="p">),</span> margins<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">12</span><span class="p">),</span>
+          col<span class="o">=</span>cols<span class="p">,</span> breaks<span class="o">=</span>bks<span class="p">,</span> colsep<span class="o">=</span><span class="m">1</span><span class="o">:</span><span class="m">72</span><span class="p">,</span> srtCol<span class="o">=</span><span class="m">0</span><span class="p">,</span> rowsep<span class="o">=</span><span class="m">1</span><span class="o">:</span><span class="m">57</span><span class="p">,</span> sepcolor<span class="o">=</span><span class="s">&quot;white&quot;</span><span class="p">,</span>
+          add.expr<span class="o">=</span>lines<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">32</span><span class="p">,</span><span class="m">32</span><span class="p">),</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1000</span><span class="p">),</span>lwd<span class="o">=</span><span class="m">2</span><span class="p">),</span>
+          main<span class="o">=</span><span class="s">&#39;Measles Incidence in US States (1930-2003)\nVaccine introduced 1961</span>
+<span class="s">             \n(data from Project Tycho)&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>And here&#39;s what I got as an initial heatmap:</p>
+
+<p><img src="/images/heatmap_v1.png" alt="heatmap v1"></p>
+
+<p>Yikes....well, at least the NA value color has now been converted to white. The color progression is how I initially wanted it to be (red). Lots of problems still. So what else could I do at this point?
+Well, there&#39;s still the issue of the margins and the state names. All the state names show up this time (unlike the WSJ graphic) but it&#39;s far too compact and dense. Here, I downloaded a simple .csv of the
+<a href="http://www.50states.com/abbreviations.htm#.VSgJpXXd89Y">abbreviations of all 50 U.S. states</a> and read it in:</p>
+<div class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># Reading in abbreviated state names file</span>
+stNames <span class="o">&lt;-</span> read.csv<span class="p">(</span><span class="s">&#39;stateNames.csv&#39;</span><span class="p">,</span> header <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> stringsAsFactors <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+<span class="kp">names</span><span class="p">(</span>y<span class="p">)[</span><span class="m">2</span><span class="o">:</span><span class="m">52</span><span class="p">]</span> <span class="o">&lt;-</span> stNames<span class="p">[,</span><span class="m">2</span><span class="p">]</span>
+</code></pre></div>
+<p>Next, I liked the idea of keeping the NA values white but perhaps have a progression that is less glaring and make a little more sense visually. I took a little bit of inspiration from the Burgoyne Diller-inspired exhibition poster on p. 185 of the Tufte book. In particular, I liked the simultaneous contrast (although the thin black lines are a neutral buffer) between beige and red and thought that perhaps I could fiddle with different color palettes until I got a color ramp with the most extreme values in a similar, albeit toned down, shade of red. Here&#39;s the excerpt from the Tufte book for reference:</p>
+
+<p><img src="/images/diller.png" alt="heatmap v2"></p>
+
+<p>Here, I&#39;ll call upon <code>RBrewer</code>. This is a nifty
+package in R that allows you to create all sorts of nice color schemes for thematic maps and such. A little playing around then with the <code>brewer.pal</code> function...</p>
+<div class="highlight"><pre><code class="language-r" data-lang="r">cols <span class="o">&lt;-</span> colorRampPalette<span class="p">(</span>brewer.pal<span class="p">(</span><span class="m">8</span><span class="p">,</span> <span class="s">&#39;Reds&#39;</span><span class="p">))(</span><span class="m">100</span><span class="p">)</span>
+bks <span class="o">&lt;-</span> <span class="kp">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="kp">max</span><span class="p">(</span>y<span class="p">[,</span> <span class="m">-1</span><span class="p">],</span> na.rm <span class="o">=</span> <span class="kc">TRUE</span><span class="p">),</span> length.out <span class="o">=</span> <span class="m">101</span><span class="p">)</span>
+
+par<span class="p">(</span>cex.main<span class="o">=</span><span class="m">0.8</span><span class="p">)</span>
+heatmap.2<span class="p">(</span><span class="kp">as.matrix</span><span class="p">(</span><span class="kp">t</span><span class="p">(</span>y<span class="p">[,</span><span class="m">2</span><span class="o">:</span><span class="kp">NCOL</span><span class="p">(</span>y<span class="p">)])),</span> Rowv<span class="o">=</span><span class="kc">NULL</span><span class="p">,</span> Colv<span class="o">=</span><span class="kc">NULL</span><span class="p">,</span> 
+        dendrogram<span class="o">=</span><span class="s">&quot;none&quot;</span><span class="p">,</span> trace<span class="o">=</span><span class="s">&quot;none&quot;</span><span class="p">,</span> key<span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span>
+        labCol<span class="o">=</span>row.labels<span class="p">,</span> cexCol<span class="o">=</span><span class="m">1</span><span class="p">,</span> lhei<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.15</span><span class="p">,</span><span class="m">1</span><span class="p">),</span> lwid<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span><span class="m">1</span><span class="p">),</span> margins<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">12</span><span class="p">),</span>
+        breaks<span class="o">=</span>bks<span class="p">,</span> colsep<span class="o">=</span><span class="m">1</span><span class="o">:</span><span class="m">72</span><span class="p">,</span> srtCol<span class="o">=</span><span class="m">0</span><span class="p">,</span> rowsep<span class="o">=</span><span class="m">1</span><span class="o">:</span><span class="m">57</span><span class="p">,</span> sepcolor<span class="o">=</span><span class="s">&quot;white&quot;</span><span class="p">,</span> col<span class="o">=</span>cols<span class="p">,</span> 
+        add.expr<span class="o">=</span>lines<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">32</span><span class="p">,</span><span class="m">32</span><span class="p">),</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1000</span><span class="p">),</span>lwd<span class="o">=</span><span class="m">2</span><span class="p">),</span>
+        main<span class="o">=</span><span class="s">&#39;Measles Incidence in US States (1930-2003)\nVaccine introduced 1961&#39;</span><span class="p">,</span> na.color <span class="o">=</span> grey<span class="p">(</span><span class="m">0.8</span><span class="p">))</span>
+</code></pre></div>
+<p>And now the second version of the heatmap:</p>
+
+<p><img src="/images/heatmap_v2.png" alt="heatmap v2"></p>
+
+<p>So now what? Well, going back to square one briefly, I wanted to see if there was a better way of bucketing the data so I got this histogram to see what was going on underneath the hood:</p>
+<div class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># Grouping together values into a 2500+ bucket</span>
+hist<span class="p">(</span><span class="kp">as.matrix</span><span class="p">(</span>y<span class="p">[,</span><span class="m">1</span><span class="o">:</span><span class="kp">NCOL</span><span class="p">(</span>y<span class="p">)]),</span> xlab <span class="o">=</span> <span class="s">&quot;Measles cases per 100,000 people&quot;</span><span class="p">,</span> main<span class="o">=</span><span class="s">&quot;Histogram of measles data&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><img src="/images/hist.png" alt="heatmap v2"></p>
+
+<p>From this, I figured it might make more sense to establish a somewhat arbitrary cutoff of 2500 and just dump everything above 2500 into its own &quot;2500 plus&quot; category.</p>
+<div class="highlight"><pre><code class="language-r" data-lang="r">y2 <span class="o">&lt;-</span> y<span class="p">[,</span> <span class="m">2</span><span class="o">:</span><span class="kp">NCOL</span><span class="p">(</span>y<span class="p">)]</span>
+<span class="kp">sum</span><span class="p">(</span>y2<span class="p">[</span><span class="o">!</span><span class="kp">is.na</span><span class="p">(</span>y2<span class="p">)]</span> <span class="o">&gt;</span> <span class="m">2500</span><span class="p">)</span>
+
+y2<span class="p">[</span>y2 <span class="o">&gt;</span> <span class="m">2500</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="m">2500</span>
+
+cols <span class="o">&lt;-</span> colorRampPalette<span class="p">(</span>brewer.pal<span class="p">(</span><span class="m">8</span><span class="p">,</span> <span class="s">&#39;Reds&#39;</span><span class="p">))(</span><span class="m">100</span><span class="p">)</span>
+bks <span class="o">&lt;-</span> <span class="kp">seq</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="kp">max</span><span class="p">(</span>y2<span class="p">,</span> na.rm <span class="o">=</span> <span class="kc">TRUE</span><span class="p">),</span> length.out <span class="o">=</span> <span class="m">101</span><span class="p">)</span>
+
+par<span class="p">(</span>cex.main<span class="o">=</span><span class="m">0.8</span><span class="p">)</span>
+heatmap.2<span class="p">(</span><span class="kp">as.matrix</span><span class="p">(</span><span class="kp">t</span><span class="p">(</span>y2<span class="p">)),</span> Rowv<span class="o">=</span><span class="kc">NULL</span><span class="p">,</span> Colv<span class="o">=</span><span class="kc">NULL</span><span class="p">,</span> 
+        dendrogram<span class="o">=</span><span class="s">&quot;none&quot;</span><span class="p">,</span> trace<span class="o">=</span><span class="s">&quot;none&quot;</span><span class="p">,</span> key<span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span>
+        labCol<span class="o">=</span>row.labels<span class="p">,</span> cexCol<span class="o">=</span><span class="m">1</span><span class="p">,</span> lhei<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.15</span><span class="p">,</span><span class="m">1</span><span class="p">),</span> lwid<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span><span class="m">1</span><span class="p">),</span> margins<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">12</span><span class="p">),</span>
+        breaks<span class="o">=</span>bks<span class="p">,</span> colsep<span class="o">=</span><span class="m">1</span><span class="o">:</span><span class="m">72</span><span class="p">,</span> srtCol<span class="o">=</span><span class="m">0</span><span class="p">,</span> rowsep<span class="o">=</span><span class="m">1</span><span class="o">:</span><span class="m">57</span><span class="p">,</span> sepcolor<span class="o">=</span><span class="s">&quot;white&quot;</span><span class="p">,</span> col<span class="o">=</span>cols<span class="p">,</span> 
+        add.expr<span class="o">=</span>lines<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">32</span><span class="p">,</span><span class="m">32</span><span class="p">),</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1000</span><span class="p">),</span>lwd<span class="o">=</span><span class="m">2</span><span class="p">),</span>
+        main<span class="o">=</span><span class="s">&#39;Measles Incidence in US States (1930-2003)\nVaccine introduced 1961&#39;</span><span class="p">,</span> na.color <span class="o">=</span> grey<span class="p">(</span><span class="m">0.8</span><span class="p">))</span>
+</code></pre></div>
+<p>And so we now get:</p>
+
+<p><img src="/images/heatmap_v3.png" alt="heatmap v3"></p>
+
+<p>Lastly, and as we have talked about in previous class sessions, there&#39;s this kind of weird arbitrariness to ordering when it comes to these types of heatmaps. Just from an intuitive sense, I thought that it might make more sense to organize the data (the states) from top to bottom in order of mean number of cases per 100,000. Add a few minor tweaks to the plot itself and:</p>
+<div class="highlight"><pre><code class="language-r" data-lang="r">means <span class="o">&lt;-</span> <span class="kp">apply</span><span class="p">(</span>y2<span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span>x<span class="p">)</span> <span class="kp">mean</span><span class="p">(</span>x<span class="p">,</span> na.rm <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span>
+
+y3 <span class="o">&lt;-</span> y2<span class="p">[,</span> <span class="kp">rev</span><span class="p">(</span><span class="kp">order</span><span class="p">(</span>means<span class="p">))]</span>
+
+par<span class="p">(</span>cex.main<span class="o">=</span><span class="m">0.8</span><span class="p">)</span>
+heatmap.2<span class="p">(</span><span class="kp">as.matrix</span><span class="p">(</span><span class="kp">t</span><span class="p">(</span>y3<span class="p">)),</span> Rowv<span class="o">=</span><span class="kc">NULL</span><span class="p">,</span> Colv<span class="o">=</span><span class="kc">NULL</span><span class="p">,</span> 
+          dendrogram<span class="o">=</span><span class="s">&quot;none&quot;</span><span class="p">,</span> trace<span class="o">=</span><span class="s">&quot;none&quot;</span><span class="p">,</span> key<span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span>
+          labCol<span class="o">=</span>row.labels<span class="p">,</span> cexCol<span class="o">=</span><span class="m">1</span><span class="p">,</span> lhei<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.15</span><span class="p">,</span><span class="m">1</span><span class="p">),</span> lwid<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span><span class="m">1</span><span class="p">),</span> margins<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">12</span><span class="p">),</span>
+          breaks<span class="o">=</span>bks<span class="p">,</span> colsep<span class="o">=</span><span class="m">1</span><span class="o">:</span><span class="m">72</span><span class="p">,</span> srtCol<span class="o">=</span><span class="m">0</span><span class="p">,</span> rowsep<span class="o">=</span><span class="m">1</span><span class="o">:</span><span class="m">57</span><span class="p">,</span> sepcolor<span class="o">=</span><span class="s">&quot;white&quot;</span><span class="p">,</span> col<span class="o">=</span>cols<span class="p">,</span> 
+          add.expr<span class="o">=</span>lines<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">32</span><span class="p">,</span><span class="m">32</span><span class="p">),</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1000</span><span class="p">),</span>lwd<span class="o">=</span><span class="m">2</span><span class="p">),</span>
+          main<span class="o">=</span><span class="s">&#39;Measles Incidence in US States (1930-2003)\nVaccine introduced 1961&#39;</span><span class="p">,</span> na.color <span class="o">=</span> grey<span class="p">(</span><span class="m">0.85</span><span class="p">))</span>
+</code></pre></div>
+<p>And finally, voila:</p>
+
+<p><img src="/images/heatmap_v4.png" alt="heatmap final"></p>
+
+<p>However, still need to adjust the key...</p>
+<div class="highlight"><pre><code class="language-r" data-lang="r">y3 <span class="o">&lt;-</span> y2<span class="p">[,</span> <span class="kp">rev</span><span class="p">(</span><span class="kp">order</span><span class="p">(</span>means<span class="p">))]</span>
+lmat <span class="o">=</span> <span class="kp">rbind</span><span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">3</span><span class="p">),</span><span class="kt">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">),</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">4</span><span class="p">))</span>
+par<span class="p">(</span>cex.main<span class="o">=</span><span class="m">0.8</span><span class="p">)</span>
+heatmap.2<span class="p">(</span><span class="kp">as.matrix</span><span class="p">(</span><span class="kp">t</span><span class="p">(</span>y3<span class="p">)),</span> Rowv<span class="o">=</span><span class="kc">NULL</span><span class="p">,</span> Colv<span class="o">=</span><span class="kc">NULL</span><span class="p">,</span> 
+          dendrogram<span class="o">=</span><span class="s">&quot;none&quot;</span><span class="p">,</span> trace<span class="o">=</span><span class="s">&quot;none&quot;</span><span class="p">,</span> key<span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> keysize<span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">,</span>
+          labCol<span class="o">=</span>row.labels<span class="p">,</span> cexCol<span class="o">=</span><span class="m">1</span><span class="p">,</span> lmat <span class="o">=</span> lmat<span class="p">,</span> lhei<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.5</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">1</span><span class="p">),</span> lwid<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span><span class="m">1</span><span class="p">),</span> margins<span class="o">=</span><span class="kt">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">12</span><span class="p">),</span>
+          breaks<span class="o">=</span>bks<span class="p">,</span> colsep<span class="o">=</span><span class="m">1</span><span class="o">:</span><span class="m">72</span><span class="p">,</span> srtCol<span class="o">=</span><span class="m">0</span><span class="p">,</span> rowsep<span class="o">=</span><span class="m">1</span><span class="o">:</span><span class="m">57</span><span class="p">,</span> sepcolor<span class="o">=</span><span class="s">&quot;white&quot;</span><span class="p">,</span> col<span class="o">=</span>cols<span class="p">,</span> 
+          add.expr<span class="o">=</span>lines<span class="p">(</span><span class="kt">c</span><span class="p">(</span><span class="m">32</span><span class="p">,</span><span class="m">32</span><span class="p">),</span><span class="kt">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1000</span><span class="p">),</span>lwd<span class="o">=</span><span class="m">2</span><span class="p">),</span>
+          main<span class="o">=</span><span class="s">&#39;Measles Incidence in US States (1930-2003)&#39;</span><span class="p">,</span> na.color <span class="o">=</span> grey<span class="p">(</span><span class="m">0.85</span><span class="p">))</span>
+</code></pre></div>
+<p><img src="/images/heatmap_v4key.png" alt="heatmap final"></p>
+
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=A+measly+critique&url="
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+              
+                <a class="icon-facebook" href="http://www.facebook.com/sharer.php?t=A+measly+critique&amp;u="
+                  onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+                <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
+                </a>
+              
+            
+              
+            
+              
+            
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4>francisco javier arceo</h4>
+              <hr>
+              <p class="published">Published <time datetime="2015-03-24 00:00">24 Mar 2015</time></p>
+            </section>
+          </div>
+          
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Credits</span></h5>
+            <footer class="site-footer">
+                <section class="copyright"><i class="fa fa-copyright"></i><a href="http://creativecommons.org/licenses/by-sa/4.0/"> Attribution-ShareAlike 4.0</a></section>
+                <hr> 
+              </div>
+            </footer>
+          </div>
+        </div>
+      </article>
+    </main>
+    <div class="bottom-closer">
+      <div class="background-closer-image"  style="background-image: url(/assets/images/background.jpg)">
+        Image
+      </div>
+      <div class="inner">
+        <h1 class="blog-title">francisco javier arceo</h1>
+        <h2 class="blog-description"></h2>
+        <a href="/blog/" class="btn">Back to Blog</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js"></script>
+<script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+    $window.on('scroll', function() {
+      var top = $window.scrollTop();
+
+      if (top < 0 || top > 1500) { return; }
+      $image
+        .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+        .css('opacity', 1-Math.max(top/700, 0));
+    });
+    $window.trigger('scroll');
+
+    var height = $('.article-image').height();
+    $('.post-content').css('padding-top', height + 'px');
+
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+       && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({ scrollTop: target.offset().top }, 500);
+          return false;
+        }
+      }
+    });
+  });
+}(jQuery));
+</script>
+
+
+  </body>
+</html>
