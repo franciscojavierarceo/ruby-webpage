@@ -13,7 +13,7 @@ recovery and quality.
 GitHub Markdown (formatted) pages are really great because of the ease and intuitive behavior.
 
 
-# Things I hope to accomplish in this blog:
+## Things I hope to accomplish in this blog:
 
 * Write about Machine Learning things I find interesting
 * Provide an "economists" introduction to hacking/data science
@@ -25,13 +25,13 @@ GitHub Markdown (formatted) pages are really great because of the ease and intui
 ---
 
 
-# Universities I've attended
+## Universities I've attended
 ![Columbia](https://raw.githubusercontent.com/franciscojavierarceo/franciscojavierarceo.github.io/master/assets/images/Columbia-University.png)   
 ![Clemson](https://raw.githubusercontent.com/franciscojavierarceo/franciscojavierarceo.github.io/master/assets/images/clemson-university.png)   
 ![Illinois State](https://raw.githubusercontent.com/franciscojavierarceo/franciscojavierarceo.github.io/master/assets/images/illinois-state.png)   
 
 ---
-# Python Code
+## Python Code
 This is what some code looks like in a nice format.
 	
 	def Build_STDM(docs, **kwargs):
@@ -49,5 +49,3 @@ This is what some code looks like in a nice format.
 	print xs[:,1:10]
 	print vocab[0:10]
 
-##[Google Flu Trends](https://www.google.org/flutrends/us/#US)
-![GoogleFluTrends](https://raw.githubusercontent.com/stat4701-edav-d3/stat4701-edav-d3.github.com/master/remark-develop/img/google_flu_trends.png)
