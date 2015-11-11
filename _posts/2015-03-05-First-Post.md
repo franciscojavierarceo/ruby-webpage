@@ -5,13 +5,10 @@ title: 'My first post'
 
 # Jekyll pages, Python, and learning to work with GitHub
 
-I recently began working with GitHub and learning the ways of the codes. **It's amazing.**
+I recently began working with GitHub and learning the ways of the codes. *It's amazing.*
 
 GitHub is a great way to version your code, especially when working with groups, to ensure 
-recovery and quality.
-
-GitHub Markdown (formatted) pages are really great because of the ease and intuitive behavior.
-
+recovery and quality. GitHub Markdown (formatted) pages are really great because of the ease and intuitive behavior.
 
 ## Things I hope to accomplish in this blog:
 
@@ -22,6 +19,7 @@ GitHub Markdown (formatted) pages are really great because of the ease and intui
 	* Maybe I'll even offer a tutorial
 * Provide an overview of some simple NLP methods
 * Give my personal opinions about various tools/pieces of software
+
 ---
 
 
@@ -33,7 +31,6 @@ GitHub Markdown (formatted) pages are really great because of the ease and intui
 ---
 ## Python Code
 This is what some code looks like in a nice format.
-	
 	def Build_STDM(docs, **kwargs):
     	''' Build Spares Term Document Matrix '''
     	from sklearn.feature_extraction.text import CountVectorizer
