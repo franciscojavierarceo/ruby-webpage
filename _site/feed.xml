@@ -5,341 +5,57 @@
     <description></description>
     <link>https://franciscojavierarceo.github.io/</link>
     <atom:link href="https://franciscojavierarceo.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 11 Nov 2015 00:17:49 -0500</pubDate>
-    <lastBuildDate>Wed, 11 Nov 2015 00:17:49 -0500</lastBuildDate>
+    <pubDate>Wed, 11 Nov 2015 01:12:51 -0500</pubDate>
+    <lastBuildDate>Wed, 11 Nov 2015 01:12:51 -0500</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
-        <title>Exploring influence</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://stephenrra.github.io/presentation&quot;&gt;Check out our presentation&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Thu, 07 May 2015 00:00:00 -0400</pubDate>
-        <link>https://franciscojavierarceo.github.io/2015/05/07/influence</link>
-        <guid isPermaLink="true">https://franciscojavierarceo.github.io/2015/05/07/influence</guid>
-      </item>
-    
-      <item>
-        <title>A measly critique</title>
-        <description>&lt;p&gt;During the first week of February, &lt;a href=&quot;http://www.github/nygeog&quot;&gt;Danny Sheehan&lt;/a&gt; and I were pitching around a few ideas for datasets that would be worth looking at and utilizing for a capstone demo for our &lt;a href=&quot;http://stat4701-edav-d3.github.io/&quot;&gt;in-class presentation on mapping in D3.js&lt;/a&gt;. We both recalled these &lt;a href=&quot;http://www.nytimes.com/interactive/2015/02/02/us/measles-facts.html&quot;&gt;terrific visualizations&lt;/a&gt; by Johnathan Corum, Josh Keller, Haeyoun Park, and Archie Tse of the New York Times that illustrated the severity and distribution of measles cases in the United States for this year:&lt;/p&gt;
+        <title>My first post</title>
+        <description>&lt;h1&gt;Jekyll pages, Python, and learning to work with GitHub&lt;/h1&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/cases-map-1050.png&quot; alt=&quot;cases map&quot; title=&quot;NYT Measles Viz&quot;&gt;
-&lt;strong&gt;Source&lt;/strong&gt;: &amp;quot;Facts About The Measles Outbreak&amp;quot; &lt;cite&gt;The New York Times&lt;/cite&gt;, Feb 2, 2015&lt;/p&gt;
+&lt;p&gt;I recently began working with GitHub and learning the ways of the codes. &lt;em&gt;It&amp;#39;s amazing.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;The timing of these visualizations was more or less perfect. They are, in some ways, an elegant data-driven riposte to the current &lt;a href=&quot;http://news.nationalgeographic.com/news/2015/02/150206-measles-vaccine-disney-outbreak-polio-health-science-infocus/&quot;&gt;anti-vaxxer zeitgeist&lt;/a&gt; by reflecting the unusually high number of measles cases this year: the numbers of cases in January alone were higher than many of the annual case totals for the years since 2000. Having read that this year&amp;#39;s flu vaccine has only been &lt;a href=&quot;http://www.nytimes.com/aponline/2015/01/15/health/ap-us-med-flu-vaccine.html&quot;&gt;23% effective&lt;/a&gt; (in part due to a failure to predict the H3N2 strain of the virus) and wanting to do something in a similar vein (&lt;s&gt;no&lt;/s&gt; OK, pun intended) of public health, we decided to use Google&amp;#39;s interesting, if &lt;a href=&quot;http://www.sciencemag.org/content/343/6176/1203.full&quot;&gt;flawed&lt;/a&gt;, Flu Trends data to motivate a &lt;a href=&quot;http://stat4701-edav-d3.github.io/viz/cities/cities.html&quot;&gt;dynamic visualization of city flu trends in the United States&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;GitHub is a great way to version your code, especially when working with groups, to ensure 
+recovery and quality. GitHub Markdown (formatted) pages are really great because of the ease and intuitive behavior.&lt;/p&gt;
 
-&lt;h3&gt;The Visualization&lt;/h3&gt;
-
-&lt;p&gt;Given all this media attention in the last year to the Ebola outbreak in West Africa as well as MERS and the flu and measles cases, I thought this post would be a great opportunity to revisit the lauded &lt;a href=&quot;http://graphics.wsj.com/infectious-diseases-and-vaccines/&quot;&gt;Wall Street Journal&amp;#39;s measles visualization&lt;/a&gt; from the mini-assignment earlier in the semester and see what what kind of improvements or tweaks could be added to it.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/wsjmeasles.png&quot; alt=&quot;original viz&quot;&gt;
-&lt;strong&gt;Source&lt;/strong&gt;: &amp;quot;Battling Infectious Diseases in the 20th Century (Tycho Project CDC Data)&amp;quot; &lt;cite&gt;The Wall Street Journal&lt;/cite&gt;, Feb 11, 2015&lt;/p&gt;
-
-&lt;h3&gt;The Critique&lt;/h3&gt;
-
-&lt;p&gt;Given the popularity and exposure of the WSJ&amp;#39;s sets of infectious diseases visualizations and having made its rounds on the interwebs, it comes as little surprise that remaking these graphics has not exactly been &lt;em&gt;terra incognita&lt;/em&gt;. For example, &lt;a href=&quot;http://robslink.com/&quot;&gt;Robert Allison&lt;/a&gt;, a notable expert in viz using SAS/GRAPH, recreated the &lt;a href=&quot;http://blogs.sas.com/content/sastraining/2015/02/17/how-to-make-infectious-diseases-look-better/?utm_source=feedburner&amp;amp;utm_medium=feed&amp;amp;utm_campaign=Feed%3A+sasblogs+%28SAS+Blogs%29&quot;&gt;plot&lt;/a&gt;. And it has since had the inevitable remake &lt;a href=&quot;http://www.r-bloggers.com/recreating-the-vaccination-heatmaps-in-r/&quot;&gt;using ggplot2&lt;/a&gt;). While everyone is queuing up with their own take, I wanted to point out a few of the issues I&amp;#39;ve had with the original as well as subsequent visualizations within a Tufte-esque framework:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt; The labels.&lt;/strong&gt; First, and as I recall looking at briefly in class, is the lack of complete state labels along the left edge (only 17 state names are present). The lack of room for all the labels could certainly be addressed fair easily, in part, with abbreviations of state names.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt; Data-ink and chart junk.&lt;/strong&gt; While there is an awful lot of information being crammed into this visualization, the original graphic and subsequent recreations have all preserved a feature that has bothered me from the outset -- the color progression/ramping of the data. From an intuitive standpoint, I felt this was particularly distracting since the ramping of the color was not necessarily obvious (a false color scheme) and I found myself referring to the gradient key more than I would have liked in looking at the data -- red to orange to yellow to blue and then low saturation. Seems fairly arbitrary. I was curious about delving more into this phenomenon and stumbled upon &lt;a href=&quot;http://blog.visual.ly/subtleties-of-color-the-perfect-palette/&quot;&gt;this enlightening blogpost&lt;/a&gt; by Robert Simmon, a visual designer, on the subtleties of color interaction, palette, and perception. One particular excerpt seemed apropos to mention here:&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;quot;A palette should also minimize errors from the color shifts introduced by nearby areas of differing color or lightness, a phenomenon known as simultaneous contrast.&amp;quot;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt; Simultaneous contrast.&lt;/strong&gt; Going a bit further, I found that simultaneous contrast in visual effects occurs when the appearance of a patch of light (the &amp;quot;test field&amp;quot;) is affected by other light patches (&amp;quot;inducing fields&amp;quot;) that are nearby in space and time, respectively. This is notoriously tricky to get right in dynamic graphics, e.g., moving maps, in which symbols move from one background color to another. In the interactive WSJ viz, the simultaneous contrast effect seems to be compounded by the mouse hover where each data box immediately turns a light blue color which could be slightly confusing for some. I aim to change the rainbowish ramping of the original viz and ggplot2 remake so as to be less of a jarring simultaneous contrast transition for the reader. This improvement ought to be more along the lines of the SAS remake where the color progression is along a gradient of one color (red). Hopefully this promotes more focus on the substance, less focus on other stuff.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt; Graphical integrity (?).&lt;/strong&gt; Lastly, one of the main things that bugged me about the original visualization (and one that has only been slightly mitigated in subsequent attempts) is the difficulty I had in distinguishing between missing data (NA) and zero values. As the Tycho Project &lt;a href=&quot;http://www.tycho.pitt.edu/faq.php&quot;&gt;points out&lt;/a&gt;, there is indeed a difference:&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;quot;The &amp;#39;-&amp;#39; value indicates that there is no data for that particular week, disease, and location. The &amp;#39;0&amp;#39; value indicates a report of zero cases or deaths for that particular week, disease, and location.&amp;quot;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I&amp;#39;m not implying that this is in anyway some sort of deliberate data obfuscation but the almost imperceptibly light gray color of missing data and the light purple/blue of the zero values makes interpretation that much more difficult. &lt;/p&gt;
-
-&lt;h3&gt;The Tweak&lt;/h3&gt;
-
-&lt;p&gt;The Tycho data is publicly accessible from &lt;a href=&quot;http://www.tycho.pitt.edu/l1advanced.php&quot;&gt;here&lt;/a&gt;. I&amp;#39;ll be also using the the enhanced heatmaps (&lt;code&gt;heatmaps.2()&lt;/code&gt;) function from the &lt;code&gt;gplots&lt;/code&gt; package.&lt;/p&gt;
-
-&lt;p&gt;Diving in then, here are the preliminaries:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;kn&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;gplots&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;RColorBrewer&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kp&quot;&gt;setwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;~/Dropbox/Documents/Academics/Courses/Git/stephenrra.github.io/data/&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-measles &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; read.csv&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;MEASLES_Incidence_1928-2003_20150403094837.csv&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; stringsAsFactors &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;F&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Having read in the data, I can see that the data has been organized by weeks:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/weekdata.png&quot; alt=&quot;measles data by week&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Here, I want to calculate the average across a given year without consideration of the NA values. I wanted to purposefully avoid taking a yearly sum since simply summing the weekly data for a given year might induce a missing data bias that may be an under-reporting of the actual annual value. Therefore, I wanted to take the empirical mean and then multiply by 52 weeks to get the expected number of cases per 100,000 individuals per year.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Replace missing values &lt;/span&gt;
-measles&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;measles &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;-&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;
-&lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;i &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;NCOL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;measles&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  measles&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; i&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;as.numeric&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;measles&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; i&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Taking the annual mean &lt;/span&gt;
-measles &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; measles&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;measles&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;YEAR&lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1930&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,]&lt;/span&gt;
-y &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; aggregate&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;measles&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;NCOL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;measles&lt;span class=&quot;p&quot;&gt;)],&lt;/span&gt; by&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;year&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;measles&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;52&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; na.rm &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-
-&lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;i &lt;span class=&quot;kr&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;NCOL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  y&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;is.nan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; i&lt;span class=&quot;p&quot;&gt;]),&lt;/span&gt; i&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;NA&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-y &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; y&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;year&lt;span class=&quot;p&quot;&gt;),]&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Row labels by decade&lt;/span&gt;
-row.labels &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;rep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;72&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-row.labels&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;41&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;51&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;61&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;71&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1930&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1940&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1950&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1960&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1970&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                                           &lt;span class=&quot;s&quot;&gt;&amp;quot;1980&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1990&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;2000&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# Initial color ramp palette &lt;/span&gt;
-cols &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; colorRampPalette&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;red&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;blue&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-bks &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;seq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; na.rm &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; length.out &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;101&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-par&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cex.main&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Initial heatmap&lt;/span&gt;
-heatmap.2&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;as.matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;NCOL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y&lt;span class=&quot;p&quot;&gt;)])),&lt;/span&gt; Rowv&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; Colv&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-          dendrogram&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; trace&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; key&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-          labCol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;row.labels&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; cexCol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; lhei&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; lwid&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; margins&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-          col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;cols&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; breaks&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;bks&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; colsep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;72&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; srtCol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; rowsep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;57&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sepcolor&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;white&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-          add.expr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;lines&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;lwd&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-          main&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Measles Incidence in US States (1930-2003)\nVaccine introduced 1961&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;             \n(data from Project Tycho)&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;And here&amp;#39;s what I got as an initial heatmap:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/heatmap_v1.png&quot; alt=&quot;heatmap v1&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Yikes....well, at least the NA value color has now been converted to white. The color progression is how I initially wanted it to be (red). Lots of problems still. So what else could I do at this point?
-Well, there&amp;#39;s still the issue of the margins and the state names. All the state names show up this time (unlike the WSJ graphic) but it&amp;#39;s far too compact and dense. Here, I downloaded a simple .csv of the
-&lt;a href=&quot;http://www.50states.com/abbreviations.htm#.VSgJpXXd89Y&quot;&gt;abbreviations of all 50 U.S. states&lt;/a&gt; and read it in:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Reading in abbreviated state names file&lt;/span&gt;
-stNames &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; read.csv&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;stateNames.csv&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; header &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; stringsAsFactors &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kp&quot;&gt;names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;52&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; stNames&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Next, I liked the idea of keeping the NA values white but perhaps have a progression that is less glaring and make a little more sense visually. I took a little bit of inspiration from the Burgoyne Diller-inspired exhibition poster on p. 185 of the Tufte book. In particular, I liked the simultaneous contrast (although the thin black lines are a neutral buffer) between beige and red and thought that perhaps I could fiddle with different color palettes until I got a color ramp with the most extreme values in a similar, albeit toned down, shade of red. Here&amp;#39;s the excerpt from the Tufte book for reference:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/diller.png&quot; alt=&quot;heatmap v2&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Here, I&amp;#39;ll call upon &lt;code&gt;RBrewer&lt;/code&gt;. This is a nifty
-package in R that allows you to create all sorts of nice color schemes for thematic maps and such. A little playing around then with the &lt;code&gt;brewer.pal&lt;/code&gt; function...&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;cols &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; colorRampPalette&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;brewer.pal&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;Reds&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-bks &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;seq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; na.rm &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; length.out &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;101&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-par&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cex.main&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-heatmap.2&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;as.matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;NCOL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y&lt;span class=&quot;p&quot;&gt;)])),&lt;/span&gt; Rowv&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; Colv&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-        dendrogram&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; trace&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; key&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        labCol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;row.labels&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; cexCol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; lhei&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; lwid&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; margins&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-        breaks&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;bks&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; colsep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;72&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; srtCol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; rowsep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;57&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sepcolor&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;white&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;cols&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-        add.expr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;lines&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;lwd&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-        main&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Measles Incidence in US States (1930-2003)\nVaccine introduced 1961&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; na.color &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; grey&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;And now the second version of the heatmap:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/heatmap_v2.png&quot; alt=&quot;heatmap v2&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;So now what? Well, going back to square one briefly, I wanted to see if there was a better way of bucketing the data so I got this histogram to see what was going on underneath the hood:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Grouping together values into a 2500+ bucket&lt;/span&gt;
-hist&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;as.matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;NCOL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y&lt;span class=&quot;p&quot;&gt;)]),&lt;/span&gt; xlab &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Measles cases per 100,000 people&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; main&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Histogram of measles data&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/images/hist.png&quot; alt=&quot;heatmap v2&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;From this, I figured it might make more sense to establish a somewhat arbitrary cutoff of 2500 and just dump everything above 2500 into its own &amp;quot;2500 plus&amp;quot; category.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;y2 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; y&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;NCOL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
-&lt;span class=&quot;kp&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y2&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;is.na&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y2&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-y2&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;y2 &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2500&lt;/span&gt;
-
-cols &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; colorRampPalette&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;brewer.pal&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;#39;Reds&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-bks &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;seq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y2&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; na.rm &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; length.out &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;101&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-par&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cex.main&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-heatmap.2&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;as.matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y2&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt; Rowv&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; Colv&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-        dendrogram&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; trace&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; key&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        labCol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;row.labels&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; cexCol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; lhei&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; lwid&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; margins&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-        breaks&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;bks&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; colsep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;72&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; srtCol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; rowsep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;57&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sepcolor&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;white&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;cols&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-        add.expr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;lines&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;lwd&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-        main&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Measles Incidence in US States (1930-2003)\nVaccine introduced 1961&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; na.color &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; grey&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;And so we now get:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/heatmap_v3.png&quot; alt=&quot;heatmap v3&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;Lastly, and as we have talked about in previous class sessions, there&amp;#39;s this kind of weird arbitrariness to ordering when it comes to these types of heatmaps. Just from an intuitive sense, I thought that it might make more sense to organize the data (the states) from top to bottom in order of mean number of cases per 100,000. Add a few minor tweaks to the plot itself and:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;means &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y2&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; na.rm &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-
-y3 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; y2&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;rev&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;means&lt;span class=&quot;p&quot;&gt;))]&lt;/span&gt;
-
-par&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cex.main&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-heatmap.2&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;as.matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y3&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt; Rowv&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; Colv&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-          dendrogram&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; trace&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; key&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;FALSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-          labCol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;row.labels&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; cexCol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; lhei&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; lwid&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; margins&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-          breaks&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;bks&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; colsep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;72&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; srtCol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; rowsep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;57&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sepcolor&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;white&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;cols&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-          add.expr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;lines&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;lwd&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-          main&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Measles Incidence in US States (1930-2003)\nVaccine introduced 1961&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; na.color &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; grey&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.85&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;And finally, voila:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/heatmap_v4.png&quot; alt=&quot;heatmap final&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;However, still need to adjust the key...&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;y3 &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; y2&lt;span class=&quot;p&quot;&gt;[,&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;rev&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;means&lt;span class=&quot;p&quot;&gt;))]&lt;/span&gt;
-lmat &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;rbind&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-par&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;cex.main&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-heatmap.2&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;as.matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;y3&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt; Rowv&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; Colv&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-          dendrogram&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; trace&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;none&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; key&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;TRUE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; keysize&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;1&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-          labCol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;row.labels&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; cexCol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; lmat &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; lmat&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; lhei&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; lwid&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; margins&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-          breaks&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;bks&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; colsep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;72&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; srtCol&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; rowsep&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;57&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; sepcolor&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;white&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; col&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;cols&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-          add.expr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;lines&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;lwd&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-          main&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;Measles Incidence in US States (1930-2003)&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; na.color &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; grey&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.85&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;/images/heatmap_v4key.png&quot; alt=&quot;heatmap final&quot;&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 24 Mar 2015 00:00:00 -0400</pubDate>
-        <link>https://franciscojavierarceo.github.io/2015/03/24/stephen-ra-critique</link>
-        <guid isPermaLink="true">https://franciscojavierarceo.github.io/2015/03/24/stephen-ra-critique</guid>
-      </item>
-    
-      <item>
-        <title>Visualizing the flu</title>
-        <description>&lt;h1&gt;stat4701-edav-d3.github.com&lt;/h1&gt;
-
-&lt;p&gt;Placeholder for update&lt;/p&gt;
-
-&lt;h3&gt;&lt;a href=&quot;http://stat4701-edav-d3.github.io/&quot;&gt;LIVE PROJECT WEBSITE&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h4&gt;&lt;a href=&quot;https://github.com/stat4701-edav-d3/stat4701-edav-d3.github.com&quot;&gt;The GitHub Project Website Repo&lt;/a&gt;&lt;/h4&gt;
-
-&lt;h4&gt;&lt;a href=&quot;https://github.com/stat4701-edav-d3/d3-presentation&quot;&gt;The GitHub Project Folder&lt;/a&gt;&lt;/h4&gt;
-
-&lt;h5&gt;&lt;a href=&quot;https://github.com/stat4701-edav-d3&quot;&gt;The GitHub Organization&lt;/a&gt;&lt;/h5&gt;
-
-&lt;h1&gt;To Do:&lt;/h1&gt;
+&lt;h2&gt;Things I hope to accomplish in this blog:&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Grab city&amp;#39;s from Table - create a list of city&amp;#39;s&lt;/li&gt;
-&lt;li&gt;geocode that list&lt;/li&gt;
-&lt;li&gt;create shapefile of that list&lt;/li&gt;
-&lt;li&gt;create geojson of cities list with coords and Flu Data
+&lt;li&gt;Write about Machine Learning topics that I find interesting&lt;/li&gt;
+&lt;li&gt;Provide an &amp;quot;economist&amp;#39;s&amp;quot; introduction to hacking/data science&lt;/li&gt;
+&lt;li&gt;Provide more clear insight on what some of the fancy machine learning algorithms do.&lt;/li&gt;
+&lt;li&gt;Provide an overview of some simple NLP methods&lt;/li&gt;
+&lt;li&gt;Give my personal opinions about various tools/pieces of software&lt;/li&gt;
+&lt;li&gt;Create cool visualizations of data
 
 &lt;ul&gt;
-&lt;li&gt;maybe all good on this, see cities ... html &lt;/li&gt;
+&lt;li&gt;Maybe I&amp;#39;ll even offer a tutorial&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;http://bost.ocks.org/mike/bubble-map/base.html&lt;/p&gt;
-
-&lt;h1&gt;Outline for Remark Presenation&lt;/h1&gt;
-
 &lt;hr&gt;
 
-&lt;p&gt;&lt;strong&gt;Code below this point will be pasted into the Remark html&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;Python Code&lt;/h2&gt;
 
-&lt;hr&gt;
+&lt;p&gt;This is what some code looks like in a nice format.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;def Build_STDM(docs, **kwargs):
+    &amp;#39;&amp;#39;&amp;#39; Build Spares Term Document Matrix &amp;#39;&amp;#39;&amp;#39;
+    from sklearn.feature_extraction.text import CountVectorizer
+    import pandas as pd
+    vectorizer = CountVectorizer(**kwargs)
+    sparsematrix= vectorizer.fit_transform(docs)
+    vocab = vectorizer.vocabulary_.keys()
+    return sparsematrix, vocab
 
-&lt;h1&gt;Stephen and Danny&amp;#39;s D3 Mapping Presentation&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/stat4701-edav-d3/stat4701-edav-d3.github.com/master/remark-develop/img/googlemap.jpg&quot; alt=&quot;googlemap&quot;&gt;   &lt;/p&gt;
-
-&lt;h1&gt;from Shapefile to TopoJSON (and some GeoJSON) using GDAL/OGR&lt;/h1&gt;
-
-&lt;hr&gt;
-
-&lt;h1&gt;Agenda&lt;/h1&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Introduction&lt;/li&gt;
-&lt;li&gt;Flu Data&lt;/li&gt;
-&lt;li&gt;D3 Examples and Inspiration&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;X. Maybe a demo that people can follow to do a very basic d3 map (maybe not, seems like this browser issues and others could be a huge pain)
-X. Maybe do something with CartoDB at the end. If no one else is talking about it, it could be useful to at least mention and show a few things.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;some code
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/stat4701-edav-d3/stat4701-edav-d3.github.com/master/remark-develop/img/googlemap.jpg&quot; alt=&quot;googlemap&quot;&gt;    &lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1&gt;Data&lt;/h1&gt;
-
-&lt;h2&gt;&lt;a href=&quot;http://www.cdc.gov/flu/weekly/fluactivitysurv.htm&quot;&gt;CDC&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h3&gt;Scraping and Munging CDC Flu Data in R&lt;/h3&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;library(cdcfluview)
-library(dplyr)
-library(magrittr)
-library(ggplot2)
-
-dat &amp;lt;- get_flu_data(region=&amp;quot;hhs&amp;quot;, 
-                sub_region=1:10, 
-                data_source=&amp;quot;ilinet&amp;quot;, 
-                years=2000:2014)
-
-dat %&amp;lt;&amp;gt;%
-  mutate(REGION=factor(REGION,
-                   levels=unique(REGION),
-                   labels=c(&amp;quot;Boston&amp;quot;, &amp;quot;New York&amp;quot;,
-                            &amp;quot;Philadelphia&amp;quot;, &amp;quot;Atlanta&amp;quot;,
-                            &amp;quot;Chicago&amp;quot;, &amp;quot;Dallas&amp;quot;,
-                            &amp;quot;Kansas City&amp;quot;, &amp;quot;Denver&amp;quot;,
-                            &amp;quot;San Francisco&amp;quot;, &amp;quot;Seattle&amp;quot;),
-                   ordered=TRUE)) %&amp;gt;%
-mutate(season_week=ifelse(WEEK&amp;gt;=40, WEEK-40, WEEK),
-     season=ifelse(WEEK&amp;lt;40,
-                   sprintf(&amp;quot;%d-%d&amp;quot;, YEAR-1, YEAR),
-                   sprintf(&amp;quot;%d-%d&amp;quot;, YEAR, YEAR+1)))
-
-prev_years &amp;lt;- dat %&amp;gt;% filter(season != &amp;quot;2014-2015&amp;quot;)
-curr_year &amp;lt;- dat %&amp;gt;% filter(season == &amp;quot;2014-2015&amp;quot;)
-
-curr_week &amp;lt;- tail(dat, 1)$season_week
-
-gg &amp;lt;- ggplot()
-gg &amp;lt;- gg + geom_point(data=prev_years,
-                  aes(x=season_week, y=X..WEIGHTED.ILI, group=season),
-                  color=&amp;quot;#969696&amp;quot;, size=1, alpa=0.25)
-gg &amp;lt;- gg + geom_point(data=curr_year,
-                  aes(x=season_week, y=X..WEIGHTED.ILI, group=season),
-                  color=&amp;quot;red&amp;quot;, size=1.25, alpha=1)
-gg &amp;lt;- gg + geom_line(data=curr_year, 
-                 aes(x=season_week, y=X..WEIGHTED.ILI, group=season),
-                 size=1.25, color=&amp;quot;#d7301f&amp;quot;)
-gg &amp;lt;- gg + geom_vline(xintercept=curr_week, color=&amp;quot;#d7301f&amp;quot;, size=0.5, linetype=&amp;quot;dashed&amp;quot;, alpha=0.5)
-gg &amp;lt;- gg + facet_wrap(~REGION, ncol=3)
-gg &amp;lt;- gg + labs(x=NULL, y=&amp;quot;Weighted ILI Index&amp;quot;, 
-            title=&amp;quot;1999-2015 Weighted Flu Index by CDC Region; Week Ending Jan 3, 2015 (Current Season in Red)n&amp;quot;)
-gg &amp;lt;- gg + theme_bw()
-gg &amp;lt;- gg + theme(panel.grid=element_blank())
-gg &amp;lt;- gg + theme(strip.background=element_blank())
-gg &amp;lt;- gg + theme(axis.ticks.x=element_blank())
-gg &amp;lt;- gg + theme(axis.text.x=element_blank())
-gg
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;&lt;a href=&quot;https://www.google.org/flutrends/us/#US&quot;&gt;Google Flu Trends&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/stat4701-edav-d3/stat4701-edav-d3.github.com/master/remark-develop/img/google_flu_trends.png&quot; alt=&quot;GoogleFluTrends&quot;&gt;&lt;/p&gt;
-
-&lt;h3&gt;Cities Lat/Longs&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/stat4701-edav-d3/stat4701-edav-d3.github.com/master/remark-develop/img/seeing-latlngs-in-source-from-google-trends.png&quot; alt=&quot;cities&quot;&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/stat4701-edav-d3/stat4701-edav-d3.github.com/master/remark-develop/img/seeing-latlngs-in-xcode.png&quot; alt=&quot;citiesxcode&quot;&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h1&gt;What&amp;#39;s not cool about D3&lt;/h1&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;some code
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/stat4701-edav-d3/stat4701-edav-d3.github.com/master/remark-develop/img/googlemap.jpg&quot; alt=&quot;googlemap&quot;&gt;  &lt;/p&gt;
-</description>
+# Call the function on e-mail messages. The token_pattern is set so that terms are only
+# words with two or more letters (no numbers or punctuation)
+xs, vocab = Build_STDM(varchar)
+print xs[:,1:10]
+print vocab[0:10]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         <pubDate>Thu, 05 Mar 2015 00:00:00 -0500</pubDate>
-        <link>https://franciscojavierarceo.github.io/2015/03/05/flu</link>
-        <guid isPermaLink="true">https://franciscojavierarceo.github.io/2015/03/05/flu</guid>
+        <link>https://franciscojavierarceo.github.io/2015/03/05/first-post</link>
+        <guid isPermaLink="true">https://franciscojavierarceo.github.io/2015/03/05/first-post</guid>
       </item>
     
   </channel>

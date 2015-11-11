@@ -7,7 +7,7 @@
   <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Visualizing the flu</title>
+  <title>My first post</title>
   <meta name="description" content="" />
 
   <meta name="HandheldFriendly" content="True" />
@@ -43,7 +43,7 @@
 
 
   <!-- Blog Post -->
-  <meta property="og:title" content="Visualizing the flu" />
+  <meta property="og:title" content="My first post" />
   <meta property="og:url" content="https://franciscojavierarceo.github.io/2015/03/05/flu" />
   <meta property="og:image" content="https://franciscojavierarceo.github.io" />
   
@@ -60,7 +60,7 @@
         
         <div class="noarticleimage">
           <div class="post-meta">
-            <h1 class="post-title">Visualizing the flu</h1>
+            <h1 class="post-title">My first post</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person"></h4>
@@ -79,153 +79,74 @@
             <span class="post-reading-time"></span> read
           </div>
           <a name="topofpage"></a>
-          <h1>stat4701-edav-d3.github.com</h1>
+          <h1>Jekyll pages, Python, and learning to work with GitHub</h1>
 
-<p>Placeholder for update</p>
+<p>I recently began working with GitHub and learning the ways of the codes. <strong>It&#39;s amazing.</strong></p>
 
-<h3><a href="http://stat4701-edav-d3.github.io/">LIVE PROJECT WEBSITE</a></h3>
+<p>GitHub is a great way to version your code, especially when working with groups, to ensure 
+recovery and quality.</p>
 
-<h4><a href="https://github.com/stat4701-edav-d3/stat4701-edav-d3.github.com">The GitHub Project Website Repo</a></h4>
+<p>GitHub Markdown (formatted) pages are really great because of the ease and intuitive behavior.</p>
 
-<h4><a href="https://github.com/stat4701-edav-d3/d3-presentation">The GitHub Project Folder</a></h4>
-
-<h5><a href="https://github.com/stat4701-edav-d3">The GitHub Organization</a></h5>
-
-<h1>To Do:</h1>
+<h1>Things I hope to accomplish in this blog:</h1>
 
 <ul>
-<li>Grab city&#39;s from Table - create a list of city&#39;s</li>
-<li>geocode that list</li>
-<li>create shapefile of that list</li>
-<li>create geojson of cities list with coords and Flu Data
+<li>Write about Machine Learning things I find interesting</li>
+<li>Provide an &quot;economists&quot; introduction to hacking/data science</li>
+<li>Provide more clear insight on what some of the fancy machine learning algorithms do.</li>
+<li>Create cool visualizations of data
 
 <ul>
-<li>maybe all good on this, see cities ... html </li>
+<li>Maybe I&#39;ll even offer a tutorial</li>
 </ul></li>
+<li>Provide an overview of some simple NLP methods</li>
 </ul>
 
-<p>http://bost.ocks.org/mike/bubble-map/base.html</p>
+<h2>* Give my personal opinions about various tools/pieces of software</h2>
 
-<h1>Outline for Remark Presenation</h1>
+<h1>Universities I&#39;ve attended</h1>
 
-<hr>
-
-<p><strong>Code below this point will be pasted into the Remark html</strong></p>
-
-<hr>
-
-<h1>Stephen and Danny&#39;s D3 Mapping Presentation</h1>
-
-<p><img src="https://raw.githubusercontent.com/stat4701-edav-d3/stat4701-edav-d3.github.com/master/remark-develop/img/googlemap.jpg" alt="googlemap">   </p>
-
-<h1>from Shapefile to TopoJSON (and some GeoJSON) using GDAL/OGR</h1>
+<p><img src="https://raw.githubusercontent.com/franciscojavierarceo/franciscojavierarceo.github.io/master/assets/images/Columbia-University.png" alt="Columbia"><br>
+<img src="https://raw.githubusercontent.com/franciscojavierarceo/franciscojavierarceo.github.io/master/assets/images/clemson-university.png" alt="Clemson"><br>
+<img src="https://raw.githubusercontent.com/franciscojavierarceo/franciscojavierarceo.github.io/master/assets/images/illinois-state.png" alt="Illinois State">   </p>
 
 <hr>
 
-<h1>Agenda</h1>
+<h1>Python Code</h1>
 
-<ol>
-<li>Introduction</li>
-<li>Flu Data</li>
-<li>D3 Examples and Inspiration</li>
-</ol>
+<p>This is what some code looks like in a nice format.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">def Build_STDM(docs, **kwargs):
+    &#39;&#39;&#39; Build Spares Term Document Matrix &#39;&#39;&#39;
+    from sklearn.feature_extraction.text import CountVectorizer
+    import pandas as pd
+    vectorizer = CountVectorizer(**kwargs)
+    sparsematrix= vectorizer.fit_transform(docs)
+    vocab = vectorizer.vocabulary_.keys()
+    return sparsematrix, vocab
 
-<p>X. Maybe a demo that people can follow to do a very basic d3 map (maybe not, seems like this browser issues and others could be a huge pain)
-X. Maybe do something with CartoDB at the end. If no one else is talking about it, it could be useful to at least mention and show a few things.</p>
-
-<hr>
-
-<h1>Introduction</h1>
-<div class="highlight"><pre><code class="language-text" data-lang="text">some code
-</code></pre></div>
-<p><img src="https://raw.githubusercontent.com/stat4701-edav-d3/stat4701-edav-d3.github.com/master/remark-develop/img/googlemap.jpg" alt="googlemap">    </p>
-
-<hr>
-
-<h1>Data</h1>
-
-<h2><a href="http://www.cdc.gov/flu/weekly/fluactivitysurv.htm">CDC</a></h2>
-
-<h3>Scraping and Munging CDC Flu Data in R</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">library(cdcfluview)
-library(dplyr)
-library(magrittr)
-library(ggplot2)
-
-dat &lt;- get_flu_data(region=&quot;hhs&quot;, 
-                sub_region=1:10, 
-                data_source=&quot;ilinet&quot;, 
-                years=2000:2014)
-
-dat %&lt;&gt;%
-  mutate(REGION=factor(REGION,
-                   levels=unique(REGION),
-                   labels=c(&quot;Boston&quot;, &quot;New York&quot;,
-                            &quot;Philadelphia&quot;, &quot;Atlanta&quot;,
-                            &quot;Chicago&quot;, &quot;Dallas&quot;,
-                            &quot;Kansas City&quot;, &quot;Denver&quot;,
-                            &quot;San Francisco&quot;, &quot;Seattle&quot;),
-                   ordered=TRUE)) %&gt;%
-mutate(season_week=ifelse(WEEK&gt;=40, WEEK-40, WEEK),
-     season=ifelse(WEEK&lt;40,
-                   sprintf(&quot;%d-%d&quot;, YEAR-1, YEAR),
-                   sprintf(&quot;%d-%d&quot;, YEAR, YEAR+1)))
-
-prev_years &lt;- dat %&gt;% filter(season != &quot;2014-2015&quot;)
-curr_year &lt;- dat %&gt;% filter(season == &quot;2014-2015&quot;)
-
-curr_week &lt;- tail(dat, 1)$season_week
-
-gg &lt;- ggplot()
-gg &lt;- gg + geom_point(data=prev_years,
-                  aes(x=season_week, y=X..WEIGHTED.ILI, group=season),
-                  color=&quot;#969696&quot;, size=1, alpa=0.25)
-gg &lt;- gg + geom_point(data=curr_year,
-                  aes(x=season_week, y=X..WEIGHTED.ILI, group=season),
-                  color=&quot;red&quot;, size=1.25, alpha=1)
-gg &lt;- gg + geom_line(data=curr_year, 
-                 aes(x=season_week, y=X..WEIGHTED.ILI, group=season),
-                 size=1.25, color=&quot;#d7301f&quot;)
-gg &lt;- gg + geom_vline(xintercept=curr_week, color=&quot;#d7301f&quot;, size=0.5, linetype=&quot;dashed&quot;, alpha=0.5)
-gg &lt;- gg + facet_wrap(~REGION, ncol=3)
-gg &lt;- gg + labs(x=NULL, y=&quot;Weighted ILI Index&quot;, 
-            title=&quot;1999-2015 Weighted Flu Index by CDC Region; Week Ending Jan 3, 2015 (Current Season in Red)n&quot;)
-gg &lt;- gg + theme_bw()
-gg &lt;- gg + theme(panel.grid=element_blank())
-gg &lt;- gg + theme(strip.background=element_blank())
-gg &lt;- gg + theme(axis.ticks.x=element_blank())
-gg &lt;- gg + theme(axis.text.x=element_blank())
-gg
+# Call the function on e-mail messages. The token_pattern is set so that terms are only
+# words with two or more letters (no numbers or punctuation)
+xs, vocab = Build_STDM(varchar)
+print xs[:,1:10]
+print vocab[0:10]
 </code></pre></div>
 <h2><a href="https://www.google.org/flutrends/us/#US">Google Flu Trends</a></h2>
 
 <p><img src="https://raw.githubusercontent.com/stat4701-edav-d3/stat4701-edav-d3.github.com/master/remark-develop/img/google_flu_trends.png" alt="GoogleFluTrends"></p>
-
-<h3>Cities Lat/Longs</h3>
-
-<p><img src="https://raw.githubusercontent.com/stat4701-edav-d3/stat4701-edav-d3.github.com/master/remark-develop/img/seeing-latlngs-in-source-from-google-trends.png" alt="cities">
-<img src="https://raw.githubusercontent.com/stat4701-edav-d3/stat4701-edav-d3.github.com/master/remark-develop/img/seeing-latlngs-in-xcode.png" alt="citiesxcode"></p>
-
-<hr>
-
-<h1>What&#39;s not cool about D3</h1>
-<div class="highlight"><pre><code class="language-text" data-lang="text">some code
-</code></pre></div>
-<p><img src="https://raw.githubusercontent.com/stat4701-edav-d3/stat4701-edav-d3.github.com/master/remark-develop/img/googlemap.jpg" alt="googlemap">  </p>
 
         </section>
         <footer class="post-footer">
           <section class="share">
             
               
-                <a class="icon-twitter" href="http://twitter.com/share?text=Visualizing+the+flu&url="
+                <a class="icon-twitter" href="http://twitter.com/share?text=My+first+post&url="
                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
                 <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
                 </a>
               
             
               
-                <a class="icon-facebook" href="http://www.facebook.com/sharer.php?t=Visualizing+the+flu&amp;u="
+                <a class="icon-facebook" href="http://www.facebook.com/sharer.php?t=My+first+post&amp;u="
                   onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
                 <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
                 </a>
