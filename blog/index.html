@@ -10,7 +10,7 @@ layout: default
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
           <div class="article-item">
             <header class="post-header">
-              <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
+              <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ post.title }} </a></h2>
             </header>
             <section class="post-excerpt" itemprop="description">
               <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
@@ -27,12 +27,16 @@ layout: default
     <h5 class="index-headline normal"><span>Regular</span></h5>
     {% endif %}
     
-<div class="cf frame">
+<p  style="margin-top: -2.0cm;">This section of my site is for blog postings. I mostly write about machine learning, economics, statistics, and interesting code bits I find. <p>
+
+<p  style="margin-top: -1.0cm;">Feel free to click on a title below to read one of my blog posts.<p>
+
+<div class="cf frame" style="margin-top: -2.5cm;">
   {% for post in paginator.posts %}
     <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
       <div class="article-item">
         <header class="post-header">
-          <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
+          <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url"> <font color='#006666'>{{ post.title }} </font></a></h2>
         </header>
         <section class="post-excerpt" itemprop="description">
           <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
