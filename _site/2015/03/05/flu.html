@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Visualizing the flu</title>
+  <meta name="description" content="" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="canonical" href="http://franciscojavierarceo.github.io/2015/03/05/flu">
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+<!--  <link rel="stylesheet" href=""> -->
+  <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+
+<!-- IndieWeb-ifying my site -->
+
+  <link rel="me" href="https://twitter.com/audreywatters" />
+  <link rel="me" href="https://github.com/audreywatters" />
+  <link rel="me" href="https://google.com/+audreywatters" />
+  <link rel="me" href="https://www.flickr.com/photos/surreal_badger/" />
+  <link rel="me" href="mailto:mail@audreywatters.com" />
+  <link rel="me" href="http://hackeducation.com" />
+  <link rel="me" href="http://aud.life" />
+  <link rel="me" href="http://techgypsi.es" />
+  <link rel="me" href="https://keybase.io/audreywatters" />
+  <link rel="me" href="https://twitter.com/hackeducation" />
+
+<!--Open Graph Stuff Take 2-->  
+
+
+
+  <!-- Blog Post -->
+  <meta property="og:title" content="Visualizing the flu" />
+  <meta property="og:url" content="http://franciscojavierarceo.github.io/2015/03/05/flu" />
+  <meta property="og:image" content="http://franciscojavierarceo.github.io" />
+  
+
+</head>
+
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+
+<a href="http://franciscojavierarceo.github.io" class="logo-readium"><span class="logo" style="background-image: url(/assets/images/df_logo.png)"></span></a>
+
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="noarticleimage">
+          <div class="post-meta">
+            <h1 class="post-title">Visualizing the flu</h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person"></h4>
+              on
+              <time datetime="2015-03-05T00:00:00-05:00">05 Mar 2015</time>
+              <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <h1>stat4701-edav-d3.github.com</h1>
+
+<p>Placeholder for update</p>
+
+<h3><a href="http://stat4701-edav-d3.github.io/">LIVE PROJECT WEBSITE</a></h3>
+
+<h4><a href="https://github.com/stat4701-edav-d3/stat4701-edav-d3.github.com">The GitHub Project Website Repo</a></h4>
+
+<h4><a href="https://github.com/stat4701-edav-d3/d3-presentation">The GitHub Project Folder</a></h4>
+
+<h5><a href="https://github.com/stat4701-edav-d3">The GitHub Organization</a></h5>
+
+<h1>To Do:</h1>
+
+<ul>
+<li>Grab city&#39;s from Table - create a list of city&#39;s</li>
+<li>geocode that list</li>
+<li>create shapefile of that list</li>
+<li>create geojson of cities list with coords and Flu Data
+
+<ul>
+<li>maybe all good on this, see cities ... html </li>
+</ul></li>
+</ul>
+
+<p>http://bost.ocks.org/mike/bubble-map/base.html</p>
+
+<h1>Outline for Remark Presenation</h1>
+
+<hr>
+
+<p><strong>Code below this point will be pasted into the Remark html</strong></p>
+
+<hr>
+
+<h1>Stephen and Danny&#39;s D3 Mapping Presentation</h1>
+
+<p><img src="https://raw.githubusercontent.com/stat4701-edav-d3/stat4701-edav-d3.github.com/master/remark-develop/img/googlemap.jpg" alt="googlemap">   </p>
+
+<h1>from Shapefile to TopoJSON (and some GeoJSON) using GDAL/OGR</h1>
+
+<hr>
+
+<h1>Agenda</h1>
+
+<ol>
+<li>Introduction</li>
+<li>Flu Data</li>
+<li>D3 Examples and Inspiration</li>
+</ol>
+
+<p>X. Maybe a demo that people can follow to do a very basic d3 map (maybe not, seems like this browser issues and others could be a huge pain)
+X. Maybe do something with CartoDB at the end. If no one else is talking about it, it could be useful to at least mention and show a few things.</p>
+
+<hr>
+
+<h1>Introduction</h1>
+<div class="highlight"><pre><code class="language-text" data-lang="text">some code
+</code></pre></div>
+<p><img src="https://raw.githubusercontent.com/stat4701-edav-d3/stat4701-edav-d3.github.com/master/remark-develop/img/googlemap.jpg" alt="googlemap">    </p>
+
+<hr>
+
+<h1>Data</h1>
+
+<h2><a href="http://www.cdc.gov/flu/weekly/fluactivitysurv.htm">CDC</a></h2>
+
+<h3>Scraping and Munging CDC Flu Data in R</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">library(cdcfluview)
+library(dplyr)
+library(magrittr)
+library(ggplot2)
+
+dat &lt;- get_flu_data(region=&quot;hhs&quot;, 
+                sub_region=1:10, 
+                data_source=&quot;ilinet&quot;, 
+                years=2000:2014)
+
+dat %&lt;&gt;%
+  mutate(REGION=factor(REGION,
+                   levels=unique(REGION),
+                   labels=c(&quot;Boston&quot;, &quot;New York&quot;,
+                            &quot;Philadelphia&quot;, &quot;Atlanta&quot;,
+                            &quot;Chicago&quot;, &quot;Dallas&quot;,
+                            &quot;Kansas City&quot;, &quot;Denver&quot;,
+                            &quot;San Francisco&quot;, &quot;Seattle&quot;),
+                   ordered=TRUE)) %&gt;%
+mutate(season_week=ifelse(WEEK&gt;=40, WEEK-40, WEEK),
+     season=ifelse(WEEK&lt;40,
+                   sprintf(&quot;%d-%d&quot;, YEAR-1, YEAR),
+                   sprintf(&quot;%d-%d&quot;, YEAR, YEAR+1)))
+
+prev_years &lt;- dat %&gt;% filter(season != &quot;2014-2015&quot;)
+curr_year &lt;- dat %&gt;% filter(season == &quot;2014-2015&quot;)
+
+curr_week &lt;- tail(dat, 1)$season_week
+
+gg &lt;- ggplot()
+gg &lt;- gg + geom_point(data=prev_years,
+                  aes(x=season_week, y=X..WEIGHTED.ILI, group=season),
+                  color=&quot;#969696&quot;, size=1, alpa=0.25)
+gg &lt;- gg + geom_point(data=curr_year,
+                  aes(x=season_week, y=X..WEIGHTED.ILI, group=season),
+                  color=&quot;red&quot;, size=1.25, alpha=1)
+gg &lt;- gg + geom_line(data=curr_year, 
+                 aes(x=season_week, y=X..WEIGHTED.ILI, group=season),
+                 size=1.25, color=&quot;#d7301f&quot;)
+gg &lt;- gg + geom_vline(xintercept=curr_week, color=&quot;#d7301f&quot;, size=0.5, linetype=&quot;dashed&quot;, alpha=0.5)
+gg &lt;- gg + facet_wrap(~REGION, ncol=3)
+gg &lt;- gg + labs(x=NULL, y=&quot;Weighted ILI Index&quot;, 
+            title=&quot;1999-2015 Weighted Flu Index by CDC Region; Week Ending Jan 3, 2015 (Current Season in Red)n&quot;)
+gg &lt;- gg + theme_bw()
+gg &lt;- gg + theme(panel.grid=element_blank())
+gg &lt;- gg + theme(strip.background=element_blank())
+gg &lt;- gg + theme(axis.ticks.x=element_blank())
+gg &lt;- gg + theme(axis.text.x=element_blank())
+gg
+</code></pre></div>
+<h2><a href="https://www.google.org/flutrends/us/#US">Google Flu Trends</a></h2>
+
+<p><img src="https://raw.githubusercontent.com/stat4701-edav-d3/stat4701-edav-d3.github.com/master/remark-develop/img/google_flu_trends.png" alt="GoogleFluTrends"></p>
+
+<h3>Cities Lat/Longs</h3>
+
+<p><img src="https://raw.githubusercontent.com/stat4701-edav-d3/stat4701-edav-d3.github.com/master/remark-develop/img/seeing-latlngs-in-source-from-google-trends.png" alt="cities">
+<img src="https://raw.githubusercontent.com/stat4701-edav-d3/stat4701-edav-d3.github.com/master/remark-develop/img/seeing-latlngs-in-xcode.png" alt="citiesxcode"></p>
+
+<hr>
+
+<h1>What&#39;s not cool about D3</h1>
+<div class="highlight"><pre><code class="language-text" data-lang="text">some code
+</code></pre></div>
+<p><img src="https://raw.githubusercontent.com/stat4701-edav-d3/stat4701-edav-d3.github.com/master/remark-develop/img/googlemap.jpg" alt="googlemap">  </p>
+
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=Visualizing+the+flu&url="
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+              
+                <a class="icon-facebook" href="http://www.facebook.com/sharer.php?t=Visualizing+the+flu&amp;u="
+                  onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+                <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
+                </a>
+              
+            
+              
+            
+              
+            
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4>francisco javier arceo</h4>
+              <hr>
+              <p class="published">Published <time datetime="2015-03-05 00:00">05 Mar 2015</time></p>
+            </section>
+          </div>
+          
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Credits</span></h5>
+            <footer class="site-footer">
+                <section class="copyright"><i class="fa fa-copyright"></i><a href="http://creativecommons.org/licenses/by-sa/4.0/"> Attribution-ShareAlike 4.0</a></section>
+                <hr> 
+              </div>
+            </footer>
+          </div>
+        </div>
+      </article>
+    </main>
+    <div class="bottom-closer">
+      <div class="background-closer-image"  style="background-image: url(/assets/images/background.jpg)">
+        Image
+      </div>
+      <div class="inner">
+        <h1 class="blog-title">francisco javier arceo</h1>
+        <h2 class="blog-description"></h2>
+        <a href="/blog/" class="btn">Back to Blog</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js"></script>
+<script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+    $window.on('scroll', function() {
+      var top = $window.scrollTop();
+
+      if (top < 0 || top > 1500) { return; }
+      $image
+        .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+        .css('opacity', 1-Math.max(top/700, 0));
+    });
+    $window.trigger('scroll');
+
+    var height = $('.article-image').height();
+    $('.post-content').css('padding-top', height + 'px');
+
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+       && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({ scrollTop: target.offset().top }, 500);
+          return false;
+        }
+      }
+    });
+  });
+}(jQuery));
+</script>
+
+
+  </body>
+</html>
