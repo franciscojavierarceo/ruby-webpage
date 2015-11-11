@@ -1,0 +1,18 @@
+{
+  "name": "Stephen Ra",
+  "website": "http://stephenrra.github.io",
+  "about": "Data scientist"
+  "contact": {
+    "email": "stephenrra@gmail.com"
+  },
+  "social": [
+    {
+      "name": "Twitter",
+      "url": "https://twitter.com/stephenrra"
+    },
+    {
+      "name": "Github",
+      "url": "https://github.com/stephenrra"
+    }
+  ]
+}
