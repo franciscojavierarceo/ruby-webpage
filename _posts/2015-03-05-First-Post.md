@@ -21,14 +21,6 @@ recovery and quality. GitHub Markdown (formatted) pages are really great because
 	* Maybe I'll even offer a tutorial
 
 ---
-
-
-## Universities I've attended
-<center> <img src = "/assets/images/Columbia-University.jpg" style="width: 300px;margin-top;" /img></center> 
-<center> <img src = "/assets/images/clemson-university.png" style="width: 300px;margin-top;" /img></center> 
-<center> <img src = "/assets/images/illinois-state.png" style="width: 300px;margin-top;" /img></center> 
-
----
 ## Python Code
 This is what some code looks like in a nice format.
 
