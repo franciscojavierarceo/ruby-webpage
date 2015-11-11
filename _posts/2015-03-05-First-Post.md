@@ -31,6 +31,7 @@ recovery and quality. GitHub Markdown (formatted) pages are really great because
 ---
 ## Python Code
 This is what some code looks like in a nice format.
+
 	def Build_STDM(docs, **kwargs):
     	''' Build Spares Term Document Matrix '''
     	from sklearn.feature_extraction.text import CountVectorizer
