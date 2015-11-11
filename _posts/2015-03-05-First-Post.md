@@ -12,13 +12,13 @@ recovery and quality. GitHub Markdown (formatted) pages are really great because
 
 ## Things I hope to accomplish in this blog:
 
-* Write about Machine Learning things I find interesting
-* Provide an "economists" introduction to hacking/data science
+* Write about Machine Learning topics that I find interesting
+* Provide an "economist's" introduction to hacking/data science
 * Provide more clear insight on what some of the fancy machine learning algorithms do.
-* Create cool visualizations of data
-	* Maybe I'll even offer a tutorial
 * Provide an overview of some simple NLP methods
 * Give my personal opinions about various tools/pieces of software
+* Create cool visualizations of data
+	* Maybe I'll even offer a tutorial
 
 ---
 
