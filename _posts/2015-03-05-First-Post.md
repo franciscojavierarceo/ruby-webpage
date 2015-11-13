@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'My first post'
+comments: true
 ---
 
 # Jekyll pages, Python, and learning to work with GitHub

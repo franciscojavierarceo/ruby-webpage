@@ -12,8 +12,7 @@
     <!-- content start -->
 
     <div class="page-content">
-      <div class="wrapper">
-      	
+      <div class="wrapper">      	
 		<div class="teaserimage">
 		    <div class="teaserimage-image" {% if site.cover %}style="background-image: url({{ site.cover }})"{% endif %}>
 		        Teaser Image
@@ -34,13 +33,9 @@
 		            </a>
 		            &nbsp;&nbsp;·&nbsp;&nbsp;
 		        {% endif %}
-		      {% endfor %}
-		      
-		      <!--edit your nav here-->
+		      {% endfor %} 
 		      <a href="/About-me/">About Me</a>&nbsp;&nbsp;·&nbsp;&nbsp;
-		      <a href="/blog/">Blog</a>
-		      <!--edit your nav here-->
-		      
+		      <a href="/blog/">Blog</a>		      
 		    </div>
 		</header>
 		
@@ -56,12 +51,8 @@
        
       </div>
     </div>
-
     <!-- content end -->
-
     {% include footer.html %}
     {% include javascripts.html %}
-
   </body>
-
 </html>
