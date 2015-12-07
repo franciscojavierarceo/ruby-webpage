@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>My first post</title>
+  <meta name="description" content="" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="canonical" href="http://franciscojavierarceo.github.io/2015/11/27/Streaming-Corpus">
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+<!--  <link rel="stylesheet" href=""> -->
+  <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+
+<!-- IndieWeb-ifying my site -->
+
+  <link rel="me" href="https://twitter.com/audreywatters" />
+  <link rel="me" href="https://github.com/audreywatters" />
+  <link rel="me" href="https://google.com/+audreywatters" />
+  <link rel="me" href="https://www.flickr.com/photos/surreal_badger/" />
+  <link rel="me" href="mailto:mail@audreywatters.com" />
+  <link rel="me" href="http://hackeducation.com" />
+  <link rel="me" href="http://aud.life" />
+  <link rel="me" href="http://techgypsi.es" />
+  <link rel="me" href="https://keybase.io/audreywatters" />
+  <link rel="me" href="https://twitter.com/hackeducation" />
+
+<!--Open Graph Stuff Take 2-->  
+
+
+
+  <!-- Blog Post -->
+  <meta property="og:title" content="My first post" />
+  <meta property="og:url" content="http://franciscojavierarceo.github.io/2015/11/27/Streaming-Corpus" />
+  <meta property="og:image" content="http://franciscojavierarceo.github.io" />
+  
+
+</head>
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+
+<!-- removed the header because it wasn't useful -->
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="noarticleimage">
+          <div class="post-meta">
+            <h1 class="post-title">My first post</h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person"></h4>
+              on
+              <time datetime="2015-11-27T00:00:00-05:00">27 Nov 2015</time>
+              <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <h1>Jekyll pages, Python, and learning to work with GitHub</h1>
+
+<p>I recently began working with GitHub and learning the ways of the codes. <em>It&#39;s amazing.</em></p>
+
+<p>GitHub is a great way to version your code, especially when working with groups, to ensure 
+recovery and quality. GitHub Markdown (formatted) pages are really great because of the ease and intuitive behavior.</p>
+
+<h2>Things I hope to accomplish in this blog:</h2>
+
+<ul>
+<li>Write about Machine Learning topics that I find interesting</li>
+<li>Provide an &quot;economist&#39;s&quot; introduction to hacking/data science</li>
+<li>Provide more clear insight on what some of the fancy machine learning algorithms do.</li>
+<li>Provide an overview of some simple NLP methods</li>
+<li>Give my personal opinions about various tools/pieces of software</li>
+<li>Create cool visualizations of data
+
+<ul>
+<li>Maybe I&#39;ll even offer a tutorial</li>
+</ul></li>
+</ul>
+
+<hr>
+
+<h2>Code</h2>
+
+<p>One of the many great things that Jekyll does is formatting code for you. Below is some simple code
+that takes in a column of text (from some arbitrary .csv file) and outputs a sparse matrix
+of unigrams/bag-of-words stored as binary variables (also called one-hot-encoding)
+that you can use for a simple regression (which is what this code does).</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">import scipy
+import os, sys
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn import linear_model, decomposition
+from sklearn.pipeline import Pipeline
+from sklearn.grid_search import GridSearchCV
+from sklearn.feature_extraction.text import CountVectorizer
+def roc_plot(actual,pred,ttl):
+    fpr, tpr, thresholds = roc_curve(actual, pred)
+    roc_auc = auc(fpr, tpr)
+    print(&quot;The Area Under the ROC Curve : %f&quot; % roc_auc)
+    # Plot ROC curve
+    plt.clf()
+    plt.plot(fpr, tpr, color=&#39;red&#39;,label=&#39;ROC curve (area = %0.2f)&#39; % roc_auc)
+    plt.plot([0, 1], [0, 1], &#39;k&#39;)
+    plt.xlim([0.0, 1.0])
+    plt.ylim([0.0, 1.0])
+    plt.grid()
+    plt.xlabel(&#39;False Positive Rate&#39;)
+    plt.ylabel(&#39;True Positive Rate&#39;)
+    plt.title(&#39;ROC Curve&#39;+&#39;\n&#39;+ttl)
+    plt.legend(loc=&quot;lower right&quot;)
+    plt.show()
+
+def Build_STDM(docs, **kwargs):
+    &#39;&#39;&#39; Build Sparse Term Document Matrix &#39;&#39;&#39;
+    vectorizer = CountVectorizer(**kwargs)
+    sparsematrix= vectorizer.fit_transform(docs)
+    vocab = vectorizer.vocabulary_.keys()
+    return sparsematrix, vocab
+
+df1 = pd.read_csv(&#39;myregressiondata.csv&#39;,sep=&#39;,&#39;)
+varchar = df1[&#39;MyTextField&#39;]
+xs = xs[:,1:10]
+y = np.hstack((np.ones(100/2),np.zeros(100/2))).reshape((100,1))
+betas = scipy.sparse.linalg.inv(xs.T.dot(xs)).dot(xs.T).dot(y)
+bdf= pd.DataFrame()
+bdf[&#39;Words&#39;] = vocab[1:10]
+bdf[&#39;betas&#39;] = betas
+
+print bdf
+logistic = linear_model.LogisticRegression(penalty=&#39;l2&#39;,tol=0.0001,
+                                       fit_intercept=True,intercept_scaling=1)
+MyModel = logistic.fit(xs,y)
+betas = MyModel.coef_.ravel()
+ys = logistic.predict_proba(xs)[:,0]
+
+# Call the function on e-mail messages. The token_pattern is set so that terms are only
+# words with two or more letters (no numbers or punctuation)
+xs, vocab = Build_STDM(varchar)
+print xs[:,1:10]
+print vocab[0:10]
+</code></pre></div>
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            
+              
+                <a class="icon-facebook" href="http://www.facebook.com/sharer.php?t=My+first+post&amp;u="
+                  onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+                <i class="fa fa-facebook"></i><span class="hidden">facebook</span>
+                </a>
+              
+            
+              
+            
+              
+            
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/assets/images/author.jpg)">Blog Logo</div>
+              <h4>francisco javier arceo</h4>
+              <hr>
+              <p class="published">Published <time datetime="2015-11-27 00:00">27 Nov 2015</time></p>
+            </section>
+          </div>
+          
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Credits</span></h5>
+            <footer class="site-footer">
+                <section class="copyright"><i class="fa fa-copyright"></i><a href="http://creativecommons.org/licenses/by-sa/4.0/"> Attribution-ShareAlike 4.0</a></section>
+                <hr> 
+              </div>
+            </footer>
+          </div>
+        </div>
+      </article>
+    </main>
+<div id="disqus_thread"></div>
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//httpfranciscojavierarceogithubioblog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    <div class="bottom-closer">
+      <div class="background-closer-image"  style="background-image: url(/assets/images/background.jpg)">
+        Image
+      </div>
+      <div class="inner">
+        <h1 class="blog-title">francisco javier arceo</h1>
+        <h2 class="blog-description"></h2>
+        <a href="/blog/" class="btn">Back to Blog</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/index.js"></script>
+<script type="text/javascript" src="/assets/js/readingTime.min.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+    $window.on('scroll', function() {
+      var top = $window.scrollTop();
+
+      if (top < 0 || top > 1500) { return; }
+      $image
+        .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+        .css('opacity', 1-Math.max(top/700, 0));
+    });
+    $window.trigger('scroll');
+
+    var height = $('.article-image').height();
+    $('.post-content').css('padding-top', height + 'px');
+
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+       && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({ scrollTop: target.offset().top }, 500);
+          return false;
+        }
+      }
+    });
+  });
+}(jQuery));
+</script>
+
+
+  </body>
+</html>
