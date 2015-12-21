@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'My first post'
+title: 'LDA for Regular Humans'
 comments: true
 ---
 
