@@ -5,100 +5,29 @@
     <description></description>
     <link>http://franciscojavierarceo.github.io/</link>
     <atom:link href="http://franciscojavierarceo.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 07 Dec 2015 14:52:46 -0500</pubDate>
-    <lastBuildDate>Mon, 07 Dec 2015 14:52:46 -0500</lastBuildDate>
+    <pubDate>Wed, 20 Jul 2016 21:36:32 -0400</pubDate>
+    <lastBuildDate>Wed, 20 Jul 2016 21:36:32 -0400</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
-        <title>My first post</title>
-        <description>&lt;h1&gt;Jekyll pages, Python, and learning to work with GitHub&lt;/h1&gt;
+        <title>2016 has been crazy</title>
+        <description>&lt;p&gt;It&amp;#39;s been a hectic year thusfar, I spent most of my time either at work, on the train, in class, at the gym, or with my lovely girlfirend Stephany (probably the best part of my year). &lt;/p&gt;
 
-&lt;p&gt;I recently began working with GitHub and learning the ways of the codes. &lt;em&gt;It&amp;#39;s amazing.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;During this hectic year I got the opportunity to improve my CS chops (e.g., building my website), learn a ton more of (&lt;a href=&quot;https://github.com/franciscojavierarceo/EECS6892&quot;&gt;Bayesian&lt;/a&gt; &lt;a href=&quot;https://github.com/franciscojavierarceo/COMS4721&quot;&gt;Machine Learning&lt;/a&gt;, and dive into &lt;a href=&quot;https://github.com/franciscojavierarceo/ECBME6040&quot;&gt;Deep Learning&lt;/a&gt;. At the gym I was able to also increase my deadlift from a pathetic 185 to 405 (still not great)! And increase my bench from 155 to 215!! So to say the least it&amp;#39;s been a pretty awesome year, for both nerdy and non-nerdy reasons.&lt;/p&gt;
 
-&lt;p&gt;GitHub is a great way to version your code, especially when working with groups, to ensure 
-recovery and quality. GitHub Markdown (formatted) pages are really great because of the ease and intuitive behavior.&lt;/p&gt;
+&lt;p&gt;This summer I decided to take a Mathematical Analysis course using the classic baby Rudin textbook and boy has that been an experience. It&amp;#39;s been my first pure mathematics course in nearly 9 years, so to say that it&amp;#39;s been a challenge is an understatement but I&amp;#39;ve &lt;em&gt;love&lt;/em&gt; the material. It&amp;#39;s absolutely fascinating, regardless of how much work I have to put in. &lt;/p&gt;
 
-&lt;h2&gt;Things I hope to accomplish in this blog:&lt;/h2&gt;
+&lt;p&gt;Let me just say, my girlfriend is amazing. During those late nights of studying and homework, she was sweet enough to feed me, keep me company, and keep me sane. Feel incredibly grateful to have such a caring, beautiful, and loving woman in my life. :) &lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Write about Machine Learning topics that I find interesting&lt;/li&gt;
-&lt;li&gt;Provide an &amp;quot;economist&amp;#39;s&amp;quot; introduction to hacking/data science&lt;/li&gt;
-&lt;li&gt;Provide more clear insight on what some of the fancy machine learning algorithms do.&lt;/li&gt;
-&lt;li&gt;Provide an overview of some simple NLP methods&lt;/li&gt;
-&lt;li&gt;Give my personal opinions about various tools/pieces of software&lt;/li&gt;
-&lt;li&gt;Create cool visualizations of data
+&lt;p&gt;Professionally, my work/career has also been going well, I love my job and my team is really incredible. My boss is the best, he&amp;#39;s been encouraging me to learn a ton of new stuff and I feel more and more like a real computer scientist (but I have a long way to go before I actually call myself that). The learning curve has been steep, but I feel like I&amp;#39;m making progress, which is really rewarding. I love computers and I love CS, so I really want to explore it more...maybe I&amp;#39;ll pursue a third masters in CS or EECS (Electrical Engineering) and finally get into hardware.&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;Maybe I&amp;#39;ll even offer a tutorial&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;That might be something I explore in the future. I love school and learning about new things and I love getting a degree out of the whole thing, so maybe I will pursue a third degree. I guess we&amp;#39;ll see what 2017 holds.&lt;/p&gt;
 
-&lt;hr&gt;
-
-&lt;h2&gt;Code&lt;/h2&gt;
-
-&lt;p&gt;One of the many great things that Jekyll does is formatting code for you. Below is some simple code
-that takes in a column of text (from some arbitrary .csv file) and outputs a sparse matrix
-of unigrams/bag-of-words stored as binary variables (also called one-hot-encoding)
-that you can use for a simple regression (which is what this code does).&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;import scipy
-import os, sys
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-from sklearn import linear_model, decomposition
-from sklearn.pipeline import Pipeline
-from sklearn.grid_search import GridSearchCV
-from sklearn.feature_extraction.text import CountVectorizer
-def roc_plot(actual,pred,ttl):
-    fpr, tpr, thresholds = roc_curve(actual, pred)
-    roc_auc = auc(fpr, tpr)
-    print(&amp;quot;The Area Under the ROC Curve : %f&amp;quot; % roc_auc)
-    # Plot ROC curve
-    plt.clf()
-    plt.plot(fpr, tpr, color=&amp;#39;red&amp;#39;,label=&amp;#39;ROC curve (area = %0.2f)&amp;#39; % roc_auc)
-    plt.plot([0, 1], [0, 1], &amp;#39;k&amp;#39;)
-    plt.xlim([0.0, 1.0])
-    plt.ylim([0.0, 1.0])
-    plt.grid()
-    plt.xlabel(&amp;#39;False Positive Rate&amp;#39;)
-    plt.ylabel(&amp;#39;True Positive Rate&amp;#39;)
-    plt.title(&amp;#39;ROC Curve&amp;#39;+&amp;#39;\n&amp;#39;+ttl)
-    plt.legend(loc=&amp;quot;lower right&amp;quot;)
-    plt.show()
-
-def Build_STDM(docs, **kwargs):
-    &amp;#39;&amp;#39;&amp;#39; Build Sparse Term Document Matrix &amp;#39;&amp;#39;&amp;#39;
-    vectorizer = CountVectorizer(**kwargs)
-    sparsematrix= vectorizer.fit_transform(docs)
-    vocab = vectorizer.vocabulary_.keys()
-    return sparsematrix, vocab
-
-df1 = pd.read_csv(&amp;#39;myregressiondata.csv&amp;#39;,sep=&amp;#39;,&amp;#39;)
-varchar = df1[&amp;#39;MyTextField&amp;#39;]
-xs = xs[:,1:10]
-y = np.hstack((np.ones(100/2),np.zeros(100/2))).reshape((100,1))
-betas = scipy.sparse.linalg.inv(xs.T.dot(xs)).dot(xs.T).dot(y)
-bdf= pd.DataFrame()
-bdf[&amp;#39;Words&amp;#39;] = vocab[1:10]
-bdf[&amp;#39;betas&amp;#39;] = betas
-
-print bdf
-logistic = linear_model.LogisticRegression(penalty=&amp;#39;l2&amp;#39;,tol=0.0001,
-                                       fit_intercept=True,intercept_scaling=1)
-MyModel = logistic.fit(xs,y)
-betas = MyModel.coef_.ravel()
-ys = logistic.predict_proba(xs)[:,0]
-
-# Call the function on e-mail messages. The token_pattern is set so that terms are only
-# words with two or more letters (no numbers or punctuation)
-xs, vocab = Build_STDM(varchar)
-print xs[:,1:10]
-print vocab[0:10]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        <pubDate>Fri, 27 Nov 2015 00:00:00 -0500</pubDate>
-        <link>http://franciscojavierarceo.github.io/2015/11/27/Streaming-Corpus</link>
-        <guid isPermaLink="true">http://franciscojavierarceo.github.io/2015/11/27/Streaming-Corpus</guid>
+&lt;p&gt;Anyways, thanks for reading! I just wanted to take a second to review how simultaneously overhwelmingly exhausting and wonderful this year has been. Going to school and working a full-time job is a handful, but I guess old habits die hard. &lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Jul 2016 00:00:00 -0400</pubDate>
+        <link>http://franciscojavierarceo.github.io/2016/07/20/Hectic-Year</link>
+        <guid isPermaLink="true">http://franciscojavierarceo.github.io/2016/07/20/Hectic-Year</guid>
       </item>
     
       <item>
