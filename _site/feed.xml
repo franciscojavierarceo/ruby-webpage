@@ -5,9 +5,230 @@
     <description></description>
     <link>http://franciscojavierarceo.github.io/</link>
     <atom:link href="http://franciscojavierarceo.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 20 Jul 2016 21:36:32 -0400</pubDate>
-    <lastBuildDate>Wed, 20 Jul 2016 21:36:32 -0400</lastBuildDate>
+    <pubDate>Sat, 23 Jul 2016 23:26:49 -0400</pubDate>
+    <lastBuildDate>Sat, 23 Jul 2016 23:26:49 -0400</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Bayesian Deep Learning</title>
+        <description>&lt;p&gt;So I&amp;#39;ve been checking out a new Python library, &lt;a href=&quot;https://github.com/blei-lab/edward&quot;&gt;Edward&lt;/a&gt;, developed by &lt;a href=&quot;http://www.cs.columbia.edu/%7Eblei/&quot;&gt;David Blei&lt;/a&gt;&amp;#39;s ML research group at Columbia recently. &lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s been fairly interesting thusfar, but I haven&amp;#39;t dived extraordinarily deep into the documentation yet. Instead, I spent some time tinkering with one of their examples: &lt;a href=&quot;https://raw.githubusercontent.com/blei-lab/edward/master/examples/bayesian_nn.py&quot;&gt;Bayesian Neural Networks&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;What is this model? It&amp;#39;s fairly interesting. It&amp;#39;s a Neural network with a Gaussian prior distribution on the weights (with an assumed variance of 1 and unknown mean). As I&amp;#39;ve mentioned probably too many times on this site, I&amp;#39;ve studied both Bayesian ML and Deep Learning, so I was particularly excited about this so I could put the two together! Interestingly, Bayesian Deep Learning is a &lt;a href=&quot;https://arxiv.org/pdf/1604.01662v2.pdf&quot;&gt;growing area of research&lt;/a&gt; with a lot of potential. Hopefully, I&amp;#39;ll explore this area more because it&amp;#39;d neatly tie two things I really love. &lt;/p&gt;
+
+&lt;p&gt;Back to my main point in writing this: what I did with the tutorial. &lt;/p&gt;
+
+&lt;p&gt;Their example shows a neat graph of the learned posterior distribution of the means of the weights of a 2-hidden layer neural network at iteration 0 and iteration 1000, which is really cool. I thought it&amp;#39;d be cool to add two things: (1) a look at the Variational objective function and (2) a dynamic, full view of the posterior as a function of the iterations. It&amp;#39;s always interesting to see how parameters behave as ML models begin to learn the appropriate functions, so I thought this exercise would be fun (I also love the excuse to make a gif whenever I can).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/vof_bnn.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Above is a look at the variational objective function, it sucks at first (to be excpected) but seems to converge pretty quickly!&lt;/p&gt;
+
+&lt;p&gt;Now here&amp;#39;s a look at the posterior means of each learned neuron/weight. Pretty neat huh? 
+&lt;img src=&quot;/assets/images/movie_bayesian_nn.gif&quot; alt=&quot;Whoaaa a gif&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;That&amp;#39;s all for now, next I want to try this model out on MNIST and see how it performs, which I think will be a fun exercise.&lt;/p&gt;
+
+&lt;p&gt;Anyways, thanks for reading! Laslty, the code is below and on my &lt;a href=&quot;https://github.com/franciscojavierarceo/edward/blob/master/examples/bayesian_nn.py&quot;&gt;github&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h1&gt;Code&lt;/h1&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;#!/usr/bin/env python
+&amp;quot;&amp;quot;&amp;quot;
+Bayesian neural network using mean-field variational inference.
+(see, e.g., Blundell et al. (2015); Kucukelbir et al. (2016))
+Inspired by autograd&amp;#39;s Bayesian neural network example.
+
+Probability model:
+    Bayesian neural network
+    Prior: Normal
+    Likelihood: Normal with mean parameterized by fully connected NN
+Variational model
+    Likelihood: Mean-field Normal
+&amp;quot;&amp;quot;&amp;quot;
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
+import os
+import imageio
+import edward as ed
+import matplotlib.pyplot as plt
+import numpy as np
+import tensorflow as tf
+
+from edward.models import Variational, Normal
+from edward.stats import norm
+from edward.util import rbf
+
+def create_dir(art_id):
+    &amp;quot;&amp;quot;&amp;quot;
+    Creates a new directory for the article if it doesn&amp;#39;t exist
+    :param art_id: string, descriptive folder name for article
+
+    :returns out_path: abs path to new directory
+    &amp;quot;&amp;quot;&amp;quot;
+    # I suspect this is unnecessary because sys.argv will error
+    if &amp;#39; &amp;#39; in art_id:
+        art_id = art_id.replace(&amp;#39; &amp;#39;, &amp;#39;_&amp;#39;)
+
+    if not os.path.isdir(art_id):
+        os.mkdir(art_id)
+
+    return os.path.join(os.getcwd(), art_id)
+
+class BayesianNN:
+    &amp;quot;&amp;quot;&amp;quot;
+    Bayesian neural network for regressing outputs y on inputs x.
+
+    p((x,y), z) = Normal(y | NN(x; z), lik_variance) *
+                  Normal(z | 0, prior_variance),
+
+    where z are neural network weights, and with known lik_variance
+    and prior_variance.
+
+    Parameters
+    ----------
+    layer_sizes : list
+        The size of each layer, ordered from input to output.
+    nonlinearity : function, optional
+        Non-linearity after each linear transformation in the neural
+        network; aka activation function.
+    lik_variance : float, optional
+        Variance of the normal likelihood; aka noise parameter,
+        homoscedastic variance, scale parameter.
+    prior_variance : float, optional
+        Variance of the normal prior on weights; aka L2
+        regularization parameter, ridge penalty, scale parameter.
+    &amp;quot;&amp;quot;&amp;quot;
+    def __init__(self, layer_sizes, nonlinearity=tf.nn.tanh,
+        lik_variance=0.01, prior_variance=1):
+        self.layer_sizes = layer_sizes
+        self.nonlinearity = nonlinearity
+        self.lik_variance = lik_variance
+        self.prior_variance = prior_variance
+
+        self.n_layers = len(layer_sizes)
+        self.weight_dims = list(zip(layer_sizes[:-1], layer_sizes[1:]))
+        self.n_vars = sum((m+1)*n for m, n in self.weight_dims)
+
+    def unpack_weights(self, z):
+        &amp;quot;&amp;quot;&amp;quot;Unpack weight matrices and biases from a flattened vector.&amp;quot;&amp;quot;&amp;quot;
+        for m, n in self.weight_dims:
+            yield tf.reshape(z[:m*n],        [m, n]), \
+                  tf.reshape(z[m*n:(m*n+n)], [1, n])
+            z = z[(m+1)*n:]
+
+    def neural_network(self, x, zs):
+        &amp;quot;&amp;quot;&amp;quot;
+        Return a `n_samples` x `n_minibatch` matrix. Each row is
+        the output of a neural network on the input data `x` and
+        given a set of weights `z` in `zs`.
+        &amp;quot;&amp;quot;&amp;quot;
+        matrix = []
+        for z in tf.unpack(zs):
+            # Calculate neural network with weights given by `z`.
+            h = x
+            for W, b in self.unpack_weights(z):
+                # broadcasting to do (h*W) + b (e.g. 40x10 + 1x10)
+                h = self.nonlinearity(tf.matmul(h, W) + b)
+
+            matrix += [tf.squeeze(h)] # n_minibatch x 1 to n_minibatch
+
+        return tf.pack(matrix)
+
+    def log_prob(self, xs, zs):
+        &amp;quot;&amp;quot;&amp;quot;Return a vector [log p(xs, zs[1,:]), ..., log p(xs, zs[S,:])].&amp;quot;&amp;quot;&amp;quot;
+        x, y = xs[&amp;#39;x&amp;#39;], xs[&amp;#39;y&amp;#39;]
+        log_prior = -tf.reduce_sum(zs*zs, 1) / self.prior_variance
+        mus = self.neural_network(x, zs)
+        # broadcasting to do mus - y (n_samples x n_minibatch - n_minibatch)
+        log_lik = -tf.reduce_sum(tf.pow(mus - y, 2), 1) / self.lik_variance
+        return log_lik + log_prior
+
+def build_toy_dataset(N=40, noise_std=0.1):
+    ed.set_seed(0)
+    D = 1
+    x  = np.concatenate([np.linspace(0, 2, num=N/2),
+                         np.linspace(6, 8, num=N/2)])
+    y = np.cos(x) + norm.rvs(0, noise_std, size=N)
+    x = (x - 4.0) / 4.0
+    x = x.reshape((N, D))
+    return {&amp;#39;x&amp;#39;: x, &amp;#39;y&amp;#39;: y}
+
+ed.set_seed(42)
+# model = BayesianNN(layer_sizes=[1, 10, 10, 1], nonlinearity=rbf)
+model = BayesianNN(layer_sizes=[1, 10, 10, 1], nonlinearity= tf.nn.tanh)
+variational = Variational()
+variational.add(Normal(model.n_vars))
+data = build_toy_dataset()
+
+sess = ed.get_session()
+inference = ed.MFVI(model, variational, data)
+inference.initialize(n_print=1)
+loss_vof = []
+
+create_dir(&amp;#39;./tmp_plots&amp;#39;)
+
+for t in range(1000):
+    loss = inference.update()
+    loss_vof.append(loss)
+    if t % inference.n_print == 0:
+        # print(&amp;quot;iter {:d} loss {:.2f}&amp;quot;.format(t, loss))
+        # Sample functions from variational model
+        mean, std = sess.run([variational.layers[0].loc,
+                              variational.layers[0].scale])
+        rs = np.random.RandomState(0)
+        zs = rs.randn(10, variational.n_vars) * std + mean
+        zs = tf.constant(zs, dtype=tf.float32)
+        inputs = np.linspace(-8, 8, num=400, dtype=np.float32)
+        x = tf.expand_dims(tf.constant(inputs), 1)
+        mus = model.neural_network(x, zs)
+        outputs = mus.eval()
+
+        # Get data
+        x, y = data[&amp;#39;x&amp;#39;], data[&amp;#39;y&amp;#39;]
+        # Plot data and functions
+        fig = plt.figure(figsize=(8,8), facecolor=&amp;#39;white&amp;#39;)
+        ax = fig.add_subplot(111, frameon=False)
+        ax.plot(x, y, &amp;#39;bx&amp;#39;)
+        ax.plot(inputs, outputs.T)
+        ax.set_xlim([-10, 10])
+        ax.set_ylim([-2, 3])
+        # Adding leading zeros for the sort later
+
+        t = str(t)
+        if len(t)!=3:
+            t = ((3-len(t)) * &amp;#39;0&amp;#39;) + t
+
+        plt.savefig(&amp;#39;./tmp_plots/%i_p.jpeg&amp;#39; % t)
+        plt.close()
+
+# Pulling in the images that were exported 
+file_names = sorted((fn for fn in os.listdir(&amp;#39;./tmp_plots/&amp;#39;) if fn.endswith(&amp;#39;_p.jpeg&amp;#39;)))
+
+# Collecting all of the images
+images = []
+for filename in file_names:
+    images.append(imageio.imread(&amp;#39;./tmp_plots/&amp;#39;+filename))
+imageio.mimsave(&amp;#39;movie_bayesian_nn.gif&amp;#39;, images)
+
+# Removing all of the old files
+#os.system(&amp;#39;rm -rf ./tmp_plots/&amp;#39;)
+
+# Plotting the variational objective function
+plt.figure(figsize=(12,8))
+plt.plot(range(len(loss_vof)), loss_vof, c=&amp;#39;red&amp;#39;)
+plt.grid() 
+plt.title(&amp;#39;Variational Objective Function&amp;#39;)
+plt.ylabel(&amp;quot;Variational Objective Function&amp;quot;)
+plt.xlabel(&amp;quot;Iteration&amp;quot;)
+plt.savefig(&amp;#39;vof_bnn.jpeg&amp;#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        <pubDate>Sat, 23 Jul 2016 00:00:00 -0400</pubDate>
+        <link>http://franciscojavierarceo.github.io/2016/07/23/Bayesian-Deep-Learning</link>
+        <guid isPermaLink="true">http://franciscojavierarceo.github.io/2016/07/23/Bayesian-Deep-Learning</guid>
+      </item>
     
       <item>
         <title>2016 has been crazy</title>
