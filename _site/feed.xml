@@ -5,39 +5,40 @@
     <description></description>
     <link>http://franciscojavierarceo.github.io/</link>
     <atom:link href="http://franciscojavierarceo.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 23 Jul 2016 23:26:49 -0400</pubDate>
-    <lastBuildDate>Sat, 23 Jul 2016 23:26:49 -0400</lastBuildDate>
+    <pubDate>Sat, 23 Jul 2016 23:32:45 -0400</pubDate>
+    <lastBuildDate>Sat, 23 Jul 2016 23:32:45 -0400</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>Bayesian Deep Learning</title>
-        <description>&lt;p&gt;So I&amp;#39;ve been checking out a new Python library, &lt;a href=&quot;https://github.com/blei-lab/edward&quot;&gt;Edward&lt;/a&gt;, developed by &lt;a href=&quot;http://www.cs.columbia.edu/%7Eblei/&quot;&gt;David Blei&lt;/a&gt;&amp;#39;s ML research group at Columbia recently. &lt;/p&gt;
+        <description>&lt;p&gt;So I’ve been checking out a new Python library, &lt;a href=&quot;https://github.com/blei-lab/edward&quot;&gt;Edward&lt;/a&gt;, developed by &lt;a href=&quot;http://www.cs.columbia.edu/~blei/&quot;&gt;David Blei&lt;/a&gt;’s ML research group at Columbia recently. &lt;/p&gt;
 
-&lt;p&gt;It&amp;#39;s been fairly interesting thusfar, but I haven&amp;#39;t dived extraordinarily deep into the documentation yet. Instead, I spent some time tinkering with one of their examples: &lt;a href=&quot;https://raw.githubusercontent.com/blei-lab/edward/master/examples/bayesian_nn.py&quot;&gt;Bayesian Neural Networks&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;It’s been fairly interesting thusfar, but I haven’t dived extraordinarily deep into the documentation yet. Instead, I spent some time tinkering with one of their examples: &lt;a href=&quot;https://raw.githubusercontent.com/blei-lab/edward/master/examples/bayesian_nn.py&quot;&gt;Bayesian Neural Networks&lt;/a&gt;. &lt;/p&gt;
 
-&lt;p&gt;What is this model? It&amp;#39;s fairly interesting. It&amp;#39;s a Neural network with a Gaussian prior distribution on the weights (with an assumed variance of 1 and unknown mean). As I&amp;#39;ve mentioned probably too many times on this site, I&amp;#39;ve studied both Bayesian ML and Deep Learning, so I was particularly excited about this so I could put the two together! Interestingly, Bayesian Deep Learning is a &lt;a href=&quot;https://arxiv.org/pdf/1604.01662v2.pdf&quot;&gt;growing area of research&lt;/a&gt; with a lot of potential. Hopefully, I&amp;#39;ll explore this area more because it&amp;#39;d neatly tie two things I really love. &lt;/p&gt;
+&lt;p&gt;What is this model? It’s fairly interesting. It’s a Neural network with a Gaussian prior distribution on the weights (with an assumed variance of 1 and unknown mean). As I’ve mentioned probably too many times on this site, I’ve studied both Bayesian ML and Deep Learning, so I was particularly excited about this so I could put the two together! Interestingly, Bayesian Deep Learning is a &lt;a href=&quot;https://arxiv.org/pdf/1604.01662v2.pdf&quot;&gt;growing area of research&lt;/a&gt; with a lot of potential. Hopefully, I’ll explore this area more because it’d neatly tie two things I really love. &lt;/p&gt;
 
 &lt;p&gt;Back to my main point in writing this: what I did with the tutorial. &lt;/p&gt;
 
-&lt;p&gt;Their example shows a neat graph of the learned posterior distribution of the means of the weights of a 2-hidden layer neural network at iteration 0 and iteration 1000, which is really cool. I thought it&amp;#39;d be cool to add two things: (1) a look at the Variational objective function and (2) a dynamic, full view of the posterior as a function of the iterations. It&amp;#39;s always interesting to see how parameters behave as ML models begin to learn the appropriate functions, so I thought this exercise would be fun (I also love the excuse to make a gif whenever I can).&lt;/p&gt;
+&lt;p&gt;Their example shows a neat graph of the learned posterior distribution of the means of the weights of a 2-hidden layer neural network at iteration 0 and iteration 1000, which is really cool. I thought it’d be cool to add two things: (1) a look at the Variational objective function and (2) a dynamic, full view of the posterior as a function of the iterations. It’s always interesting to see how parameters behave as ML models begin to learn the appropriate functions, so I thought this exercise would be fun (I also love the excuse to make a gif whenever I can).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/vof_bnn.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/vof_bnn.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Above is a look at the variational objective function, it sucks at first (to be excpected) but seems to converge pretty quickly!&lt;/p&gt;
 
-&lt;p&gt;Now here&amp;#39;s a look at the posterior means of each learned neuron/weight. Pretty neat huh? 
-&lt;img src=&quot;/assets/images/movie_bayesian_nn.gif&quot; alt=&quot;Whoaaa a gif&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Now here’s a look at the posterior means of each learned neuron/weight. Pretty neat huh? 
+&lt;img src=&quot;/assets/images/movie_bayesian_nn.gif&quot; alt=&quot;Whoaaa a gif&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;That&amp;#39;s all for now, next I want to try this model out on MNIST and see how it performs, which I think will be a fun exercise.&lt;/p&gt;
+&lt;p&gt;That’s all for now, next I want to try this model out on MNIST and see how it performs, which I think will be a fun exercise.&lt;/p&gt;
 
 &lt;p&gt;Anyways, thanks for reading! Laslty, the code is below and on my &lt;a href=&quot;https://github.com/franciscojavierarceo/edward/blob/master/examples/bayesian_nn.py&quot;&gt;github&lt;/a&gt;!&lt;/p&gt;
 
-&lt;h1&gt;Code&lt;/h1&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;#!/usr/bin/env python
-&amp;quot;&amp;quot;&amp;quot;
+&lt;h1 id=&quot;code&quot;&gt;Code&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/usr/bin/env python
+&quot;&quot;&quot;
 Bayesian neural network using mean-field variational inference.
 (see, e.g., Blundell et al. (2015); Kucukelbir et al. (2016))
-Inspired by autograd&amp;#39;s Bayesian neural network example.
+Inspired by autograd&#39;s Bayesian neural network example.
 
 Probability model:
     Bayesian neural network
@@ -45,7 +46,7 @@ Probability model:
     Likelihood: Normal with mean parameterized by fully connected NN
 Variational model
     Likelihood: Mean-field Normal
-&amp;quot;&amp;quot;&amp;quot;
+&quot;&quot;&quot;
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -62,15 +63,15 @@ from edward.stats import norm
 from edward.util import rbf
 
 def create_dir(art_id):
-    &amp;quot;&amp;quot;&amp;quot;
-    Creates a new directory for the article if it doesn&amp;#39;t exist
+    &quot;&quot;&quot;
+    Creates a new directory for the article if it doesn&#39;t exist
     :param art_id: string, descriptive folder name for article
 
     :returns out_path: abs path to new directory
-    &amp;quot;&amp;quot;&amp;quot;
+    &quot;&quot;&quot;
     # I suspect this is unnecessary because sys.argv will error
-    if &amp;#39; &amp;#39; in art_id:
-        art_id = art_id.replace(&amp;#39; &amp;#39;, &amp;#39;_&amp;#39;)
+    if &#39; &#39; in art_id:
+        art_id = art_id.replace(&#39; &#39;, &#39;_&#39;)
 
     if not os.path.isdir(art_id):
         os.mkdir(art_id)
@@ -78,7 +79,7 @@ def create_dir(art_id):
     return os.path.join(os.getcwd(), art_id)
 
 class BayesianNN:
-    &amp;quot;&amp;quot;&amp;quot;
+    &quot;&quot;&quot;
     Bayesian neural network for regressing outputs y on inputs x.
 
     p((x,y), z) = Normal(y | NN(x; z), lik_variance) *
@@ -100,7 +101,7 @@ class BayesianNN:
     prior_variance : float, optional
         Variance of the normal prior on weights; aka L2
         regularization parameter, ridge penalty, scale parameter.
-    &amp;quot;&amp;quot;&amp;quot;
+    &quot;&quot;&quot;
     def __init__(self, layer_sizes, nonlinearity=tf.nn.tanh,
         lik_variance=0.01, prior_variance=1):
         self.layer_sizes = layer_sizes
@@ -113,18 +114,18 @@ class BayesianNN:
         self.n_vars = sum((m+1)*n for m, n in self.weight_dims)
 
     def unpack_weights(self, z):
-        &amp;quot;&amp;quot;&amp;quot;Unpack weight matrices and biases from a flattened vector.&amp;quot;&amp;quot;&amp;quot;
+        &quot;&quot;&quot;Unpack weight matrices and biases from a flattened vector.&quot;&quot;&quot;
         for m, n in self.weight_dims:
             yield tf.reshape(z[:m*n],        [m, n]), \
                   tf.reshape(z[m*n:(m*n+n)], [1, n])
             z = z[(m+1)*n:]
 
     def neural_network(self, x, zs):
-        &amp;quot;&amp;quot;&amp;quot;
+        &quot;&quot;&quot;
         Return a `n_samples` x `n_minibatch` matrix. Each row is
         the output of a neural network on the input data `x` and
         given a set of weights `z` in `zs`.
-        &amp;quot;&amp;quot;&amp;quot;
+        &quot;&quot;&quot;
         matrix = []
         for z in tf.unpack(zs):
             # Calculate neural network with weights given by `z`.
@@ -138,8 +139,8 @@ class BayesianNN:
         return tf.pack(matrix)
 
     def log_prob(self, xs, zs):
-        &amp;quot;&amp;quot;&amp;quot;Return a vector [log p(xs, zs[1,:]), ..., log p(xs, zs[S,:])].&amp;quot;&amp;quot;&amp;quot;
-        x, y = xs[&amp;#39;x&amp;#39;], xs[&amp;#39;y&amp;#39;]
+        &quot;&quot;&quot;Return a vector [log p(xs, zs[1,:]), ..., log p(xs, zs[S,:])].&quot;&quot;&quot;
+        x, y = xs[&#39;x&#39;], xs[&#39;y&#39;]
         log_prior = -tf.reduce_sum(zs*zs, 1) / self.prior_variance
         mus = self.neural_network(x, zs)
         # broadcasting to do mus - y (n_samples x n_minibatch - n_minibatch)
@@ -154,7 +155,7 @@ def build_toy_dataset(N=40, noise_std=0.1):
     y = np.cos(x) + norm.rvs(0, noise_std, size=N)
     x = (x - 4.0) / 4.0
     x = x.reshape((N, D))
-    return {&amp;#39;x&amp;#39;: x, &amp;#39;y&amp;#39;: y}
+    return {&#39;x&#39;: x, &#39;y&#39;: y}
 
 ed.set_seed(42)
 # model = BayesianNN(layer_sizes=[1, 10, 10, 1], nonlinearity=rbf)
@@ -168,13 +169,13 @@ inference = ed.MFVI(model, variational, data)
 inference.initialize(n_print=1)
 loss_vof = []
 
-create_dir(&amp;#39;./tmp_plots&amp;#39;)
+create_dir(&#39;./tmp_plots&#39;)
 
 for t in range(1000):
     loss = inference.update()
     loss_vof.append(loss)
     if t % inference.n_print == 0:
-        # print(&amp;quot;iter {:d} loss {:.2f}&amp;quot;.format(t, loss))
+        # print(&quot;iter {:d} loss {:.2f}&quot;.format(t, loss))
         # Sample functions from variational model
         mean, std = sess.run([variational.layers[0].loc,
                               variational.layers[0].scale])
@@ -187,11 +188,11 @@ for t in range(1000):
         outputs = mus.eval()
 
         # Get data
-        x, y = data[&amp;#39;x&amp;#39;], data[&amp;#39;y&amp;#39;]
+        x, y = data[&#39;x&#39;], data[&#39;y&#39;]
         # Plot data and functions
-        fig = plt.figure(figsize=(8,8), facecolor=&amp;#39;white&amp;#39;)
+        fig = plt.figure(figsize=(8,8), facecolor=&#39;white&#39;)
         ax = fig.add_subplot(111, frameon=False)
-        ax.plot(x, y, &amp;#39;bx&amp;#39;)
+        ax.plot(x, y, &#39;bx&#39;)
         ax.plot(inputs, outputs.T)
         ax.set_xlim([-10, 10])
         ax.set_ylim([-2, 3])
@@ -199,32 +200,34 @@ for t in range(1000):
 
         t = str(t)
         if len(t)!=3:
-            t = ((3-len(t)) * &amp;#39;0&amp;#39;) + t
+            t = ((3-len(t)) * &#39;0&#39;) + t
 
-        plt.savefig(&amp;#39;./tmp_plots/%i_p.jpeg&amp;#39; % t)
+        plt.savefig(&#39;./tmp_plots/%i_p.jpeg&#39; % t)
         plt.close()
 
 # Pulling in the images that were exported 
-file_names = sorted((fn for fn in os.listdir(&amp;#39;./tmp_plots/&amp;#39;) if fn.endswith(&amp;#39;_p.jpeg&amp;#39;)))
+file_names = sorted((fn for fn in os.listdir(&#39;./tmp_plots/&#39;) if fn.endswith(&#39;_p.jpeg&#39;)))
 
 # Collecting all of the images
 images = []
 for filename in file_names:
-    images.append(imageio.imread(&amp;#39;./tmp_plots/&amp;#39;+filename))
-imageio.mimsave(&amp;#39;movie_bayesian_nn.gif&amp;#39;, images)
+    images.append(imageio.imread(&#39;./tmp_plots/&#39;+filename))
+imageio.mimsave(&#39;movie_bayesian_nn.gif&#39;, images)
 
 # Removing all of the old files
-#os.system(&amp;#39;rm -rf ./tmp_plots/&amp;#39;)
+#os.system(&#39;rm -rf ./tmp_plots/&#39;)
 
 # Plotting the variational objective function
 plt.figure(figsize=(12,8))
-plt.plot(range(len(loss_vof)), loss_vof, c=&amp;#39;red&amp;#39;)
+plt.plot(range(len(loss_vof)), loss_vof, c=&#39;red&#39;)
 plt.grid() 
-plt.title(&amp;#39;Variational Objective Function&amp;#39;)
-plt.ylabel(&amp;quot;Variational Objective Function&amp;quot;)
-plt.xlabel(&amp;quot;Iteration&amp;quot;)
-plt.savefig(&amp;#39;vof_bnn.jpeg&amp;#39;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+plt.title(&#39;Variational Objective Function&#39;)
+plt.ylabel(&quot;Variational Objective Function&quot;)
+plt.xlabel(&quot;Iteration&quot;)
+plt.savefig(&#39;vof_bnn.jpeg&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+</description>
         <pubDate>Sat, 23 Jul 2016 00:00:00 -0400</pubDate>
         <link>http://franciscojavierarceo.github.io/2016/07/23/Bayesian-Deep-Learning</link>
         <guid isPermaLink="true">http://franciscojavierarceo.github.io/2016/07/23/Bayesian-Deep-Learning</guid>
@@ -232,19 +235,19 @@ plt.savefig(&amp;#39;vof_bnn.jpeg&amp;#39;)
     
       <item>
         <title>2016 has been crazy</title>
-        <description>&lt;p&gt;It&amp;#39;s been a hectic year thusfar, I spent most of my time either at work, on the train, in class, at the gym, or with my lovely girlfirend Stephany (probably the best part of my year). &lt;/p&gt;
+        <description>&lt;p&gt;It’s been a hectic year thusfar, I spent most of my time either at work, on the train, in class, at the gym, or with my lovely girlfirend Stephany (probably the best part of my year). &lt;/p&gt;
 
-&lt;p&gt;During this hectic year I got the opportunity to improve my CS chops (e.g., building my website), learn a ton more of (&lt;a href=&quot;https://github.com/franciscojavierarceo/EECS6892&quot;&gt;Bayesian&lt;/a&gt; &lt;a href=&quot;https://github.com/franciscojavierarceo/COMS4721&quot;&gt;Machine Learning&lt;/a&gt;, and dive into &lt;a href=&quot;https://github.com/franciscojavierarceo/ECBME6040&quot;&gt;Deep Learning&lt;/a&gt;. At the gym I was able to also increase my deadlift from a pathetic 185 to 405 (still not great)! And increase my bench from 155 to 215!! So to say the least it&amp;#39;s been a pretty awesome year, for both nerdy and non-nerdy reasons.&lt;/p&gt;
+&lt;p&gt;During this chaotic year I got the opportunity to improve my computer science (CS) chops (e.g., building my website), learn a ton more of (&lt;a href=&quot;https://github.com/franciscojavierarceo/EECS6892&quot;&gt;Bayesian&lt;/a&gt; &lt;a href=&quot;https://github.com/franciscojavierarceo/COMS4721&quot;&gt;Machine Learning&lt;/a&gt;, and dive into &lt;a href=&quot;https://github.com/franciscojavierarceo/ECBME6040&quot;&gt;Deep Learning&lt;/a&gt;. At the gym I was able to also increase my deadlift from a pathetic 185 to 405 (still not great)! And increase my bench from 155 to 215!! So to say the least it’s been a pretty awesome year, for both nerdy and non-nerdy reasons.&lt;/p&gt;
 
-&lt;p&gt;This summer I decided to take a Mathematical Analysis course using the classic baby Rudin textbook and boy has that been an experience. It&amp;#39;s been my first pure mathematics course in nearly 9 years, so to say that it&amp;#39;s been a challenge is an understatement but I&amp;#39;ve &lt;em&gt;love&lt;/em&gt; the material. It&amp;#39;s absolutely fascinating, regardless of how much work I have to put in. &lt;/p&gt;
+&lt;p&gt;This summer I decided to take a Mathematical Analysis course using the classic Rudin textbook and boy has that been an experience. It’s been my first pure mathematics course in nearly 9 years, so to say that it’s been a challenge is an understatement but I &lt;em&gt;love&lt;/em&gt; the material. It’s absolutely fascinating to me, regardless of how much work I have to put in to actually understand it. &lt;/p&gt;
 
-&lt;p&gt;Let me just say, my girlfriend is amazing. During those late nights of studying and homework, she was sweet enough to feed me, keep me company, and keep me sane. Feel incredibly grateful to have such a caring, beautiful, and loving woman in my life. :) &lt;/p&gt;
+&lt;p&gt;Also, let me just say, Stephany is amazing. During those late nights of studying and homework, she was sweet enough to feed me, keep me company, and keep me sane. I am so grateful to have such a caring, beautiful, and loving woman in my life. :) &lt;/p&gt;
 
-&lt;p&gt;Professionally, my work/career has also been going well, I love my job and my team is really incredible. My boss is the best, he&amp;#39;s been encouraging me to learn a ton of new stuff and I feel more and more like a real computer scientist (but I have a long way to go before I actually call myself that). The learning curve has been steep, but I feel like I&amp;#39;m making progress, which is really rewarding. I love computers and I love CS, so I really want to explore it more...maybe I&amp;#39;ll pursue a third masters in CS or EECS (Electrical Engineering) and finally get into hardware.&lt;/p&gt;
+&lt;p&gt;Professionally, my work/career has also been going well, I love my job and my team is really incredible. My boss is the best, he’s been encouraging me to learn a ton of new stuff and I feel more and more like a real computer scientist (but I have a long way to go before I actually call myself that). The learning curve has also been steep, but I feel like I’m making progress, which is really rewarding. I love computers and I love CS, so I really want to explore it more…maybe I’ll pursue a third masters in CS or EECS (Electrical Engineering and CS) and finally get into hardware.&lt;/p&gt;
 
-&lt;p&gt;That might be something I explore in the future. I love school and learning about new things and I love getting a degree out of the whole thing, so maybe I will pursue a third degree. I guess we&amp;#39;ll see what 2017 holds.&lt;/p&gt;
+&lt;p&gt;That might be something I explore in the future. I love school, learning about new things, and getting a degree out of the whole thing, so maybe I will pursue a third masters, I guess we’ll see what 2017 holds.&lt;/p&gt;
 
-&lt;p&gt;Anyways, thanks for reading! I just wanted to take a second to review how simultaneously overhwelmingly exhausting and wonderful this year has been. Going to school and working a full-time job is a handful, but I guess old habits die hard. &lt;/p&gt;
+&lt;p&gt;Anyways, thanks for reading! I just wanted to take a second to review how simultaneously exhausting and wonderful this year has been. Going to school and working a full-time job is a handful, but I guess old habits die hard. &lt;/p&gt;
 </description>
         <pubDate>Wed, 20 Jul 2016 00:00:00 -0400</pubDate>
         <link>http://franciscojavierarceo.github.io/2016/07/20/Hectic-Year</link>
@@ -253,37 +256,36 @@ plt.savefig(&amp;#39;vof_bnn.jpeg&amp;#39;)
     
       <item>
         <title>My first post</title>
-        <description>&lt;h1&gt;Jekyll pages, Python, and learning to work with GitHub&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;jekyll-pages-python-and-learning-to-work-with-github&quot;&gt;Jekyll pages, Python, and learning to work with GitHub&lt;/h1&gt;
 
-&lt;p&gt;I recently began working with GitHub and learning the ways of the codes. &lt;em&gt;It&amp;#39;s amazing.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I recently began working with GitHub and learning the ways of the codes. &lt;em&gt;It’s amazing.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;GitHub is a great way to version your code, especially when working with groups, to ensure 
 recovery and quality. GitHub Markdown (formatted) pages are really great because of the ease and intuitive behavior.&lt;/p&gt;
 
-&lt;h2&gt;Things I hope to accomplish in this blog:&lt;/h2&gt;
+&lt;h2 id=&quot;things-i-hope-to-accomplish-in-this-blog&quot;&gt;Things I hope to accomplish in this blog:&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Write about Machine Learning topics that I find interesting&lt;/li&gt;
-&lt;li&gt;Provide an &amp;quot;economist&amp;#39;s&amp;quot; introduction to hacking/data science&lt;/li&gt;
-&lt;li&gt;Provide more clear insight on what some of the fancy machine learning algorithms do.&lt;/li&gt;
-&lt;li&gt;Provide an overview of some simple NLP methods&lt;/li&gt;
-&lt;li&gt;Give my personal opinions about various tools/pieces of software&lt;/li&gt;
-&lt;li&gt;Create cool visualizations of data
-
-&lt;ul&gt;
-&lt;li&gt;Maybe I&amp;#39;ll even offer a tutorial&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+  &lt;li&gt;Write about Machine Learning topics that I find interesting&lt;/li&gt;
+  &lt;li&gt;Provide an “economist’s” introduction to hacking/data science&lt;/li&gt;
+  &lt;li&gt;Provide more clear insight on what some of the fancy machine learning algorithms do.&lt;/li&gt;
+  &lt;li&gt;Provide an overview of some simple NLP methods&lt;/li&gt;
+  &lt;li&gt;Give my personal opinions about various tools/pieces of software&lt;/li&gt;
+  &lt;li&gt;Create cool visualizations of data
+    &lt;ul&gt;
+      &lt;li&gt;Maybe I’ll even offer a tutorial&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr&gt;
-
-&lt;h2&gt;Code&lt;/h2&gt;
-
-&lt;p&gt;One of the many great things that Jekyll does is formatting code for you. Below is some simple code
+&lt;hr /&gt;
+&lt;p&gt;## Code
+One of the many great things that Jekyll does is formatting code for you. Below is some simple code
 that takes in a column of text (from some arbitrary .csv file) and outputs a sparse matrix
 of unigrams/bag-of-words stored as binary variables (also called one-hot-encoding)
 that you can use for a simple regression (which is what this code does).&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;import scipy
+
+&lt;pre&gt;&lt;code&gt;import scipy
 import os, sys
 import numpy as np
 import pandas as pd
@@ -293,40 +295,40 @@ from sklearn.pipeline import Pipeline
 from sklearn.grid_search import GridSearchCV
 from sklearn.feature_extraction.text import CountVectorizer
 def roc_plot(actual,pred,ttl):
-    fpr, tpr, thresholds = roc_curve(actual, pred)
-    roc_auc = auc(fpr, tpr)
-    print(&amp;quot;The Area Under the ROC Curve : %f&amp;quot; % roc_auc)
+	fpr, tpr, thresholds = roc_curve(actual, pred)
+	roc_auc = auc(fpr, tpr)
+    print(&quot;The Area Under the ROC Curve : %f&quot; % roc_auc)
     # Plot ROC curve
-    plt.clf()
-    plt.plot(fpr, tpr, color=&amp;#39;red&amp;#39;,label=&amp;#39;ROC curve (area = %0.2f)&amp;#39; % roc_auc)
-    plt.plot([0, 1], [0, 1], &amp;#39;k&amp;#39;)
+	plt.clf()
+    plt.plot(fpr, tpr, color=&#39;red&#39;,label=&#39;ROC curve (area = %0.2f)&#39; % roc_auc)
+    plt.plot([0, 1], [0, 1], &#39;k&#39;)
     plt.xlim([0.0, 1.0])
     plt.ylim([0.0, 1.0])
-    plt.grid()
-    plt.xlabel(&amp;#39;False Positive Rate&amp;#39;)
-    plt.ylabel(&amp;#39;True Positive Rate&amp;#39;)
-    plt.title(&amp;#39;ROC Curve&amp;#39;+&amp;#39;\n&amp;#39;+ttl)
-    plt.legend(loc=&amp;quot;lower right&amp;quot;)
+	plt.grid()
+	plt.xlabel(&#39;False Positive Rate&#39;)
+	plt.ylabel(&#39;True Positive Rate&#39;)
+    plt.title(&#39;ROC Curve&#39;+&#39;\n&#39;+ttl)
+    plt.legend(loc=&quot;lower right&quot;)
     plt.show()
 
 def Build_STDM(docs, **kwargs):
-    &amp;#39;&amp;#39;&amp;#39; Build Sparse Term Document Matrix &amp;#39;&amp;#39;&amp;#39;
-    vectorizer = CountVectorizer(**kwargs)
-    sparsematrix= vectorizer.fit_transform(docs)
+	&#39;&#39;&#39; Build Sparse Term Document Matrix &#39;&#39;&#39;
+	vectorizer = CountVectorizer(**kwargs)
+	sparsematrix= vectorizer.fit_transform(docs)
     vocab = vectorizer.vocabulary_.keys()
     return sparsematrix, vocab
 
-df1 = pd.read_csv(&amp;#39;myregressiondata.csv&amp;#39;,sep=&amp;#39;,&amp;#39;)
-varchar = df1[&amp;#39;MyTextField&amp;#39;]
+df1 = pd.read_csv(&#39;myregressiondata.csv&#39;,sep=&#39;,&#39;)
+varchar = df1[&#39;MyTextField&#39;]
 xs = xs[:,1:10]
 y = np.hstack((np.ones(100/2),np.zeros(100/2))).reshape((100,1))
 betas = scipy.sparse.linalg.inv(xs.T.dot(xs)).dot(xs.T).dot(y)
 bdf= pd.DataFrame()
-bdf[&amp;#39;Words&amp;#39;] = vocab[1:10]
-bdf[&amp;#39;betas&amp;#39;] = betas
+bdf[&#39;Words&#39;] = vocab[1:10]
+bdf[&#39;betas&#39;] = betas
 
 print bdf
-logistic = linear_model.LogisticRegression(penalty=&amp;#39;l2&amp;#39;,tol=0.0001,
+logistic = linear_model.LogisticRegression(penalty=&#39;l2&#39;,tol=0.0001,
                                        fit_intercept=True,intercept_scaling=1)
 MyModel = logistic.fit(xs,y)
 betas = MyModel.coef_.ravel()
@@ -337,7 +339,9 @@ ys = logistic.predict_proba(xs)[:,0]
 xs, vocab = Build_STDM(varchar)
 print xs[:,1:10]
 print vocab[0:10]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;
+
+</description>
         <pubDate>Thu, 12 Nov 2015 00:00:00 -0500</pubDate>
         <link>http://franciscojavierarceo.github.io/2015/11/12/First-Post</link>
         <guid isPermaLink="true">http://franciscojavierarceo.github.io/2015/11/12/First-Post</guid>
