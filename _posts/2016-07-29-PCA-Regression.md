@@ -8,7 +8,7 @@ So one thing I've always found myself puzzled by is why someone would use PCA as
 
 I understand the argument about stabalizing the variance of your input space, but with sufficient data and a good regularization strategy, you can solve those problems directly. 
 
-So I decided to make a Jupyter Notebook highlighting why it's a bad choice. The intuition is identical to what I said above, but with a little more mathematical rigor and some simulations to provide some additional validation. 
+So I decided to make a [Jupyter Notebook](https://github.com/franciscojavierarceo/Python/blob/master/SVD%20and%20Regression.ipynb) highlighting why it's a bad choice. The intuition is identical to what I said above, but with a little more mathematical rigor and some simulations to provide some additional validation. 
 
 The neat idea I had was to visualize how the error of the PCA approximation and the linear regression error behave as a function of (1) the true error, (2) the rank of the approximation in PCA, (3) the true rank of the original matrix, and (4) the correlation structure of the features/design matrix. This simulation samples from a multivariate normal and assumes a normally distributed error term (it may or may not be interesting to see how this behaves for discrete distrbutions--though I expect it'd be similar).
 
