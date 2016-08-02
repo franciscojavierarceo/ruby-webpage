@@ -6,7 +6,7 @@ comments: true
 
 Deep Learning is awesome, I'm a huge fan. I took a class in the Spring of 2016 just on Deep Learning and got to dive into the really awesome work people are doing in computer vision, NLP, and data mining.
 
-I've recently been trying to test DL on more general problems and have found that DL algorithms (e.g., MLPs) don't necessarily do better than other algorithms all the time, which is not shocking. In fact, I've heard passively in class that a proof exists showing that for any given algorithm, you can always construct a daaset for which a given algorithm will fail. In the DL literature we call data like this [adversarial examples](https://arxiv.org/pdf/1412.6572.pdf). 
+I've recently been trying to test DL on more general problems and have found that DL algorithms (e.g., MLPs) don't necessarily do better than other algorithms all the time, which is not shocking. In fact, I've heard passively in class that a proof exists showing that for any given algorithm, you can always construct a dataset for which a given algorithm will fail. In the DL literature we call data like this [adversarial examples](https://arxiv.org/pdf/1412.6572.pdf). 
 
 So, one thing that's great about decision trees is that they can learn very jagged function, (e.g., 2-dimensional step-functions). So I simulated some data with a fairly silly output function that looks like this:
 
