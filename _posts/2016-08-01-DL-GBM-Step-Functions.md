@@ -4,7 +4,7 @@ title: 'GBMs, Step Functions, and Deep Learning'
 comments: true
 ---
 
-Deep Learning is awesome, I'm a huge fan. I took a class in the Spring of 2016 just on Deep Learning and got to dive into the really awesome work people are doing in computer vision, NLP, and data mining.
+Deep Learning is awesome, I'm a huge fan. I took a class in the Spring of 2016 just on [Deep Learning](https://github.com/franciscojavierarceo/ECBME6040) and got to dive into the really awesome work people are doing in computer vision, NLP, and data mining.
 
 I've recently been trying to test DL on more general problems and have found that DL algorithms (e.g., MLPs) don't necessarily do better than other algorithms all the time, which is not shocking. In fact, I've heard passively in class that a proof exists showing that for any given algorithm, you can always construct a dataset for which a given algorithm will fail. In the DL literature we call data like this [adversarial examples](https://arxiv.org/pdf/1412.6572.pdf). 
 
