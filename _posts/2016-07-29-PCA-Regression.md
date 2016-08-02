@@ -25,7 +25,7 @@ We see that when we have large error the approximation is less impactful, but as
 
 For the first simulation I generated the covariance matrix from a uniform distribution but this implies the features are uncorrelated, so I thought I'd experiment with a correlated covariance matrix. Here we see that the the ratio of the two models now produces a varying shape on the z axis, which makes sense since different rank approximations will produce different shapes for varying true ranks, but ultimately the conclusion remains the same, using PCA/SVD as a pipeline to a regression model leaves to a significant degridation in model performance.
 
-Obviously this particular was pathological and we *defined* the outcome to be exactly our reconstruction error, we can obviously createan example that loses no performance in model degredation but it's very rare that we will do better from PCA/SVD and if we do, it's only likely to be due to sampling error and is unlikely to hold repeatedly. 
+Obviously this particular example was pathological and we *defined* the outcome to be exactly our reconstruction error, we can obviously create an example that loses no performance in model degredation but it's very rare that we will do better from PCA/SVD and if we do, it's only likely to be due to sampling error and is unlikely to hold repeatedly. 
 
-Again, PCA is awesome for a ton of other things, but it's just inappropriate to use as a pipeline for others. Use the features themselves, you can always do better.
+Again, PCA/SVD is awesome for a ton of other things, but it's just inappropriate to use as a pipeline for others. Use the features themselves, you can always do better.
 
