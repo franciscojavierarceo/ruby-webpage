@@ -28,9 +28,9 @@ Here we find that the specification for this NN wasn't able to learn this thresh
 
 Lastly, I thought I'd juxstapose the two residual plots (plots of the errors) as function of the two features because it further emphasizes the point the the MLP is learning an overly smooth of a function.
 
-![Residuals from a GBM](/assets/images/stepfunction_gbm_res.png =20x20)
-![Residuals from a NN](/assets/images/stepfunction_nns_res.png =20x20)
+![Residuals from a GBM](/assets/images/stepfunction_gbm_res.png) 
 
+![Residuals from an MLP](/assets/images/stepfunction_nns_res.png)
 
 Neural Networks and Deep Learning are awesome and have a huge amount of potential in the future and have had a ton of success in the present, I think it'd be interesting to see what modifications to neural networks are necessary to make learning step functions of this nature easier for them to learn.
 
