@@ -5,9 +5,88 @@
     <description></description>
     <link>http://franciscojavierarceo.github.io/</link>
     <atom:link href="http://franciscojavierarceo.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 23 Jul 2016 23:35:01 -0400</pubDate>
-    <lastBuildDate>Sat, 23 Jul 2016 23:35:01 -0400</lastBuildDate>
+    <pubDate>Wed, 03 Aug 2016 20:55:04 -0400</pubDate>
+    <lastBuildDate>Wed, 03 Aug 2016 20:55:04 -0400</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>GBMs, Step Functions, and Deep Learning</title>
+        <description>&lt;p&gt;Deep Learning is awesome, I’m a huge fan. I took a class in the Spring of 2016 just on &lt;a href=&quot;https://github.com/franciscojavierarceo/ECBME6040&quot;&gt;Deep Learning&lt;/a&gt; and got to dive into the really awesome work people are doing in computer vision, NLP, and data mining.&lt;/p&gt;
+
+&lt;p&gt;I’ve recently been trying to test DL on more general problems and have found that DL algorithms (e.g., MLPs) don’t necessarily do better than other algorithms all the time, which is not shocking. In fact, I’ve heard passively in class that a proof exists showing that for any given algorithm, you can always construct a dataset it will fail to learn. In the DL literature we call data like this &lt;a href=&quot;https://arxiv.org/pdf/1412.6572.pdf&quot;&gt;adversarial examples&lt;/a&gt;. So I started to look a little more into this problem and I thought it would be fun to make a quick &lt;a href=&quot;https://github.com/franciscojavierarceo/Python/blob/master/Step%20Functions.ipynb&quot;&gt;simulation&lt;/a&gt; and blog post about my findings.  &lt;/p&gt;
+
+&lt;p&gt;So, one thing that’s great about decision trees is that they can learn very jagged functions, (e.g., 2-dimensional step-functions). So I simulated some data with a fairly silly output function that looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/stepfunction_true.png&quot; alt=&quot;A look at the true function&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here at the critical points of the input, the output simply shifts by a constant value. This is a pretty ugly function because it almost doesn’t seem continuous but it is.&lt;/p&gt;
+
+&lt;p&gt;Now we can estimate this function using Sklearn’s &lt;a href=&quot;http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html&quot;&gt;Gradient Boosting Machine&lt;/a&gt; in Python prettty trivially, then we can look at what the model thinks the test set should be given the input data.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/stepfunction_gbm.png&quot; alt=&quot;Gradient Boosting Machine&#39;s Estimation of the Function&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We see that the GBM does a great job! In fact, we can calculate the RMSE here and find that it’s almost 0. How does a Neural Network do? I used an MLP with 10 hidden layers with 200 neurons/units in each layer and ReLU activation units. Here’s what the NN learned:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/stepfunction_nns.png&quot; alt=&quot;Nueral Network&#39;s Estimation of the Function&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Interesting right? The NN learns a smooth function and seems to struggle with the boundary points of the threshold function, I tried experimenting with a variety of different parameters but most provided a result similar to this one. &lt;/p&gt;
+
+&lt;p&gt;Here we find that the specification for this NN wasn’t able to learn this threshold function but we were able to learn it trivially using  GBM with respect to computation time of both algorithms. This most certaintly has to do with the activation functions and the fact that NN tries to learn a smooth decision boundary near the critical points.&lt;/p&gt;
+
+&lt;p&gt;Lastly, I thought I’d juxtapose the two residual plots (plots of the errors) as function of the two features because it further emphasizes the point the the MLP is learning an overly smooth of a function.&lt;/p&gt;
+
+&lt;center&gt; &lt;img src=&quot;/assets/images/stepfunction_res.png&quot; width=&quot;1400&quot; /&gt; &lt;/center&gt;
+
+&lt;p&gt;Neural Networks and Deep Learning are awesome and have a huge amount of potential in the future and have had a ton of success in the present, I think it’d be interesting to see what modifications to neural networks are necessary to make learning step functions of this nature easier for them to learn.&lt;/p&gt;
+
+&lt;p&gt;Anyways, thanks for reading!
+-Francisco&lt;/p&gt;
+</description>
+        <pubDate>Mon, 01 Aug 2016 00:00:00 -0400</pubDate>
+        <link>http://franciscojavierarceo.github.io/2016/08/01/DL-GBM-Step-Functions</link>
+        <guid isPermaLink="true">http://franciscojavierarceo.github.io/2016/08/01/DL-GBM-Step-Functions</guid>
+      </item>
+    
+      <item>
+        <title>PCA and Regression</title>
+        <description>&lt;p&gt;So one thing I’ve always found myself puzzled by is why someone would use PCA as a first-stage model and feeding the scores into a second stage model (e.g., linear regression). Doing this (potentially) loses a lot information, so I don’t see why people think it makes sense. &lt;/p&gt;
+
+&lt;p&gt;I understand the argument about stabalizing the variance of your input space, but with sufficient data and a good regularization strategy, you can solve those problems directly. &lt;/p&gt;
+
+&lt;p&gt;So I decided to make a &lt;a href=&quot;https://github.com/franciscojavierarceo/Python/blob/master/SVD%20and%20Regression.ipynb&quot;&gt;Jupyter Notebook&lt;/a&gt; highlighting why it’s a bad choice. The intuition is identical to what I said above, but with a little more mathematical rigor and some simulations to provide some additional validation. &lt;/p&gt;
+
+&lt;p&gt;The neat idea I had was to visualize how the error of the PCA approximation and the linear regression error behave as a function of (1) the true error, (2) the rank of the approximation in PCA, (3) the true rank of the original matrix, and (4) the correlation structure of the features/design matrix. This simulation samples from a multivariate normal and assumes a normally distributed error term (it may or may not be interesting to see how this behaves for discrete distrbutions–though I expect it’d be similar).&lt;/p&gt;
+
+&lt;p&gt;So here’s what happened in the first simulation I specificed an uncorrelated covariance matrix (features are not correlated) and I chose a matrix rank from 10 - 31 and an approximation of 1-K components with an error iterated from 1 to 3. Below is the gif as with the error as the time dimension.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/3dplot_gif.GIF&quot; alt=&quot;Whoaaa a 3d gif with a gradient&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pretty neat visualization, right? The z axis shows the ratio of two &lt;a href=&quot;https://en.wikipedia.org/wiki/Root-mean-square_deviation&quot;&gt;RMSEs&lt;/a&gt; one when using all of the features for the linear regression and the second when using the SVD/PCA scores as a feed into a second stage model.&lt;/p&gt;
+
+&lt;p&gt;We see that when we have large error the approximation is less impactful, but as we decrease the amount of noise in the system the performance the low-rank approximation causes us to do much worse, which is intuitive because as the noise decreases in the system the features are proportionally more important, so taking an approximation of them and attributing the error to your outcome becomes more impactful, so our ability to learn the function reduces.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/3dplotcorr_gif.GIF&quot; alt=&quot;Even more gif, yay&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For the first simulation I generated the covariance matrix from a uniform distribution but this implies the features are uncorrelated, so I thought I’d experiment with a correlated covariance matrix. Here we see that the the ratio of the two models now produces a varying shape on the z axis, which makes sense since different rank approximations will produce different shapes for varying true ranks, but ultimately the conclusion remains the same, using PCA/SVD as a pipeline to a regression model leaves to a significant degridation in model performance.&lt;/p&gt;
+
+&lt;p&gt;Obviously this particular example was pathological and we &lt;em&gt;defined&lt;/em&gt; the outcome to be exactly our reconstruction error, we can obviously create an example that loses no performance in model degredation but it’s very rare that we will do better from PCA/SVD and if we do, it’s only likely to be due to sampling error and is unlikely to hold repeatedly. &lt;/p&gt;
+
+&lt;p&gt;Again, PCA/SVD is awesome for a ton of other things, but it’s just inappropriate to use as a pipeline for others. Use the features themselves, you can always do better.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 29 Jul 2016 00:00:00 -0400</pubDate>
+        <link>http://franciscojavierarceo.github.io/2016/07/29/PCA-Regression</link>
+        <guid isPermaLink="true">http://franciscojavierarceo.github.io/2016/07/29/PCA-Regression</guid>
+      </item>
+    
+      <item>
+        <title>Bayesian Deep Learning: Mnist</title>
+        <description>
+</description>
+        <pubDate>Tue, 26 Jul 2016 00:00:00 -0400</pubDate>
+        <link>http://franciscojavierarceo.github.io/2016/07/26/Bayesian-Deep-Learning-MNIST</link>
+        <guid isPermaLink="true">http://franciscojavierarceo.github.io/2016/07/26/Bayesian-Deep-Learning-MNIST</guid>
+      </item>
     
       <item>
         <title>Bayesian Deep Learning</title>
@@ -19,214 +98,18 @@
 
 &lt;p&gt;Back to my main point in writing this: what I did with the tutorial. &lt;/p&gt;
 
-&lt;p&gt;Their example shows a neat graph of the learned posterior distribution of the means of the weights of a 2-hidden layer neural network at iteration 0 and iteration 1000, which is really cool. I thought it’d be cool to add two things: (1) a look at the Variational objective function and (2) a dynamic, full view of the posterior as a function of the iterations. It’s always interesting to see how parameters behave as ML models begin to learn the appropriate functions, so I thought this exercise would be fun (I also love the excuse to make a gif whenever I can).&lt;/p&gt;
+&lt;p&gt;Their example shows a neat graph of the learned posterior predictive distribution of the of a 2-hidden layer neural network at iteration 0 and iteration 1000, which is really cool. I thought it’d be cool to add two things: (1) a look at the Variational objective function and (2) a dynamic, full view of the posterior as a function of the iterations. It’s always interesting to see how parameters behave as ML models begin to learn the appropriate functions, so I thought this exercise would be fun (I also love the excuse to make a gif whenever I can).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/vof_bnn.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Above is a look at the variational objective function, it sucks at first (to be excpected) but seems to converge pretty quickly!&lt;/p&gt;
 
-&lt;p&gt;Now here’s a look at the posterior means of each learned neuron/weight. Pretty neat huh? 
+&lt;p&gt;Now here’s a look at the posterior predictive learned during training. Pretty neat huh? 
 &lt;img src=&quot;/assets/images/movie_bayesian_nn.gif&quot; alt=&quot;Whoaaa a gif&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;That’s all for now, next I want to try this model out on MNIST and see how it performs, which I think will be a fun exercise.&lt;/p&gt;
 
-&lt;p&gt;Anyways, thanks for reading! Laslty, the code is below and on my &lt;a href=&quot;https://github.com/franciscojavierarceo/edward/blob/master/examples/bayesian_nn.py&quot;&gt;github&lt;/a&gt;!&lt;/p&gt;
-
-&lt;h1 id=&quot;code&quot;&gt;Code&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/usr/bin/env python
-&quot;&quot;&quot;
-Bayesian neural network using mean-field variational inference.
-(see, e.g., Blundell et al. (2015); Kucukelbir et al. (2016))
-Inspired by autograd&#39;s Bayesian neural network example.
-
-Probability model:
-    Bayesian neural network
-    Prior: Normal
-    Likelihood: Normal with mean parameterized by fully connected NN
-Variational model
-    Likelihood: Mean-field Normal
-&quot;&quot;&quot;
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-
-import os
-import imageio
-import edward as ed
-import matplotlib.pyplot as plt
-import numpy as np
-import tensorflow as tf
-
-from edward.models import Variational, Normal
-from edward.stats import norm
-from edward.util import rbf
-
-def create_dir(art_id):
-    &quot;&quot;&quot;
-    Creates a new directory for the article if it doesn&#39;t exist
-    :param art_id: string, descriptive folder name for article
-
-    :returns out_path: abs path to new directory
-    &quot;&quot;&quot;
-    # I suspect this is unnecessary because sys.argv will error
-    if &#39; &#39; in art_id:
-        art_id = art_id.replace(&#39; &#39;, &#39;_&#39;)
-
-    if not os.path.isdir(art_id):
-        os.mkdir(art_id)
-
-    return os.path.join(os.getcwd(), art_id)
-
-class BayesianNN:
-    &quot;&quot;&quot;
-    Bayesian neural network for regressing outputs y on inputs x.
-
-    p((x,y), z) = Normal(y | NN(x; z), lik_variance) *
-                  Normal(z | 0, prior_variance),
-
-    where z are neural network weights, and with known lik_variance
-    and prior_variance.
-
-    Parameters
-    ----------
-    layer_sizes : list
-        The size of each layer, ordered from input to output.
-    nonlinearity : function, optional
-        Non-linearity after each linear transformation in the neural
-        network; aka activation function.
-    lik_variance : float, optional
-        Variance of the normal likelihood; aka noise parameter,
-        homoscedastic variance, scale parameter.
-    prior_variance : float, optional
-        Variance of the normal prior on weights; aka L2
-        regularization parameter, ridge penalty, scale parameter.
-    &quot;&quot;&quot;
-    def __init__(self, layer_sizes, nonlinearity=tf.nn.tanh,
-        lik_variance=0.01, prior_variance=1):
-        self.layer_sizes = layer_sizes
-        self.nonlinearity = nonlinearity
-        self.lik_variance = lik_variance
-        self.prior_variance = prior_variance
-
-        self.n_layers = len(layer_sizes)
-        self.weight_dims = list(zip(layer_sizes[:-1], layer_sizes[1:]))
-        self.n_vars = sum((m+1)*n for m, n in self.weight_dims)
-
-    def unpack_weights(self, z):
-        &quot;&quot;&quot;Unpack weight matrices and biases from a flattened vector.&quot;&quot;&quot;
-        for m, n in self.weight_dims:
-            yield tf.reshape(z[:m*n],        [m, n]), \
-                  tf.reshape(z[m*n:(m*n+n)], [1, n])
-            z = z[(m+1)*n:]
-
-    def neural_network(self, x, zs):
-        &quot;&quot;&quot;
-        Return a `n_samples` x `n_minibatch` matrix. Each row is
-        the output of a neural network on the input data `x` and
-        given a set of weights `z` in `zs`.
-        &quot;&quot;&quot;
-        matrix = []
-        for z in tf.unpack(zs):
-            # Calculate neural network with weights given by `z`.
-            h = x
-            for W, b in self.unpack_weights(z):
-                # broadcasting to do (h*W) + b (e.g. 40x10 + 1x10)
-                h = self.nonlinearity(tf.matmul(h, W) + b)
-
-            matrix += [tf.squeeze(h)] # n_minibatch x 1 to n_minibatch
-
-        return tf.pack(matrix)
-
-    def log_prob(self, xs, zs):
-        &quot;&quot;&quot;Return a vector [log p(xs, zs[1,:]), ..., log p(xs, zs[S,:])].&quot;&quot;&quot;
-        x, y = xs[&#39;x&#39;], xs[&#39;y&#39;]
-        log_prior = -tf.reduce_sum(zs*zs, 1) / self.prior_variance
-        mus = self.neural_network(x, zs)
-        # broadcasting to do mus - y (n_samples x n_minibatch - n_minibatch)
-        log_lik = -tf.reduce_sum(tf.pow(mus - y, 2), 1) / self.lik_variance
-        return log_lik + log_prior
-
-def build_toy_dataset(N=40, noise_std=0.1):
-    ed.set_seed(0)
-    D = 1
-    x  = np.concatenate([np.linspace(0, 2, num=N/2),
-                         np.linspace(6, 8, num=N/2)])
-    y = np.cos(x) + norm.rvs(0, noise_std, size=N)
-    x = (x - 4.0) / 4.0
-    x = x.reshape((N, D))
-    return {&#39;x&#39;: x, &#39;y&#39;: y}
-
-ed.set_seed(42)
-# model = BayesianNN(layer_sizes=[1, 10, 10, 1], nonlinearity=rbf)
-model = BayesianNN(layer_sizes=[1, 10, 10, 1], nonlinearity= tf.nn.tanh)
-variational = Variational()
-variational.add(Normal(model.n_vars))
-data = build_toy_dataset()
-
-sess = ed.get_session()
-inference = ed.MFVI(model, variational, data)
-inference.initialize(n_print=1)
-loss_vof = []
-
-create_dir(&#39;./tmp_plots&#39;)
-
-for t in range(1000):
-    loss = inference.update()
-    loss_vof.append(loss)
-    if t % inference.n_print == 0:
-        # print(&quot;iter {:d} loss {:.2f}&quot;.format(t, loss))
-        # Sample functions from variational model
-        mean, std = sess.run([variational.layers[0].loc,
-                              variational.layers[0].scale])
-        rs = np.random.RandomState(0)
-        zs = rs.randn(10, variational.n_vars) * std + mean
-        zs = tf.constant(zs, dtype=tf.float32)
-        inputs = np.linspace(-8, 8, num=400, dtype=np.float32)
-        x = tf.expand_dims(tf.constant(inputs), 1)
-        mus = model.neural_network(x, zs)
-        outputs = mus.eval()
-
-        # Get data
-        x, y = data[&#39;x&#39;], data[&#39;y&#39;]
-        # Plot data and functions
-        fig = plt.figure(figsize=(8,8), facecolor=&#39;white&#39;)
-        ax = fig.add_subplot(111, frameon=False)
-        ax.plot(x, y, &#39;bx&#39;)
-        ax.plot(inputs, outputs.T)
-        ax.set_xlim([-10, 10])
-        ax.set_ylim([-2, 3])
-        # Adding leading zeros for the sort later
-
-        t = str(t)
-        if len(t)!=3:
-            t = ((3-len(t)) * &#39;0&#39;) + t
-
-        plt.savefig(&#39;./tmp_plots/%i_p.jpeg&#39; % t)
-        plt.close()
-
-# Pulling in the images that were exported 
-file_names = sorted((fn for fn in os.listdir(&#39;./tmp_plots/&#39;) if fn.endswith(&#39;_p.jpeg&#39;)))
-
-# Collecting all of the images
-images = []
-for filename in file_names:
-    images.append(imageio.imread(&#39;./tmp_plots/&#39;+filename))
-imageio.mimsave(&#39;movie_bayesian_nn.gif&#39;, images)
-
-# Removing all of the old files
-#os.system(&#39;rm -rf ./tmp_plots/&#39;)
-
-# Plotting the variational objective function
-plt.figure(figsize=(12,8))
-plt.plot(range(len(loss_vof)), loss_vof, c=&#39;red&#39;)
-plt.grid() 
-plt.title(&#39;Variational Objective Function&#39;)
-plt.ylabel(&quot;Variational Objective Function&quot;)
-plt.xlabel(&quot;Iteration&quot;)
-plt.savefig(&#39;vof_bnn.jpeg&#39;)
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;p&gt;Anyways, thanks for reading! Laslty, feel free to peak at the code to make this gif. It’s available on my &lt;a href=&quot;https://github.com/franciscojavierarceo/edward/blob/master/examples/bayesian_nn.py&quot;&gt;github&lt;/a&gt;!&lt;/p&gt;
 </description>
         <pubDate>Sat, 23 Jul 2016 00:00:00 -0400</pubDate>
         <link>http://franciscojavierarceo.github.io/2016/07/23/Bayesian-Deep-Learning</link>
