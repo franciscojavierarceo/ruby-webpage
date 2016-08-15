@@ -20,13 +20,17 @@ Now we can estimate this function using Sklearn's [Gradient Boosting Machine](ht
 
 We see that the GBM does a great job! In fact, we can calculate the RMSE here and find that it's almost 0. How does a Neural Network do? I used an MLP with 10 hidden layers with 200 neurons/units in each layer and ReLU activation units. Here's what the NN learned:
 
-![Nueral Network's Estimation of the Function](/assets/images/stepfunction_nns.png)
+![MLP's Estimation of a Step-Function](/assets/images/stepfunctionmlp.gif)
 
-Interesting right? The NN learns a smooth function and seems to struggle with the boundary points of the threshold function, I tried experimenting with a variety of different parameters but most provided a result similar to this one. 
+Interesting right? The NN learns a smooth function and seems to struggle with the boundary points of the threshold function. I should note that I tried experimenting with a variety of different parameters but most provided a result similar to this one (e.g., using a maxout layer, using dropout, increasing the number of numbers, hidden layers, various activation functions). 
 
-Here we find that the specification for this NN wasn't able to learn this threshold function but we were able to learn it trivially using  GBM with respect to computation time of both algorithms. This most certaintly has to do with the activation functions and the fact that NN tries to learn a smooth decision boundary near the critical points.
+Here we find that the specification for this NN wasn't able to learn this threshold function but we were able to learn it trivially using  GBM with respect to computation time of both algorithms. 
 
-Lastly, I thought I'd juxtapose the two residual plots (plots of the errors) as function of the two features because it further emphasizes the point the the MLP is learning an overly smooth of a function.
+![GBM's Estimation of a Step-Function](/assets/images/stepfunctiongbm.gif)
+
+This most certaintly has to do with the activation functions and the fact that NN tries to learn a smooth decision boundary near the critical points.
+
+Lastly, I thought I'd juxtapose the two residual plots (plots of the errors) as function of the two features because it further emphasizes the point that the MLP is learning an overly smooth function.
 
 
 <center> <img src="/assets/images/stepfunction_res.png" width="1400" /> </center>
