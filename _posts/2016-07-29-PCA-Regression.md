@@ -37,4 +37,5 @@ Obviously this particular example was pathological and we *defined* the outcome 
 Again, PCA/SVD is awesome for a ton of other things, but it's a suboptimal choice to use as a pipeline for supervised learninsupervised learning. Use the features themselves, you can always do better.
 
 Thanks for reading!
+
 -Francisco
