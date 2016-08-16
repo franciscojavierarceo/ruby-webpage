@@ -10,9 +10,8 @@ I've recently been trying to test DL on more general problems and have found tha
 
 So, one thing that's great about decision trees is that they can learn very jagged functions, (e.g., 2-dimensional step-functions). So I simulated some data with a fairly silly output function that looks like this:
 
-<center> 
-![A look at the true function](/assets/images/stepfunction_true.png)
-</center>
+{:.center} ![A look at the true function](/assets/images/stepfunction_true.png)
+
 Here at the critical points of the input, the output simply shifts by a constant value. This is a pretty ugly function because it almost doesn't seem continuous but it is.
 
 Now we can estimate this function using Sklearn's [Gradient Boosting Machine](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html) in Python prettty trivially, then we can look at what the model thinks the test set should be given the input data.
