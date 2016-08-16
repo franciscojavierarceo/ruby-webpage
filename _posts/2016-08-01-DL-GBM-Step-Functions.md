@@ -10,9 +10,10 @@ I've recently been trying to test DL on more general problems and have found tha
 
 So, one thing that's great about decision trees is that they can learn very jagged functions, (e.g., 2-dimensional step-functions). So I simulated some data with a fairly silly output function that looks like this:
 
-{:.center} ![A look at the true function](/assets/images/stepfunction_true.png)
+{:.center} 
+![A look at the true function](/assets/images/stepfunction_true.png)
 
-Here at the critical points of the input, the output simply shifts by a constant value. This is a pretty ugly function because it almost doesn't seem continuous but it is.
+This is a pretty ugly function where at the critical points of the input, the output simply shifts by a constant value. 
 
 Now we can estimate this function using Sklearn's [Gradient Boosting Machine](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html) in Python prettty trivially, then we can look at what the model thinks the test set should be given the input data.
 
@@ -26,7 +27,7 @@ We see that the GBM does a great job! In fact, we can calculate the RMSE here an
 
 Interesting right? The NN learns a smooth function and seems to struggle with the boundary points of the threshold function. I should note that I tried experimenting with a variety of different parameters but most provided a result similar to this one (e.g., using a maxout layer, using dropout, increasing the number of numbers, hidden layers, various activation functions). 
 
-Here we find that the specification for this NN wasn't able to learn this threshold function but we were able to learn it trivially using  GBM with respect to computation time of both algorithms. This most certaintly has to do with the activation functions and the fact that NN tries to learn a smooth decision boundary near the critical points.
+Here we find that the specification for this NN wasn't able to learn this threshold function but we were able to learn it trivially using GBM (at least with respect to the computation time of both algorithms). This most certaintly has to do with the activation functions and the fact that the NN tries to learn a smooth decision boundary near the critical points.
 
 Lastly, I thought I'd juxtapose the two residual plots (plots of the errors) as function of the two features because it further emphasizes the point that the MLP is learning an overly smooth function.
 
