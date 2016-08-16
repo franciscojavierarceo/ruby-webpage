@@ -14,9 +14,8 @@ The neat idea I had was to visualize how the error of the PCA approximation and 
 
 So here's what happened in the first simulation I specificed an uncorrelated covariance matrix (features are not correlated) and I chose a matrix rank from 10 - 31 and an approximation of 1-K components with an error iterated from 1 to 3. Below is the gif with the error as the time dimension (i.e., I decrease the error from 3.0 to 1.0 as the gif continues).
 
-<center>
+{:.center}
 ![Whoaaa a 3d gif with a gradient](/assets/images/3dplot_gif.GIF)
-</center>
 
 Pretty neat visualization, right? The z axis shows the ratio of two [RMSEs](https://en.wikipedia.org/wiki/Root-mean-square_deviation) one when using all of the features for the linear regression and the second when using the SVD/PCA scores as a feed into a second stage model. If the ratio is close to 1, that means we're not losing anything from the approximation. If the ratio is greater than 1 that means we are losing information. Notice that at the final iteration when the Model Error = 1.0, the error rate of the PCA 2-stage model can be as high as 5x the error of the single stage model!
 
