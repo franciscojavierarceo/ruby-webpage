@@ -13,7 +13,10 @@ So, one thing that's great about decision trees is that they can learn very jagg
 {:.center}
 ![Gradient Boosting Machine's Estimation of the Function](/assets/images/stepfunction_true.png)
 
-# ![A look at the true function](/assets/images/stepfunction_true.png){: .center-image}
+{: .center-image}
+![A look at the true function](/assets/images/stepfunction_true.png)
+
+<center><img src="/assets/images/stepfunction_true.png">A look at the true function</center>
 
 This is a pretty ugly function where at the critical points of the input, the output simply shifts by a constant value. 
 
@@ -32,7 +35,6 @@ Interesting right? The NN learns a smooth function and seems to struggle with th
 Here we find that the specification for this NN wasn't able to learn this threshold function but we were able to learn it trivially using GBM (at least with respect to the computation time of both algorithms). This most certaintly has to do with the activation functions and the fact that the NN tries to learn a smooth decision boundary near the critical points.
 
 Lastly, I thought I'd juxtapose the two residual plots (plots of the errors) as function of the two features because it further emphasizes the point that the MLP is learning an overly smooth function.
-
 
 {:.center}
 {:height="100px" width="100px"}
