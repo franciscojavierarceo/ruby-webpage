@@ -14,14 +14,17 @@ The neat idea I had was to visualize how the error of the PCA approximation and 
 
 So here's what happened in the first simulation I specificed an uncorrelated covariance matrix (features are not correlated) and I chose a matrix rank from 10 - 31 and an approximation of 1-K components with an error iterated from 1 to 3. Below is the gif with the error as the time dimension (i.e., I decrease the error from 3.0 to 1.0 as the gif continues).
 
+<center>
 ![Whoaaa a 3d gif with a gradient](/assets/images/3dplot_gif.GIF)
+</center>
 
 Pretty neat visualization, right? The z axis shows the ratio of two [RMSEs](https://en.wikipedia.org/wiki/Root-mean-square_deviation) one when using all of the features for the linear regression and the second when using the SVD/PCA scores as a feed into a second stage model. If the ratio is close to 1, that means we're not losing anything from the approximation. If the ratio is greater than 1 that means we are losing information. Notice that at the final iteration when the Model Error = 1.0, the error rate of the PCA 2-stage model can be as high as 5x the error of the single stage model!
 
 We see that when we have large error the approximation is less impactful but as we decrease the amount of noise in the system the performance of the low-rank approximation causes us to do much worse. This result is intuitive because as the noise decreases in the system the features are proportionally more important, so taking an approximation of them and attributing the error to your outcome becomes more impactful, thus our ability to learn the function reduces.
 
-
+<center>
 ![Even more gif, yay](/assets/images/3dplotcorr_gif.GIF)
+</center>
 
 For the first simulation I generated the covariance matrix from a uniform distribution but this implies the features are uncorrelated, so I thought I'd experiment with a correlated covariance matrix. Here we see that the the ratio of the two models now produces a varying shape on the z axis, which makes sense since different rank approximations will produce different shapes for varying ranks of the design matrix, but ultimately the conclusion remains the same, using PCA/SVD as a pipeline to a regression model leads to a significant degridation in model performance.
 
