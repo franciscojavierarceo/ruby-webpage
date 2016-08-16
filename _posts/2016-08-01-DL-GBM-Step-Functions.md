@@ -10,16 +10,19 @@ I've recently been trying to test DL on more general problems and have found tha
 
 So, one thing that's great about decision trees is that they can learn very jagged functions, (e.g., 2-dimensional step-functions). So I simulated some data with a fairly silly output function that looks like this:
 
+{:.center}
 ![A look at the true function](/assets/images/stepfunction_true.png)
 
 Here at the critical points of the input, the output simply shifts by a constant value. This is a pretty ugly function because it almost doesn't seem continuous but it is.
 
 Now we can estimate this function using Sklearn's [Gradient Boosting Machine](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html) in Python prettty trivially, then we can look at what the model thinks the test set should be given the input data.
 
+{:.center}
 ![Gradient Boosting Machine's Estimation of the Function](/assets/images/stepfunctiongbm.gif)
 
 We see that the GBM does a great job! In fact, we can calculate the RMSE here and find that it's almost 0. How does a Neural Network do? I used an MLP with 10 hidden layers with 200 neurons/units in each layer and ReLU activation units. Here's what the NN learned:
 
+{:.center}
 ![MLP's Estimation of a Step-Function](/assets/images/stepfunctionmlp.gif)
 
 Interesting right? The NN learns a smooth function and seems to struggle with the boundary points of the threshold function. I should note that I tried experimenting with a variety of different parameters but most provided a result similar to this one (e.g., using a maxout layer, using dropout, increasing the number of numbers, hidden layers, various activation functions). 
@@ -29,7 +32,9 @@ Here we find that the specification for this NN wasn't able to learn this thresh
 Lastly, I thought I'd juxtapose the two residual plots (plots of the errors) as function of the two features because it further emphasizes the point that the MLP is learning an overly smooth function.
 
 
-<center> <img src="/assets/images/stepfunction_res.png" width="1400" /> </center>
+{: height="100px" width="100px"}
+[Look at them there residuals!](/assets/images/stepfunction_res.png)
+<center> <img src="" width="1400" /> </center>
 
 Neural Networks and Deep Learning are awesome and have a huge amount of potential in the future and have had a ton of success in the present, I think it'd be interesting to see what modifications to neural networks are necessary to make learning step functions of this nature easier for them to learn.
 
