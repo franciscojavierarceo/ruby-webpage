@@ -22,9 +22,9 @@ Pretty neat visualization, right? The z axis shows the ratio of two [RMSEs](http
 
 We see that when we have large error the approximation is less impactful but as we decrease the amount of noise in the system the performance of the low-rank approximation causes us to do much worse. This result is intuitive because as the noise decreases in the system the features are proportionally more important, so taking an approximation of them and attributing the error to your outcome becomes more impactful, thus our ability to learn the function reduces.
 
-<center>
+{:.center}
 ![Even more gif, yay](/assets/images/3dplotcorr_gif.GIF)
-</center>
+
 
 For the first simulation I generated the covariance matrix from a uniform distribution but this implies the features are uncorrelated, so I thought I'd experiment with a correlated covariance matrix. Here we see that the the ratio of the two models now produces a varying shape on the z axis, which makes sense since different rank approximations will produce different shapes for varying ranks of the design matrix, but ultimately the conclusion remains the same, using PCA/SVD as a pipeline to a regression model leads to a significant degridation in model performance.
 
@@ -34,3 +34,7 @@ Again, PCA/SVD is awesome for a ton of other things, but it's a suboptimal choic
 
 Thanks for reading!
 -Francisco
+
+.center {
+    text-align: center;
+}
