@@ -11,7 +11,6 @@ I've recently been trying to test DL on more general problems and have found tha
 So, one thing that's great about decision trees is that they can learn very jagged functions, (e.g., 2-dimensional step-functions). So I simulated some data with a fairly silly output function that looks like this
 
 <center><img src="/assets/images/stepfunction_true.png">
-![A look at the true function]()
 </center>
 This is a pretty ugly function where at the critical points of the input, the output simply shifts by a constant value. 
 
