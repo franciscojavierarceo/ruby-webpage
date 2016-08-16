@@ -38,7 +38,3 @@ Again, PCA/SVD is awesome for a ton of other things, but it's a suboptimal choic
 
 Thanks for reading!
 -Francisco
-
-.center {
-    text-align: center;
-}
