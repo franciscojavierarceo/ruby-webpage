@@ -8,10 +8,11 @@ Deep Learning is awesome, I'm a huge fan. I took a class in the Spring of 2016 j
 
 I've recently been trying to test DL on more general problems and have found that DL algorithms (e.g., MLPs) don't necessarily do better than other algorithms all the time, which is not shocking. In fact, I've heard passively in class that a proof exists showing that for any given algorithm, you can always construct a dataset the model will fail to learn. In the DL literature we call data like this [adversarial examples](https://arxiv.org/pdf/1412.6572.pdf). So I started to look a little more into this problem and I thought it would be fun to make a quick [simulation](https://github.com/franciscojavierarceo/Python/blob/master/Step%20Functions.ipynb) and blog post about my findings.  
 
-So, one thing that's great about decision trees is that they can learn very jagged functions, (e.g., 2-dimensional step-functions). So I simulated some data with a fairly silly output function that looks like this
+As a lot of people in the data science/data mining area might know, Gradient Boosting Machine is a pretty popular algorithm that can approximate a variety of different functions through a series of decision trees. One thing that's great about decision trees is that they can learn very jagged functions, (e.g., 2-dimensional step-functions). So I simulated some data with a fairly silly output function that looks like this
 
 <center><img src="/assets/images/stepfunction_true.png">
 </center>
+
 This is a pretty ugly function where at the critical points of the input, the output simply shifts by a constant value. 
 
 Now we can estimate this function using Sklearn's [Gradient Boosting Machine](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html) in Python prettty trivially, then we can look at what the model thinks the test set should be given the input data.
