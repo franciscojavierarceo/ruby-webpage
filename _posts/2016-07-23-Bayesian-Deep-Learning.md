@@ -14,9 +14,9 @@ Back to my main point in writing this: what I did with the tutorial.
 
 Their example shows a neat graph of the learned posterior predictive distribution of the of a 2-hidden layer neural network at iteration 0 and iteration 1000, which is really cool. I thought it'd be cool to add two things: (1) a look at the Variational objective function and (2) a dynamic, full view of the posterior as a function of the iterations. It's always interesting to see how parameters behave as ML models begin to learn the appropriate functions, so I thought this exercise would be fun (I also love the excuse to make a gif whenever I can).
 
-![](/assets/images/vof_bnn.jpeg)
+![Le Variational Objective Function](/assets/images/vof_bnn.jpeg)
 
-Above is a look at the variational objective function, it sucks at first (to be excpected) but seems to converge pretty quickly!
+Above is a look at the variational objective function, it sucks at first (to be expected) but seems to converge pretty quickly!
 
 Now here's a look at the posterior predictive learned during training. Pretty neat huh? 
 ![Whoaaa a gif](/assets/images/movie_bayesian_nn.gif)
