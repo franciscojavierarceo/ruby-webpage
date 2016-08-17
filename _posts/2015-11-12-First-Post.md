@@ -22,6 +22,7 @@ recovery and quality. GitHub Markdown (formatted) pages are really great because
 	* Maybe I'll even offer a tutorial
 
 ---
+
 ## Code
 
 One of the many great things that Jekyll does is formatting code for you. Below is some simple code
