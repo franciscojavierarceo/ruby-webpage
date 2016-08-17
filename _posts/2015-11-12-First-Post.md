@@ -23,6 +23,7 @@ recovery and quality. GitHub Markdown (formatted) pages are really great because
 
 ---
 ## Code
+
 One of the many great things that Jekyll does is formatting code for you. Below is some simple code
 that takes in a column of text (from some arbitrary .csv file) and outputs a sparse matrix
 of unigrams/bag-of-words stored as binary variables (also called one-hot-encoding)
