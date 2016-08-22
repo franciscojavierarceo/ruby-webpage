@@ -13,7 +13,7 @@ As a lot of people in the data science/data mining area might know, Gradient Boo
 <center><img src="/assets/images/stepfunction_true.png">
 </center>
 
-This is a pretty ugly function where at the critical points of the input, the output simply shifts by a constant value. 
+This is a pretty ugly function where at the critical points of the input, the output simply shifts by a constant value. In fact, this is a continuous function everywhere except at the *critical* points where the left and right limits are not equal to the limit point.
 
 Now we can estimate this function using Sklearn's [Gradient Boosting Machine](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html) in Python prettty trivially, then we can look at what the model thinks the test set should be given the input data.
 
