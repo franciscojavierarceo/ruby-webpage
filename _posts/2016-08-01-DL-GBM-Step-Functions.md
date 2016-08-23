@@ -38,7 +38,7 @@ Using the wonderful [Keras](https://keras.io/) library in Python, I estimated an
     <i>A gif of an MLP, woot!</i>
 </p>
 
-Interesting right? The NN learns a smooth function and seems to struggle with the boundary points of the threshold function. I should note that I tried experimenting with a variety of different parameters but most provided a result similar to this one. I tried using a maxout layer, using dropout, increasing the number of neurons, hidden layers, various activation functions. 
+Interesting right? The NN learns a smooth function and seems to struggle with the boundary points of the threshold function. I should note that I tried experimenting with a variety of different parameters but most provided a result similar to this one. I tried using a maxout layer, adding dropout, increasing the number of neurons and hidden layers, and testing different activation functions. 
 
 Here we find that the specification for this NN wasn't able to learn this threshold function but we were able to learn it fairly easily using GBM (at least with respect to the computation time of both algorithms). This most certaintly has to do with the activation functions and the fact that the NN tries to learn a smooth decision boundary near the critical points.
 
