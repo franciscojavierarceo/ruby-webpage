@@ -10,7 +10,7 @@ I've recently been trying to test DL on more general problems and have found tha
 
 ## Gradient Boosted Decision Trees
 
-As a lot of people in the data science/data mining area might know, Gradient Boosting Machine is a pretty popular algorithm that can approximate a variety of different functions through a series of decision trees. One thing that's great about decision trees is that they can learn very jagged functions, (e.g., 2-dimensional step-functions). So I simulated some data with a fairly silly output function that looks like this
+As a lot of people in the data science/data mining area might know, [Gradient Boosting Machine](https://statweb.stanford.edu/~jhf/ftp/trebst.pdf) is a pretty popular algorithm that can approximate a variety of different functions through a series of decision trees. One thing that's great about decision trees is that they can learn very jagged functions, (e.g., 2-dimensional step-functions). So I simulated some data with a fairly silly output function that looks like this
 
 <center>
     <img src="/assets/images/stepfunction_true.png">
