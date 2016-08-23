@@ -20,8 +20,11 @@ This is a pretty ugly function where at the critical points of the input, the ou
 
 Now we can estimate this function using Sklearn's [Gradient Boosting Machine](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html) (GBM) in Python prettty trivially, then we can look at what the model thinks the test set should be given the input data.
 
-{:.center}
-![A gif of a GBM, whoaaa](/assets/images/stepfunctiongbm.gif)
+<p style="text-align: center; color:gray;"> 
+    <img src="/assets/images/stepfunctiongbm.gif">
+    <br>
+    <i>A gif of a GBM, whoaaa</i>
+</p>
 
 We see that the GBM does a great job! In fact, we can calculate the RMSE here and find that it's almost 0. How does a Neural Network do? 
 
@@ -29,8 +32,11 @@ We see that the GBM does a great job! In fact, we can calculate the RMSE here an
 
 Using the wonderful [Keras](https://keras.io/) library in Python, I estimated an [MLP](https://en.wikipedia.org/wiki/Multilayer_perceptron) with 10 hidden layers, 200 neurons/units in each layer, and ReLU activation units. Here's what the Neural Network (NN) learned:
 
-{:.center}
-![A gif of an MLP woot!](/assets/images/stepfunctionmlp.gif)
+<p style="text-align: center; color:gray;"> 
+    <img src="/assets/images/stepfunctionmlp.gif">
+    <br>
+    <i>A gif of an MLP, woot!</i>
+</p>
 
 Interesting right? The NN learns a smooth function and seems to struggle with the boundary points of the threshold function. I should note that I tried experimenting with a variety of different parameters but most provided a result similar to this one. I tried using a maxout layer, using dropout, increasing the number of neurons, hidden layers, various activation functions. 
 
