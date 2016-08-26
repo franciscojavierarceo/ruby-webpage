@@ -34,7 +34,7 @@ Ultimately the conclusion remains the same, using PCA/SVD as a pipeline to a reg
 
 Obviously this particular example was pathological and we *defined* the outcome to be exactly our reconstruction error, we can certainly create an example that loses no performance in model degredation but it's very rare that we will do better from PCA/SVD and if we do, it's likely due to sampling error and is unlikely to hold repeatedly. 
 
-Again, PCA/SVD is awesome for a ton of other things, but it's a suboptimal choice to use as a pipeline for supervised learninsupervised learning. Use the features themselves, you can always do better.
+Again, PCA/SVD is awesome for a ton of other things, but it's a suboptimal choice to use as a pipeline for supervised learning. Use the features themselves, you can always do better.
 
 Thanks for reading!
 
