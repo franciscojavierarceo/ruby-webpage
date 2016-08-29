@@ -38,9 +38,14 @@ Using the wonderful [Keras](https://keras.io/) library in Python, I estimated an
     <i>A gif of an MLP, woot!</i>
 </p>
 
-Interesting right? The NN learns a smooth function and seems to struggle with the boundary points of the threshold function. I should note that I tried experimenting with a variety of different parameters but most provided a result similar to this one. I tried using a maxout layer, adding dropout, increasing the number of neurons and hidden layers, and testing different activation functions. 
+Interesting right? The NN learns a smooth function and seems to struggle with the boundary points of the threshold function. 
 
-Here we find that the specification for this NN wasn't able to learn this threshold function but we were able to learn it fairly easily using GBM (at least with respect to the computation time of both algorithms). This most certaintly has to do with the activation functions and the fact that the NN tries to learn a smooth decision boundary near the critical points.
+I should note that I tried experimenting with a variety of different parameters but most provided a result similar to this one. I tried using a maxout layer, adding dropout, increasing the number of neurons and hidden layers, and testing different activation functions. 
+
+Here we find that the specification for this NN wasn't able to learn this threshold function but we were able to learn it fairly easily using GBM (at least with respect to the computation time of both algorithms). 
+
+One of the most important theoretical properties of NNs is that even a *single hidden layer* feed-forward neural network with a finite number of neurons and a activation layer (squashing function) can approximate any continuos function on a compact subset of $R^n$; this is known as the [Universal Approximation Theorem](https://en.wikipedia.org/wiki/Universal_approximation_theorem). Now we know exactly why the NN failed, which is due entirely to the discontinuity of the underlying function! So, it's no surprise that the NN struggles to learn this function, since they are always learning smoooth approximations of the input space. 
+
 
 Lastly, I thought I'd juxtapose the two residual plots as function of the two features because it further emphasizes the point that the MLP is learning a function that is too smooth.
 
