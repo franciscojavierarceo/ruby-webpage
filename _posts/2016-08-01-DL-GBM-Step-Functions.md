@@ -18,7 +18,7 @@ As a lot of people in the data science/data mining area might know, [Gradient Bo
 
 This is a pretty ugly function where at the critical points of the input, the output simply shifts by a constant value. In fact, this is a continuous function everywhere except at the *critical* points where the left and right limits are not equal to the limit point ([i.e., discontinuities of the first type](https://en.wikipedia.org/wiki/Classification_of_discontinuities)).
 
-Now we can estimate this function using Sklearn's [Gradient Boosting Machine](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html) (GBM) in Python prettty trivially, then we can look at what the model thinks the test set should be given the input data.
+Now we can estimate this function using Sklearn's [Gradient Boosting Machine](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html) (GBM) in Python pretty trivially, then we can look at what the model thinks the test set should be given the input data.
 
 <p style="text-align: center; color:gray;"> 
     <img src="/assets/images/stepfunctiongbm.gif">
