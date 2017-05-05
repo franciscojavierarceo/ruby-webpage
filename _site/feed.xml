@@ -5,39 +5,193 @@
     <description></description>
     <link>http://franciscojavierarceo.github.io/</link>
     <atom:link href="http://franciscojavierarceo.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 03 Aug 2016 20:55:04 -0400</pubDate>
-    <lastBuildDate>Wed, 03 Aug 2016 20:55:04 -0400</lastBuildDate>
+    <pubDate>Fri, 05 May 2017 08:53:47 -0400</pubDate>
+    <lastBuildDate>Fri, 05 May 2017 08:53:47 -0400</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
+        <title>Deep Q-Networks for Event Summarization</title>
+        <description>&lt;p&gt;I &lt;em&gt;love&lt;/em&gt; school.&lt;/p&gt;
+
+&lt;p&gt;Learning is my passion…and while I certainly can learn outside of the classroom, I find myself starry-eyed while on an academic campus.&lt;/p&gt;
+
+&lt;p&gt;This semester was my last semester as a master’s student in the Data Science department at Columbia, which is extremely bitter sweet. It’s nice to complete my second graduate degree, but I will miss studying and learning new material in that wonderful environment.&lt;/p&gt;
+
+&lt;p&gt;Either way this past semester has been incredible. I got the chance to spend it doing some real research with a current Ph.D. student, &lt;a href=&quot;http://www.cs.columbia.edu/~kedzie/&quot;&gt;Chris Kedzie&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;so-whatd-we-build&quot;&gt;So, what’d we build?&lt;/h1&gt;
+
+&lt;p&gt;We developed an algorithm to summarize events over time. One use case is for real-time disaster summarization. The figure below shows what the core algorithm is really doing and how it learns. &lt;/p&gt;
+
+&lt;p style=&quot;text-align: center; color:gray;&quot;&gt; 
+    &lt;img src=&quot;/assets/images/dqn_algorithm.png&quot; /&gt;
+    &lt;br /&gt;
+    &lt;i&gt;Deep Q-Networks for Event Summarization: Core Algorithm&lt;/i&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Pretty neat huh? &lt;/p&gt;
+
+&lt;p&gt;Below is a look at how the model is learning to select or skip sentences based on the neural network.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center; color:gray;&quot;&gt; 
+    &lt;img src=&quot;/assets/images/dqn_qlearner.jpg&quot; /&gt;
+    &lt;br /&gt;
+    &lt;i&gt;Deep Q-Networks for Event Summarization: Neural Network Architecture&lt;/i&gt;
+&lt;/p&gt;
+
+&lt;p&gt;For more technical details you’re welcome to look at the &lt;a href=&quot;https://github.com/franciscojavierarceo/DQN-Event-Summarization&quot;&gt;Github Repo&lt;/a&gt; and the working paper.&lt;/p&gt;
+
+&lt;p&gt;To me, the cool components are that we are using (1) Recurrent Neural Networks (i.e., deep learning), (2) Natural Language Processing, and (3) Reinforcement Learning. These are three things I’ve been really interested in learning so it was a great experience diving more deeply into them outside of homework assignments. It was also a really cool experience to learn &lt;a href=&quot;https://www.lua.org/&quot;&gt;Lua&lt;/a&gt; and &lt;a href=&quot;http://torch.ch/&quot;&gt;Torch&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;I got to present our work earlier this week to the &lt;a href=&quot;http://www1.cs.columbia.edu/nlp/index.cgi&quot;&gt;NLP Group at Columbia&lt;/a&gt; and it was really fun getting to talk to such talented researchers. &lt;/p&gt;
+
+&lt;p&gt;Hopefully Chris and I will be able to polish this work up and submit it for publication in 2017!&lt;/p&gt;
+
+&lt;p&gt;To all of my dear friends and family that I didn’t communicate with as often as I usually do, I am sorry!! I spent all of my time coding, here’s a graph below to prove it!&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center; color:gray;&quot;&gt; 
+    &lt;img src=&quot;/assets/images/dqn_didisleep.png&quot; /&gt;
+    &lt;br /&gt;
+    &lt;i&gt;When did I sleep this semester?&lt;/i&gt;
+&lt;/p&gt;
+
+&lt;p&gt;The good news is that I’ve returned from my hiding and am so looking forward to seeing all of the wonderful people in my life again…and to spend some quality time with my lovely fiancée.&lt;/p&gt;
+
+&lt;p&gt;Lastly and most importantly, Merry Christmas and Happy New Year to all of you! I can’t wait to see all of you again soon.&lt;/p&gt;
+
+&lt;p&gt;-Francisco&lt;/p&gt;
+</description>
+        <pubDate>Wed, 21 Dec 2016 00:00:00 -0500</pubDate>
+        <link>http://franciscojavierarceo.github.io/2016/12/21/DQN</link>
+        <guid isPermaLink="true">http://franciscojavierarceo.github.io/2016/12/21/DQN</guid>
+      </item>
+    
+      <item>
+        <title>Engaged</title>
+        <description>&lt;p&gt;To say that I am the luckiest man alive is a severe understatement; it feels like a mediocre and inadequate attempt at succinctly explaining the enumerable gifts in my life. Frankly, it feels lame…but it’s the truth. &lt;/p&gt;
+
+&lt;p&gt;Saturday was the greatest day of my life. My beloved partner in crime, Stephany, said “Yes” to my proposal.&lt;/p&gt;
+
+&lt;p&gt;Stephany is the life force that keeps me together. She was there for me when &lt;a href=&quot;https://www.linkedin.com/pulse/mentor-who-shaped-me-what-i-learned-from-child-whose-life-arceo?trk=prof-post&quot;&gt;I lost my best friend Ervi&lt;/a&gt;; she has taken care of me when I’ve been sick; she’s patiently waited for me to finish homework before being able to spend quality time with her; and she’s loved me for who I am—a nerdy, goofy, large and bumbling idiot.&lt;/p&gt;
+
+&lt;p&gt;I’ve been planning this proposal since June (~3 months), but I’ve wanted to marry Steph for far longer than that; I knew about 3 months after we met that I wanted to marry her—I waited 22. She’s the most incredible woman I’ve ever known, so I wanted it to be perfect and I think it went pretty well. :)&lt;/p&gt;
+
+&lt;p&gt;So here’s the story.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-0-deception&quot;&gt;Step 0: Deception&lt;/h2&gt;
+
+&lt;p&gt;The hardest part of all of this was keeping it from Steph. Fortunately, her sister, Susan, was willing to help me keep this all a secret and plan the whole thing! The second hardest part was balancing this while taking my Analysis class this summer, but, hey, who needs sleep anyways. The third most difficult thing was lying to Steph about where I was certain nights and what I was doing. It was hard mostly because I am a terrible liar (which I think is a good thing), so I doubled up on my lies (sometimes tripled up) when she figured out I was trying to deceive her, luckily, that worked out okay.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-1-the-proposal&quot;&gt;Step 1: The Proposal&lt;/h2&gt;
+
+&lt;p&gt;With a bit of effort, Susan was persuasive enough to get Steph to the Brooklyn Promenade and there Susan and I created a trail of roses that led to me and my guitar standing in a heart of roses (you may barf now). &lt;/p&gt;
+
+&lt;p style=&quot;text-align: center; color:gray;&quot;&gt; 
+    &lt;img src=&quot;/assets/images/proposal_me.jpg&quot; /&gt;
+    &lt;br /&gt;
+    &lt;i&gt;Sweating in Brooklyn&lt;/i&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&quot;step-2-a-little-show&quot;&gt;Step 2: A Little Show&lt;/h2&gt;
+
+&lt;p&gt;When Steph and I first started dating, I promised to write her a song, so last Christmas I gave her a poem on a plaque with a photograph of us at my cousin’s wedding in Chicago. I wrote the poem knowing I would turn it into a song but she had no idea. So, when I proposed I played her the song I wrote her last December for the first time (in front of a crowd that I did not expect to be there /insert heavy sweating and anxiety/). &lt;/p&gt;
+
+&lt;p&gt;I was so nervous that I was shaking while playing! But I began to calm as I looked at her and then the crowd seemed to fade into the distance, then she made me the happiest man in the world. &lt;/p&gt;
+
+&lt;p style=&quot;text-align: center; color:gray;&quot;&gt; 
+    &lt;img src=&quot;/assets/images/proposal_fullmain.png&quot; /&gt;
+    &lt;br /&gt;
+    &lt;i&gt;So happy I almost went Super Saiyan&lt;/i&gt;
+&lt;/p&gt;
+
+&lt;p&gt;I heard that one little word and I was overwhelmed with joy, so much so that I immediately lifted her in excitement…and in my typical baffoonish fashion I forgot to put the ring on her. No worries though, I put the ring on after I realized it.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-3-surprise-family-dinner&quot;&gt;Step 3: Surprise Family Dinner&lt;/h2&gt;
+
+&lt;p&gt;After a quick photoshoot with our photographer, I surprised her with a dinner with both of our famillies, which was a very enjoyable meal. Also, further data supporting my scatter-brained nature, I forgot to tell my parents the address of the venue so they showed up slightly late (it was still a nice surprise for Steph though).&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center; color:gray;&quot;&gt; 
+    &lt;img src=&quot;/assets/images/proposal_dinner.jpg&quot; /&gt;
+    &lt;br /&gt;
+    &lt;i&gt;Family Dinner!&lt;/i&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&quot;step-4-surprise-celebration&quot;&gt;Step 4: Surprise Celebration!&lt;/h2&gt;
+
+&lt;p&gt;The final piece was a celebration at a bar with our friends and family. After dinner our parents ran off to the bar where the surprise party was being held and our friends came from California, Chicago, and DC just to see us. It was an absolute blast. &lt;/p&gt;
+
+&lt;p style=&quot;text-align: center; color:gray;&quot;&gt; 
+    &lt;img src=&quot;/assets/images/proposal_party.jpg&quot; /&gt;
+    &lt;br /&gt;
+    &lt;i&gt;My best friends :)&lt;/i&gt;
+&lt;/p&gt;
+
+&lt;p&gt;It was certainly a lot of work to get this all together and it was quite exhausting, but it was the most amazing day with my beloved fiancé. :) &lt;/p&gt;
+
+&lt;p&gt;Thank you all who came and shared this day with us and who helped me set up everything. As I said, I am the luckiest man alive.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center; color:gray;&quot;&gt; 
+    &lt;img src=&quot;/assets/images/proposal_us.jpg&quot; /&gt;
+    &lt;br /&gt;
+    &lt;i&gt;Holding her so tight she won&#39;t run away&lt;/i&gt;
+&lt;/p&gt;
+
+&lt;p&gt;-Francisco&lt;/p&gt;
+</description>
+        <pubDate>Mon, 22 Aug 2016 00:00:00 -0400</pubDate>
+        <link>http://franciscojavierarceo.github.io/2016/08/22/Engaged</link>
+        <guid isPermaLink="true">http://franciscojavierarceo.github.io/2016/08/22/Engaged</guid>
+      </item>
+    
+      <item>
         <title>GBMs, Step Functions, and Deep Learning</title>
-        <description>&lt;p&gt;Deep Learning is awesome, I’m a huge fan. I took a class in the Spring of 2016 just on &lt;a href=&quot;https://github.com/franciscojavierarceo/ECBME6040&quot;&gt;Deep Learning&lt;/a&gt; and got to dive into the really awesome work people are doing in computer vision, NLP, and data mining.&lt;/p&gt;
+        <description>&lt;p&gt;Deep Learning is awesome, I’m a huge fan. I took a class in the Spring of 2016 just on &lt;a href=&quot;https://github.com/franciscojavierarceo/ECBME6040&quot;&gt;Deep Learning&lt;/a&gt; and got to dive into the really awesome work people are doing in computer vision, natural language processing (NLP), and data mining.&lt;/p&gt;
 
-&lt;p&gt;I’ve recently been trying to test DL on more general problems and have found that DL algorithms (e.g., MLPs) don’t necessarily do better than other algorithms all the time, which is not shocking. In fact, I’ve heard passively in class that a proof exists showing that for any given algorithm, you can always construct a dataset it will fail to learn. In the DL literature we call data like this &lt;a href=&quot;https://arxiv.org/pdf/1412.6572.pdf&quot;&gt;adversarial examples&lt;/a&gt;. So I started to look a little more into this problem and I thought it would be fun to make a quick &lt;a href=&quot;https://github.com/franciscojavierarceo/Python/blob/master/Step%20Functions.ipynb&quot;&gt;simulation&lt;/a&gt; and blog post about my findings.  &lt;/p&gt;
+&lt;p&gt;I’ve recently been trying to test DL on more general problems and have found that DL algorithms (e.g., MLPs) don’t necessarily do better than other algorithms all the time, which is not shocking. In fact, I’ve heard passively in class that a proof exists showing that for any given algorithm, you can always construct a dataset the model will fail to learn; interestingly, data that fool learning algorithms are an active area of research. In the DL literature some folks call data like this &lt;a href=&quot;https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45471.pdf&quot;&gt;adversarial examples&lt;/a&gt;. So I started to look a little more into this problem and I thought it would be fun to make a quick &lt;a href=&quot;https://github.com/franciscojavierarceo/Python/blob/master/Step%20Functions.ipynb&quot;&gt;simulation&lt;/a&gt; and write about my findings.&lt;/p&gt;
 
-&lt;p&gt;So, one thing that’s great about decision trees is that they can learn very jagged functions, (e.g., 2-dimensional step-functions). So I simulated some data with a fairly silly output function that looks like this:&lt;/p&gt;
+&lt;h2 id=&quot;gradient-boosted-decision-trees&quot;&gt;Gradient Boosted Decision Trees&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/stepfunction_true.png&quot; alt=&quot;A look at the true function&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;As a lot of people in the data science/data mining area might know, &lt;a href=&quot;https://statweb.stanford.edu/~jhf/ftp/trebst.pdf&quot;&gt;Gradient Boosting Machine&lt;/a&gt; is a pretty popular algorithm that can approximate a variety of different functions through a series of decision trees. One thing that’s great about decision trees is that they can learn very jagged functions, (e.g., 2-dimensional step-functions). So I simulated some data with a fairly silly output function that looks like this&lt;/p&gt;
 
-&lt;p&gt;Here at the critical points of the input, the output simply shifts by a constant value. This is a pretty ugly function because it almost doesn’t seem continuous but it is.&lt;/p&gt;
+&lt;center&gt;
+    &lt;img src=&quot;/assets/images/stepfunction_true.png&quot; /&gt;
+&lt;/center&gt;
 
-&lt;p&gt;Now we can estimate this function using Sklearn’s &lt;a href=&quot;http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html&quot;&gt;Gradient Boosting Machine&lt;/a&gt; in Python prettty trivially, then we can look at what the model thinks the test set should be given the input data.&lt;/p&gt;
+&lt;p&gt;This is a pretty ugly function where at the critical points of the input, the output simply shifts by a constant value. In fact, this is a continuous function everywhere except at the &lt;em&gt;critical&lt;/em&gt; points where the left and right limits are not equal to the limit point (&lt;a href=&quot;https://en.wikipedia.org/wiki/Classification_of_discontinuities&quot;&gt;i.e., discontinuities of the first type&lt;/a&gt;).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/stepfunction_gbm.png&quot; alt=&quot;Gradient Boosting Machine&#39;s Estimation of the Function&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Now we can estimate this function using Sklearn’s &lt;a href=&quot;http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html&quot;&gt;Gradient Boosting Machine&lt;/a&gt; (GBM) in Python pretty trivially, then we can look at what the model thinks the test set should be given the input data.&lt;/p&gt;
 
-&lt;p&gt;We see that the GBM does a great job! In fact, we can calculate the RMSE here and find that it’s almost 0. How does a Neural Network do? I used an MLP with 10 hidden layers with 200 neurons/units in each layer and ReLU activation units. Here’s what the NN learned:&lt;/p&gt;
+&lt;p style=&quot;text-align: center; color:gray;&quot;&gt; 
+    &lt;img src=&quot;/assets/images/stepfunctiongbm.gif&quot; /&gt;
+    &lt;br /&gt;
+    &lt;i&gt;A gif of a GBM, whoaaa&lt;/i&gt;
+&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/stepfunction_nns.png&quot; alt=&quot;Nueral Network&#39;s Estimation of the Function&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;We see that the GBM does a great job! In fact, we can calculate the RMSE here and find that it’s almost 0. How does a Neural Network do? &lt;/p&gt;
 
-&lt;p&gt;Interesting right? The NN learns a smooth function and seems to struggle with the boundary points of the threshold function, I tried experimenting with a variety of different parameters but most provided a result similar to this one. &lt;/p&gt;
+&lt;h2 id=&quot;the-multilayer-perceptron-mlp&quot;&gt;The Multilayer Perceptron (MLP)&lt;/h2&gt;
 
-&lt;p&gt;Here we find that the specification for this NN wasn’t able to learn this threshold function but we were able to learn it trivially using  GBM with respect to computation time of both algorithms. This most certaintly has to do with the activation functions and the fact that NN tries to learn a smooth decision boundary near the critical points.&lt;/p&gt;
+&lt;p&gt;Using the wonderful &lt;a href=&quot;https://keras.io/&quot;&gt;Keras&lt;/a&gt; library in Python, I estimated an &lt;a href=&quot;https://en.wikipedia.org/wiki/Multilayer_perceptron&quot;&gt;MLP&lt;/a&gt; with 10 hidden layers, 200 neurons/units in each layer, and ReLU activation units. Here’s what the Neural Network (NN) learned:&lt;/p&gt;
 
-&lt;p&gt;Lastly, I thought I’d juxtapose the two residual plots (plots of the errors) as function of the two features because it further emphasizes the point the the MLP is learning an overly smooth of a function.&lt;/p&gt;
+&lt;p style=&quot;text-align: center; color:gray;&quot;&gt; 
+    &lt;img src=&quot;/assets/images/stepfunctionmlp.gif&quot; /&gt;
+    &lt;br /&gt;
+    &lt;i&gt;A gif of an MLP, woot!&lt;/i&gt;
+&lt;/p&gt;
 
-&lt;center&gt; &lt;img src=&quot;/assets/images/stepfunction_res.png&quot; width=&quot;1400&quot; /&gt; &lt;/center&gt;
+&lt;p&gt;Interesting right? The NN learns a smooth function and seems to struggle with the boundary points of the threshold function. &lt;/p&gt;
 
-&lt;p&gt;Neural Networks and Deep Learning are awesome and have a huge amount of potential in the future and have had a ton of success in the present, I think it’d be interesting to see what modifications to neural networks are necessary to make learning step functions of this nature easier for them to learn.&lt;/p&gt;
+&lt;p&gt;I should note that I tried experimenting with a variety of different parameters but most provided a result similar to this one. I tried using a maxout layer, adding dropout, increasing the number of neurons and hidden layers, and testing different activation functions. &lt;/p&gt;
+
+&lt;p&gt;Here we find that the specification for this NN wasn’t able to learn this threshold function but we were able to learn it fairly easily using GBM (at least with respect to the computation time of both algorithms). &lt;/p&gt;
+
+&lt;p&gt;One of the most important theoretical properties of NNs is that even a &lt;em&gt;single hidden layer&lt;/em&gt; feed-forward neural network with a finite number of neurons and a activation layer (squashing function) can approximate any continuos function on a compact subset of $R^n$; this is known as the &lt;a href=&quot;https://en.wikipedia.org/wiki/Universal_approximation_theorem&quot;&gt;Universal Approximation Theorem&lt;/a&gt;. Now we know exactly why the NN failed, which is due entirely to the discontinuity of the underlying function! So, it’s no surprise that the NN struggles to learn this function, since they are always learning smoooth approximations of the input space. &lt;/p&gt;
+
+&lt;p&gt;Lastly, I thought I’d juxtapose the two residual plots as function of the two features because it further emphasizes the point that the MLP is learning a function that is too smooth.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/stepfunction_res.png&quot; alt=&quot;Look at them there residuals&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Neural Networks and Deep Learning are awesome and have had a ton of success on a variety of different problems and they have a huge amount of potential in the future, but it’s always nice knowing when an algorithm will break. I think it’d be interesting to see what modifications to neural networks are necessary to make learning step functions of this nature easier for them to learn (I’m sure someone much brighter than me will figure it out!).&lt;/p&gt;
 
 &lt;p&gt;Anyways, thanks for reading!
 -Francisco&lt;/p&gt;
@@ -51,28 +205,37 @@
         <title>PCA and Regression</title>
         <description>&lt;p&gt;So one thing I’ve always found myself puzzled by is why someone would use PCA as a first-stage model and feeding the scores into a second stage model (e.g., linear regression). Doing this (potentially) loses a lot information, so I don’t see why people think it makes sense. &lt;/p&gt;
 
-&lt;p&gt;I understand the argument about stabalizing the variance of your input space, but with sufficient data and a good regularization strategy, you can solve those problems directly. &lt;/p&gt;
+&lt;p&gt;I understand the argument about stabalizing the variance of your input space but with sufficient data and a good regularization strategy (e.g., L1), you can solve those problems directly. The other argument I’ve heard about using PCA first so that you don’t use all of your degrees of freedom doesn’t convince me either, since L1 regularization is provably one of the best techniques out there for the &lt;a href=&quot;https://people.eecs.berkeley.edu/~wainwrig/Papers/Wai09_Sharp_Journal.pdf&quot;&gt;overdetermined regression problem&lt;/a&gt;. In fact, there’s a rich literature on this topic in information theory and statistics. Friedman, Hastie, and Tibshirarni offer a nice introduction in their &lt;a href=&quot;http://statweb.stanford.edu/~tibs/ElemStatLearn/printings/ESLII_print10.pdf&quot;&gt;book&lt;/a&gt;. Also, I’d like to note that the degrees of freedom, like many other things, can be a misleading assessment for &lt;a href=&quot;https://web.stanford.edu/~hastie/Papers/df_paper_LJrev6.pdf&quot;&gt;model quality&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;So I decided to make a &lt;a href=&quot;https://github.com/franciscojavierarceo/Python/blob/master/SVD%20and%20Regression.ipynb&quot;&gt;Jupyter Notebook&lt;/a&gt; highlighting why it’s a bad choice. The intuition is identical to what I said above, but with a little more mathematical rigor and some simulations to provide some additional validation. &lt;/p&gt;
+&lt;p&gt;Anyways, all of this led me to make a &lt;a href=&quot;https://github.com/franciscojavierarceo/Python/blob/master/SVD%20and%20Regression.ipynb&quot;&gt;Jupyter Notebook&lt;/a&gt; highlighting why it’s a suboptimal modeling choice. The intuition is identical to what I said above, but with a little more mathematical rigor and some simulations to provide some additional validation/insight. &lt;/p&gt;
 
-&lt;p&gt;The neat idea I had was to visualize how the error of the PCA approximation and the linear regression error behave as a function of (1) the true error, (2) the rank of the approximation in PCA, (3) the true rank of the original matrix, and (4) the correlation structure of the features/design matrix. This simulation samples from a multivariate normal and assumes a normally distributed error term (it may or may not be interesting to see how this behaves for discrete distrbutions–though I expect it’d be similar).&lt;/p&gt;
+&lt;p&gt;The idea I had was to understand how the error of the PCA approximation and the linear regression error behave as a function of (1) the true error, (2) the rank of the approximation in PCA, (3) the true rank of the original matrix, and (4) the correlation structure of the features/design matrix. I’m a visual person, so I thought visualizing these 4 dimensions would help with intuition quite a bit. &lt;/p&gt;
 
-&lt;p&gt;So here’s what happened in the first simulation I specificed an uncorrelated covariance matrix (features are not correlated) and I chose a matrix rank from 10 - 31 and an approximation of 1-K components with an error iterated from 1 to 3. Below is the gif as with the error as the time dimension.&lt;/p&gt;
+&lt;p&gt;This simulation samples from a multivariate normal and assumes a normally distributed error term (it may or may not be interesting to see how this behaves for discrete distrbutions–though I expect it’d be similar).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/3dplot_gif.GIF&quot; alt=&quot;Whoaaa a 3d gif with a gradient&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;So here’s what happened in the first simulation I specificed an uncorrelated covariance matrix (features are not correlated) and I chose a matrix rank from 10 - 31 and an approximation of 1-K components with an error iterated from 1 to 3. Below is the gif with the error as the time dimension (i.e., I decrease the error from 3.0 to 1.0 as the gif continues).&lt;/p&gt;
 
-&lt;p&gt;Pretty neat visualization, right? The z axis shows the ratio of two &lt;a href=&quot;https://en.wikipedia.org/wiki/Root-mean-square_deviation&quot;&gt;RMSEs&lt;/a&gt; one when using all of the features for the linear regression and the second when using the SVD/PCA scores as a feed into a second stage model.&lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/3dplot_gif.GIF&quot; alt=&quot;Whoaaa a 3d gif with a gradient&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;We see that when we have large error the approximation is less impactful, but as we decrease the amount of noise in the system the performance the low-rank approximation causes us to do much worse, which is intuitive because as the noise decreases in the system the features are proportionally more important, so taking an approximation of them and attributing the error to your outcome becomes more impactful, so our ability to learn the function reduces.&lt;/p&gt;
+&lt;p&gt;Pretty neat visualization, right? The z axis shows the ratio of two &lt;a href=&quot;https://en.wikipedia.org/wiki/Root-mean-square_deviation&quot;&gt;RMSEs&lt;/a&gt; one when using all of the features for the linear regression and the second when using the SVD/PCA scores as a feed into a second stage model. If the ratio is close to 1, that means we’re not losing anything from the approximation. If the ratio is greater than 1 that means we are losing information. Notice that at the final iteration when the Model Error = 1.0, the error rate of the PCA 2-stage model can be as high as 5x the error of the single stage model!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/3dplotcorr_gif.GIF&quot; alt=&quot;Even more gif, yay&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;We see that when we have large error the approximation is less impactful but as we decrease the amount of noise in the system the performance of the low-rank approximation causes us to do much worse. This result is intuitive because as the noise decreases in the system the features are proportionally more important, so taking an approximation of them and attributing the error to your outcome becomes more impactful, thus our ability to learn the function reduces.&lt;/p&gt;
 
-&lt;p&gt;For the first simulation I generated the covariance matrix from a uniform distribution but this implies the features are uncorrelated, so I thought I’d experiment with a correlated covariance matrix. Here we see that the the ratio of the two models now produces a varying shape on the z axis, which makes sense since different rank approximations will produce different shapes for varying true ranks, but ultimately the conclusion remains the same, using PCA/SVD as a pipeline to a regression model leaves to a significant degridation in model performance.&lt;/p&gt;
+&lt;p&gt;For the first simulation I generated the covariance matrix from a uniform distribution but this implies the features are uncorrelated, so I thought I’d experiment with a correlated covariance matrix  in the plot below.&lt;/p&gt;
 
-&lt;p&gt;Obviously this particular example was pathological and we &lt;em&gt;defined&lt;/em&gt; the outcome to be exactly our reconstruction error, we can obviously create an example that loses no performance in model degredation but it’s very rare that we will do better from PCA/SVD and if we do, it’s only likely to be due to sampling error and is unlikely to hold repeatedly. &lt;/p&gt;
+&lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/3dplotcorr_gif.GIF&quot; alt=&quot;Even more gif, yay&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Again, PCA/SVD is awesome for a ton of other things, but it’s just inappropriate to use as a pipeline for others. Use the features themselves, you can always do better.&lt;/p&gt;
+&lt;p&gt;We see that the the ratio of the two models now produces a varying shape on the z axis, which makes sense since different rank approximations will produce different shapes for varying ranks of the design matrix. &lt;/p&gt;
 
+&lt;p&gt;Ultimately the conclusion remains the same, using PCA/SVD as a pipeline to a regression model leads to a significant degridation in model performance.&lt;/p&gt;
+
+&lt;p&gt;Obviously this particular example was pathological and we &lt;em&gt;defined&lt;/em&gt; the outcome to be exactly our reconstruction error, we can certainly create an example that loses no performance in model degredation but it’s very rare that we will do better from PCA/SVD and if we do, it’s likely due to sampling error and is unlikely to hold repeatedly. &lt;/p&gt;
+
+&lt;p&gt;Again, PCA/SVD is awesome for a ton of other things, but it’s a suboptimal choice to use as a pipeline for supervised learning. Use the features themselves, you can always do better.&lt;/p&gt;
+
+&lt;p&gt;Thanks for reading!&lt;/p&gt;
+
+&lt;p&gt;-Francisco&lt;/p&gt;
 </description>
         <pubDate>Fri, 29 Jul 2016 00:00:00 -0400</pubDate>
         <link>http://franciscojavierarceo.github.io/2016/07/29/PCA-Regression</link>
@@ -100,9 +263,9 @@
 
 &lt;p&gt;Their example shows a neat graph of the learned posterior predictive distribution of the of a 2-hidden layer neural network at iteration 0 and iteration 1000, which is really cool. I thought it’d be cool to add two things: (1) a look at the Variational objective function and (2) a dynamic, full view of the posterior as a function of the iterations. It’s always interesting to see how parameters behave as ML models begin to learn the appropriate functions, so I thought this exercise would be fun (I also love the excuse to make a gif whenever I can).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/vof_bnn.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/vof_bnn.jpeg&quot; alt=&quot;Le Variational Objective Function&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Above is a look at the variational objective function, it sucks at first (to be excpected) but seems to converge pretty quickly!&lt;/p&gt;
+&lt;p&gt;Above is a look at the variational objective function, it sucks at first (to be expected) but seems to converge pretty quickly!&lt;/p&gt;
 
 &lt;p&gt;Now here’s a look at the posterior predictive learned during training. Pretty neat huh? 
 &lt;img src=&quot;/assets/images/movie_bayesian_nn.gif&quot; alt=&quot;Whoaaa a gif&quot; /&gt;&lt;/p&gt;
@@ -162,8 +325,10 @@ recovery and quality. GitHub Markdown (formatted) pages are really great because
 &lt;/ul&gt;
 
 &lt;hr /&gt;
-&lt;p&gt;## Code
-One of the many great things that Jekyll does is formatting code for you. Below is some simple code
+
+&lt;h2 id=&quot;code&quot;&gt;Code&lt;/h2&gt;
+
+&lt;p&gt;One of the many great things that Jekyll does is formatting code for you. Below is some simple code
 that takes in a column of text (from some arbitrary .csv file) and outputs a sparse matrix
 of unigrams/bag-of-words stored as binary variables (also called one-hot-encoding)
 that you can use for a simple regression (which is what this code does).&lt;/p&gt;

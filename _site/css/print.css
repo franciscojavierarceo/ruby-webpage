@@ -21,3 +21,8 @@ page-break-after:never
 .subscribe icon-feed{
   display:none;
 }
+
+/* To center images */
+.center {
+    text-align: center;
+}

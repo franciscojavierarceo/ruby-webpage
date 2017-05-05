@@ -404,3 +404,14 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+.center-image
+{
+    margin: 0 auto;
+    display: block;
+}
+
+/* To center images */
+.center {
+    text-align: center;
+}

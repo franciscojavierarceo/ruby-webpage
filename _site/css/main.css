@@ -251,7 +251,7 @@ body {
 
 .content {
   width: 100%;
-  max-width: 640px;
+  max-width: 1000px;
   margin: 0 auto;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
