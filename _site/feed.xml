@@ -3,11 +3,11 @@
   <channel>
     <title>francisco javier arceo</title>
     <description></description>
-    <link>http://franciscojavierarceo.github.io/</link>
-    <atom:link href="http://franciscojavierarceo.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 05 May 2017 08:53:47 -0400</pubDate>
-    <lastBuildDate>Fri, 05 May 2017 08:53:47 -0400</lastBuildDate>
-    <generator>Jekyll v2.4.0</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 28 Aug 2019 15:03:07 -0400</pubDate>
+    <lastBuildDate>Wed, 28 Aug 2019 15:03:07 -0400</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>Deep Q-Networks for Event Summarization</title>
@@ -21,7 +21,7 @@
 
 &lt;h1 id=&quot;so-whatd-we-build&quot;&gt;So, what’d we build?&lt;/h1&gt;
 
-&lt;p&gt;We developed an algorithm to summarize events over time. One use case is for real-time disaster summarization. The figure below shows what the core algorithm is really doing and how it learns. &lt;/p&gt;
+&lt;p&gt;We developed an algorithm to summarize events over time. One use case is for real-time disaster summarization. The figure below shows what the core algorithm is really doing and how it learns.&lt;/p&gt;
 
 &lt;p style=&quot;text-align: center; color:gray;&quot;&gt; 
     &lt;img src=&quot;/assets/images/dqn_algorithm.png&quot; /&gt;
@@ -29,7 +29,7 @@
     &lt;i&gt;Deep Q-Networks for Event Summarization: Core Algorithm&lt;/i&gt;
 &lt;/p&gt;
 
-&lt;p&gt;Pretty neat huh? &lt;/p&gt;
+&lt;p&gt;Pretty neat huh?&lt;/p&gt;
 
 &lt;p&gt;Below is a look at how the model is learning to select or skip sentences based on the neural network.&lt;/p&gt;
 
@@ -41,9 +41,9 @@
 
 &lt;p&gt;For more technical details you’re welcome to look at the &lt;a href=&quot;https://github.com/franciscojavierarceo/DQN-Event-Summarization&quot;&gt;Github Repo&lt;/a&gt; and the working paper.&lt;/p&gt;
 
-&lt;p&gt;To me, the cool components are that we are using (1) Recurrent Neural Networks (i.e., deep learning), (2) Natural Language Processing, and (3) Reinforcement Learning. These are three things I’ve been really interested in learning so it was a great experience diving more deeply into them outside of homework assignments. It was also a really cool experience to learn &lt;a href=&quot;https://www.lua.org/&quot;&gt;Lua&lt;/a&gt; and &lt;a href=&quot;http://torch.ch/&quot;&gt;Torch&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;To me, the cool components are that we are using (1) Recurrent Neural Networks (i.e., deep learning), (2) Natural Language Processing, and (3) Reinforcement Learning. These are three things I’ve been really interested in learning so it was a great experience diving more deeply into them outside of homework assignments. It was also a really cool experience to learn &lt;a href=&quot;https://www.lua.org/&quot;&gt;Lua&lt;/a&gt; and &lt;a href=&quot;http://torch.ch/&quot;&gt;Torch&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;I got to present our work earlier this week to the &lt;a href=&quot;http://www1.cs.columbia.edu/nlp/index.cgi&quot;&gt;NLP Group at Columbia&lt;/a&gt; and it was really fun getting to talk to such talented researchers. &lt;/p&gt;
+&lt;p&gt;I got to present our work earlier this week to the &lt;a href=&quot;http://www1.cs.columbia.edu/nlp/index.cgi&quot;&gt;NLP Group at Columbia&lt;/a&gt; and it was really fun getting to talk to such talented researchers.&lt;/p&gt;
 
 &lt;p&gt;Hopefully Chris and I will be able to polish this work up and submit it for publication in 2017!&lt;/p&gt;
 
@@ -62,13 +62,13 @@
 &lt;p&gt;-Francisco&lt;/p&gt;
 </description>
         <pubDate>Wed, 21 Dec 2016 00:00:00 -0500</pubDate>
-        <link>http://franciscojavierarceo.github.io/2016/12/21/DQN</link>
-        <guid isPermaLink="true">http://franciscojavierarceo.github.io/2016/12/21/DQN</guid>
+        <link>http://localhost:4000/2016/12/21/DQN</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/12/21/DQN</guid>
       </item>
     
       <item>
         <title>Engaged</title>
-        <description>&lt;p&gt;To say that I am the luckiest man alive is a severe understatement; it feels like a mediocre and inadequate attempt at succinctly explaining the enumerable gifts in my life. Frankly, it feels lame…but it’s the truth. &lt;/p&gt;
+        <description>&lt;p&gt;To say that I am the luckiest man alive is a severe understatement; it feels like a mediocre and inadequate attempt at succinctly explaining the enumerable gifts in my life. Frankly, it feels lame…but it’s the truth.&lt;/p&gt;
 
 &lt;p&gt;Saturday was the greatest day of my life. My beloved partner in crime, Stephany, said “Yes” to my proposal.&lt;/p&gt;
 
@@ -84,7 +84,7 @@
 
 &lt;h2 id=&quot;step-1-the-proposal&quot;&gt;Step 1: The Proposal&lt;/h2&gt;
 
-&lt;p&gt;With a bit of effort, Susan was persuasive enough to get Steph to the Brooklyn Promenade and there Susan and I created a trail of roses that led to me and my guitar standing in a heart of roses (you may barf now). &lt;/p&gt;
+&lt;p&gt;With a bit of effort, Susan was persuasive enough to get Steph to the Brooklyn Promenade and there Susan and I created a trail of roses that led to me and my guitar standing in a heart of roses (you may barf now).&lt;/p&gt;
 
 &lt;p style=&quot;text-align: center; color:gray;&quot;&gt; 
     &lt;img src=&quot;/assets/images/proposal_me.jpg&quot; /&gt;
@@ -94,9 +94,9 @@
 
 &lt;h2 id=&quot;step-2-a-little-show&quot;&gt;Step 2: A Little Show&lt;/h2&gt;
 
-&lt;p&gt;When Steph and I first started dating, I promised to write her a song, so last Christmas I gave her a poem on a plaque with a photograph of us at my cousin’s wedding in Chicago. I wrote the poem knowing I would turn it into a song but she had no idea. So, when I proposed I played her the song I wrote her last December for the first time (in front of a crowd that I did not expect to be there /insert heavy sweating and anxiety/). &lt;/p&gt;
+&lt;p&gt;When Steph and I first started dating, I promised to write her a song, so last Christmas I gave her a poem on a plaque with a photograph of us at my cousin’s wedding in Chicago. I wrote the poem knowing I would turn it into a song but she had no idea. So, when I proposed I played her the song I wrote her last December for the first time (in front of a crowd that I did not expect to be there /insert heavy sweating and anxiety/).&lt;/p&gt;
 
-&lt;p&gt;I was so nervous that I was shaking while playing! But I began to calm as I looked at her and then the crowd seemed to fade into the distance, then she made me the happiest man in the world. &lt;/p&gt;
+&lt;p&gt;I was so nervous that I was shaking while playing! But I began to calm as I looked at her and then the crowd seemed to fade into the distance, then she made me the happiest man in the world.&lt;/p&gt;
 
 &lt;p style=&quot;text-align: center; color:gray;&quot;&gt; 
     &lt;img src=&quot;/assets/images/proposal_fullmain.png&quot; /&gt;
@@ -118,7 +118,7 @@
 
 &lt;h2 id=&quot;step-4-surprise-celebration&quot;&gt;Step 4: Surprise Celebration!&lt;/h2&gt;
 
-&lt;p&gt;The final piece was a celebration at a bar with our friends and family. After dinner our parents ran off to the bar where the surprise party was being held and our friends came from California, Chicago, and DC just to see us. It was an absolute blast. &lt;/p&gt;
+&lt;p&gt;The final piece was a celebration at a bar with our friends and family. After dinner our parents ran off to the bar where the surprise party was being held and our friends came from California, Chicago, and DC just to see us. It was an absolute blast.&lt;/p&gt;
 
 &lt;p style=&quot;text-align: center; color:gray;&quot;&gt; 
     &lt;img src=&quot;/assets/images/proposal_party.jpg&quot; /&gt;
@@ -126,21 +126,21 @@
     &lt;i&gt;My best friends :)&lt;/i&gt;
 &lt;/p&gt;
 
-&lt;p&gt;It was certainly a lot of work to get this all together and it was quite exhausting, but it was the most amazing day with my beloved fiancé. :) &lt;/p&gt;
+&lt;p&gt;It was certainly a lot of work to get this all together and it was quite exhausting, but it was the most amazing day with my beloved fiancé. :)&lt;/p&gt;
 
 &lt;p&gt;Thank you all who came and shared this day with us and who helped me set up everything. As I said, I am the luckiest man alive.&lt;/p&gt;
 
 &lt;p style=&quot;text-align: center; color:gray;&quot;&gt; 
     &lt;img src=&quot;/assets/images/proposal_us.jpg&quot; /&gt;
     &lt;br /&gt;
-    &lt;i&gt;Holding her so tight she won&#39;t run away&lt;/i&gt;
+    &lt;i&gt;Holding her so tight she won't run away&lt;/i&gt;
 &lt;/p&gt;
 
 &lt;p&gt;-Francisco&lt;/p&gt;
 </description>
         <pubDate>Mon, 22 Aug 2016 00:00:00 -0400</pubDate>
-        <link>http://franciscojavierarceo.github.io/2016/08/22/Engaged</link>
-        <guid isPermaLink="true">http://franciscojavierarceo.github.io/2016/08/22/Engaged</guid>
+        <link>http://localhost:4000/2016/08/22/Engaged</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/08/22/Engaged</guid>
       </item>
     
       <item>
@@ -167,7 +167,7 @@
     &lt;i&gt;A gif of a GBM, whoaaa&lt;/i&gt;
 &lt;/p&gt;
 
-&lt;p&gt;We see that the GBM does a great job! In fact, we can calculate the RMSE here and find that it’s almost 0. How does a Neural Network do? &lt;/p&gt;
+&lt;p&gt;We see that the GBM does a great job! In fact, we can calculate the RMSE here and find that it’s almost 0. How does a Neural Network do?&lt;/p&gt;
 
 &lt;h2 id=&quot;the-multilayer-perceptron-mlp&quot;&gt;The Multilayer Perceptron (MLP)&lt;/h2&gt;
 
@@ -179,17 +179,17 @@
     &lt;i&gt;A gif of an MLP, woot!&lt;/i&gt;
 &lt;/p&gt;
 
-&lt;p&gt;Interesting right? The NN learns a smooth function and seems to struggle with the boundary points of the threshold function. &lt;/p&gt;
+&lt;p&gt;Interesting right? The NN learns a smooth function and seems to struggle with the boundary points of the threshold function.&lt;/p&gt;
 
-&lt;p&gt;I should note that I tried experimenting with a variety of different parameters but most provided a result similar to this one. I tried using a maxout layer, adding dropout, increasing the number of neurons and hidden layers, and testing different activation functions. &lt;/p&gt;
+&lt;p&gt;I should note that I tried experimenting with a variety of different parameters but most provided a result similar to this one. I tried using a maxout layer, adding dropout, increasing the number of neurons and hidden layers, and testing different activation functions.&lt;/p&gt;
 
-&lt;p&gt;Here we find that the specification for this NN wasn’t able to learn this threshold function but we were able to learn it fairly easily using GBM (at least with respect to the computation time of both algorithms). &lt;/p&gt;
+&lt;p&gt;Here we find that the specification for this NN wasn’t able to learn this threshold function but we were able to learn it fairly easily using GBM (at least with respect to the computation time of both algorithms).&lt;/p&gt;
 
-&lt;p&gt;One of the most important theoretical properties of NNs is that even a &lt;em&gt;single hidden layer&lt;/em&gt; feed-forward neural network with a finite number of neurons and a activation layer (squashing function) can approximate any continuos function on a compact subset of $R^n$; this is known as the &lt;a href=&quot;https://en.wikipedia.org/wiki/Universal_approximation_theorem&quot;&gt;Universal Approximation Theorem&lt;/a&gt;. Now we know exactly why the NN failed, which is due entirely to the discontinuity of the underlying function! So, it’s no surprise that the NN struggles to learn this function, since they are always learning smoooth approximations of the input space. &lt;/p&gt;
+&lt;p&gt;One of the most important theoretical properties of NNs is that even a &lt;em&gt;single hidden layer&lt;/em&gt; feed-forward neural network with a finite number of neurons and a activation layer (squashing function) can approximate any continuos function on a compact subset of $R^n$; this is known as the &lt;a href=&quot;https://en.wikipedia.org/wiki/Universal_approximation_theorem&quot;&gt;Universal Approximation Theorem&lt;/a&gt;. Now we know exactly why the NN failed, which is due entirely to the discontinuity of the underlying function! So, it’s no surprise that the NN struggles to learn this function, since they are always learning smoooth approximations of the input space.&lt;/p&gt;
 
 &lt;p&gt;Lastly, I thought I’d juxtapose the two residual plots as function of the two features because it further emphasizes the point that the MLP is learning a function that is too smooth.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/stepfunction_res.png&quot; alt=&quot;Look at them there residuals&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;center&quot; height=&quot;100px&quot; width=&quot;100px&quot;&gt;&lt;img src=&quot;/assets/images/stepfunction_res.png&quot; alt=&quot;Look at them there residuals&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Neural Networks and Deep Learning are awesome and have had a ton of success on a variety of different problems and they have a huge amount of potential in the future, but it’s always nice knowing when an algorithm will break. I think it’d be interesting to see what modifications to neural networks are necessary to make learning step functions of this nature easier for them to learn (I’m sure someone much brighter than me will figure it out!).&lt;/p&gt;
 
@@ -197,19 +197,19 @@
 -Francisco&lt;/p&gt;
 </description>
         <pubDate>Mon, 01 Aug 2016 00:00:00 -0400</pubDate>
-        <link>http://franciscojavierarceo.github.io/2016/08/01/DL-GBM-Step-Functions</link>
-        <guid isPermaLink="true">http://franciscojavierarceo.github.io/2016/08/01/DL-GBM-Step-Functions</guid>
+        <link>http://localhost:4000/2016/08/01/DL-GBM-Step-Functions</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/08/01/DL-GBM-Step-Functions</guid>
       </item>
     
       <item>
         <title>PCA and Regression</title>
-        <description>&lt;p&gt;So one thing I’ve always found myself puzzled by is why someone would use PCA as a first-stage model and feeding the scores into a second stage model (e.g., linear regression). Doing this (potentially) loses a lot information, so I don’t see why people think it makes sense. &lt;/p&gt;
+        <description>&lt;p&gt;So one thing I’ve always found myself puzzled by is why someone would use PCA as a first-stage model and feeding the scores into a second stage model (e.g., linear regression). Doing this (potentially) loses a lot information, so I don’t see why people think it makes sense.&lt;/p&gt;
 
 &lt;p&gt;I understand the argument about stabalizing the variance of your input space but with sufficient data and a good regularization strategy (e.g., L1), you can solve those problems directly. The other argument I’ve heard about using PCA first so that you don’t use all of your degrees of freedom doesn’t convince me either, since L1 regularization is provably one of the best techniques out there for the &lt;a href=&quot;https://people.eecs.berkeley.edu/~wainwrig/Papers/Wai09_Sharp_Journal.pdf&quot;&gt;overdetermined regression problem&lt;/a&gt;. In fact, there’s a rich literature on this topic in information theory and statistics. Friedman, Hastie, and Tibshirarni offer a nice introduction in their &lt;a href=&quot;http://statweb.stanford.edu/~tibs/ElemStatLearn/printings/ESLII_print10.pdf&quot;&gt;book&lt;/a&gt;. Also, I’d like to note that the degrees of freedom, like many other things, can be a misleading assessment for &lt;a href=&quot;https://web.stanford.edu/~hastie/Papers/df_paper_LJrev6.pdf&quot;&gt;model quality&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Anyways, all of this led me to make a &lt;a href=&quot;https://github.com/franciscojavierarceo/Python/blob/master/SVD%20and%20Regression.ipynb&quot;&gt;Jupyter Notebook&lt;/a&gt; highlighting why it’s a suboptimal modeling choice. The intuition is identical to what I said above, but with a little more mathematical rigor and some simulations to provide some additional validation/insight. &lt;/p&gt;
+&lt;p&gt;Anyways, all of this led me to make a &lt;a href=&quot;https://github.com/franciscojavierarceo/Python/blob/master/SVD%20and%20Regression.ipynb&quot;&gt;Jupyter Notebook&lt;/a&gt; highlighting why it’s a suboptimal modeling choice. The intuition is identical to what I said above, but with a little more mathematical rigor and some simulations to provide some additional validation/insight.&lt;/p&gt;
 
-&lt;p&gt;The idea I had was to understand how the error of the PCA approximation and the linear regression error behave as a function of (1) the true error, (2) the rank of the approximation in PCA, (3) the true rank of the original matrix, and (4) the correlation structure of the features/design matrix. I’m a visual person, so I thought visualizing these 4 dimensions would help with intuition quite a bit. &lt;/p&gt;
+&lt;p&gt;The idea I had was to understand how the error of the PCA approximation and the linear regression error behave as a function of (1) the true error, (2) the rank of the approximation in PCA, (3) the true rank of the original matrix, and (4) the correlation structure of the features/design matrix. I’m a visual person, so I thought visualizing these 4 dimensions would help with intuition quite a bit.&lt;/p&gt;
 
 &lt;p&gt;This simulation samples from a multivariate normal and assumes a normally distributed error term (it may or may not be interesting to see how this behaves for discrete distrbutions–though I expect it’d be similar).&lt;/p&gt;
 
@@ -225,11 +225,11 @@
 
 &lt;p class=&quot;center&quot;&gt;&lt;img src=&quot;/assets/images/3dplotcorr_gif.GIF&quot; alt=&quot;Even more gif, yay&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;We see that the the ratio of the two models now produces a varying shape on the z axis, which makes sense since different rank approximations will produce different shapes for varying ranks of the design matrix. &lt;/p&gt;
+&lt;p&gt;We see that the the ratio of the two models now produces a varying shape on the z axis, which makes sense since different rank approximations will produce different shapes for varying ranks of the design matrix.&lt;/p&gt;
 
 &lt;p&gt;Ultimately the conclusion remains the same, using PCA/SVD as a pipeline to a regression model leads to a significant degridation in model performance.&lt;/p&gt;
 
-&lt;p&gt;Obviously this particular example was pathological and we &lt;em&gt;defined&lt;/em&gt; the outcome to be exactly our reconstruction error, we can certainly create an example that loses no performance in model degredation but it’s very rare that we will do better from PCA/SVD and if we do, it’s likely due to sampling error and is unlikely to hold repeatedly. &lt;/p&gt;
+&lt;p&gt;Obviously this particular example was pathological and we &lt;em&gt;defined&lt;/em&gt; the outcome to be exactly our reconstruction error, we can certainly create an example that loses no performance in model degredation but it’s very rare that we will do better from PCA/SVD and if we do, it’s likely due to sampling error and is unlikely to hold repeatedly.&lt;/p&gt;
 
 &lt;p&gt;Again, PCA/SVD is awesome for a ton of other things, but it’s a suboptimal choice to use as a pipeline for supervised learning. Use the features themselves, you can always do better.&lt;/p&gt;
 
@@ -238,28 +238,19 @@
 &lt;p&gt;-Francisco&lt;/p&gt;
 </description>
         <pubDate>Fri, 29 Jul 2016 00:00:00 -0400</pubDate>
-        <link>http://franciscojavierarceo.github.io/2016/07/29/PCA-Regression</link>
-        <guid isPermaLink="true">http://franciscojavierarceo.github.io/2016/07/29/PCA-Regression</guid>
-      </item>
-    
-      <item>
-        <title>Bayesian Deep Learning: Mnist</title>
-        <description>
-</description>
-        <pubDate>Tue, 26 Jul 2016 00:00:00 -0400</pubDate>
-        <link>http://franciscojavierarceo.github.io/2016/07/26/Bayesian-Deep-Learning-MNIST</link>
-        <guid isPermaLink="true">http://franciscojavierarceo.github.io/2016/07/26/Bayesian-Deep-Learning-MNIST</guid>
+        <link>http://localhost:4000/2016/07/29/PCA-Regression</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/07/29/PCA-Regression</guid>
       </item>
     
       <item>
         <title>Bayesian Deep Learning</title>
-        <description>&lt;p&gt;So I’ve been checking out a new Python library, &lt;a href=&quot;https://github.com/blei-lab/edward&quot;&gt;Edward&lt;/a&gt;, developed by &lt;a href=&quot;http://www.cs.columbia.edu/~blei/&quot;&gt;David Blei&lt;/a&gt;’s ML research group at Columbia recently. &lt;/p&gt;
+        <description>&lt;p&gt;So I’ve been checking out a new Python library, &lt;a href=&quot;https://github.com/blei-lab/edward&quot;&gt;Edward&lt;/a&gt;, developed by &lt;a href=&quot;http://www.cs.columbia.edu/~blei/&quot;&gt;David Blei&lt;/a&gt;’s ML research group at Columbia recently.&lt;/p&gt;
 
-&lt;p&gt;It’s been fairly interesting thusfar, but I haven’t dived extraordinarily deep into the documentation yet. Instead, I spent some time tinkering with one of their examples: &lt;a href=&quot;https://raw.githubusercontent.com/blei-lab/edward/master/examples/bayesian_nn.py&quot;&gt;Bayesian Neural Networks&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;It’s been fairly interesting thusfar, but I haven’t dived extraordinarily deep into the documentation yet. Instead, I spent some time tinkering with one of their examples: &lt;a href=&quot;https://raw.githubusercontent.com/blei-lab/edward/master/examples/bayesian_nn.py&quot;&gt;Bayesian Neural Networks&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;What is this model? It’s fairly interesting. It’s a Neural network with a Gaussian prior distribution on the weights (with an assumed variance of 1 and unknown mean). As I’ve mentioned probably too many times on this site, I’ve studied both Bayesian ML and Deep Learning, so I was particularly excited about this so I could put the two together! Interestingly, Bayesian Deep Learning is a &lt;a href=&quot;https://arxiv.org/pdf/1604.01662v2.pdf&quot;&gt;growing area of research&lt;/a&gt; with a lot of potential. Hopefully, I’ll explore this area more because it’d neatly tie two things I really love. &lt;/p&gt;
+&lt;p&gt;What is this model? It’s fairly interesting. It’s a Neural network with a Gaussian prior distribution on the weights (with an assumed variance of 1 and unknown mean). As I’ve mentioned probably too many times on this site, I’ve studied both Bayesian ML and Deep Learning, so I was particularly excited about this so I could put the two together! Interestingly, Bayesian Deep Learning is a &lt;a href=&quot;https://arxiv.org/pdf/1604.01662v2.pdf&quot;&gt;growing area of research&lt;/a&gt; with a lot of potential. Hopefully, I’ll explore this area more because it’d neatly tie two things I really love.&lt;/p&gt;
 
-&lt;p&gt;Back to my main point in writing this: what I did with the tutorial. &lt;/p&gt;
+&lt;p&gt;Back to my main point in writing this: what I did with the tutorial.&lt;/p&gt;
 
 &lt;p&gt;Their example shows a neat graph of the learned posterior predictive distribution of the of a 2-hidden layer neural network at iteration 0 and iteration 1000, which is really cool. I thought it’d be cool to add two things: (1) a look at the Variational objective function and (2) a dynamic, full view of the posterior as a function of the iterations. It’s always interesting to see how parameters behave as ML models begin to learn the appropriate functions, so I thought this exercise would be fun (I also love the excuse to make a gif whenever I can).&lt;/p&gt;
 
@@ -275,29 +266,29 @@
 &lt;p&gt;Anyways, thanks for reading! Laslty, feel free to peak at the code to make this gif. It’s available on my &lt;a href=&quot;https://github.com/franciscojavierarceo/edward/blob/master/examples/bayesian_nn.py&quot;&gt;github&lt;/a&gt;!&lt;/p&gt;
 </description>
         <pubDate>Sat, 23 Jul 2016 00:00:00 -0400</pubDate>
-        <link>http://franciscojavierarceo.github.io/2016/07/23/Bayesian-Deep-Learning</link>
-        <guid isPermaLink="true">http://franciscojavierarceo.github.io/2016/07/23/Bayesian-Deep-Learning</guid>
+        <link>http://localhost:4000/2016/07/23/Bayesian-Deep-Learning</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/07/23/Bayesian-Deep-Learning</guid>
       </item>
     
       <item>
         <title>2016 has been crazy</title>
-        <description>&lt;p&gt;It’s been a hectic year thusfar, I spent most of my time either at work, on the train, in class, at the gym, or with my lovely girlfirend Stephany (probably the best part of my year). &lt;/p&gt;
+        <description>&lt;p&gt;It’s been a hectic year thusfar, I spent most of my time either at work, on the train, in class, at the gym, or with my lovely girlfirend Stephany (probably the best part of my year).&lt;/p&gt;
 
 &lt;p&gt;During this chaotic year I got the opportunity to improve my computer science (CS) chops (e.g., building my website), learn a ton more of (&lt;a href=&quot;https://github.com/franciscojavierarceo/EECS6892&quot;&gt;Bayesian&lt;/a&gt; &lt;a href=&quot;https://github.com/franciscojavierarceo/COMS4721&quot;&gt;Machine Learning&lt;/a&gt;, and dive into &lt;a href=&quot;https://github.com/franciscojavierarceo/ECBME6040&quot;&gt;Deep Learning&lt;/a&gt;. At the gym I was able to also increase my deadlift from a pathetic 185 to 405 (still not great)! And increase my bench from 155 to 215!! So to say the least it’s been a pretty awesome year, for both nerdy and non-nerdy reasons.&lt;/p&gt;
 
-&lt;p&gt;This summer I decided to take a Mathematical Analysis course using the classic Rudin textbook and boy has that been an experience. It’s been my first pure mathematics course in nearly 9 years, so to say that it’s been a challenge is an understatement but I &lt;em&gt;love&lt;/em&gt; the material. It’s absolutely fascinating to me, regardless of how much work I have to put in to actually understand it. &lt;/p&gt;
+&lt;p&gt;This summer I decided to take a Mathematical Analysis course using the classic Rudin textbook and boy has that been an experience. It’s been my first pure mathematics course in nearly 9 years, so to say that it’s been a challenge is an understatement but I &lt;em&gt;love&lt;/em&gt; the material. It’s absolutely fascinating to me, regardless of how much work I have to put in to actually understand it.&lt;/p&gt;
 
-&lt;p&gt;Also, let me just say, Stephany is amazing. During those late nights of studying and homework, she was sweet enough to feed me, keep me company, and keep me sane. I am so grateful to have such a caring, beautiful, and loving woman in my life. :) &lt;/p&gt;
+&lt;p&gt;Also, let me just say, Stephany is amazing. During those late nights of studying and homework, she was sweet enough to feed me, keep me company, and keep me sane. I am so grateful to have such a caring, beautiful, and loving woman in my life. :)&lt;/p&gt;
 
 &lt;p&gt;Professionally, my work/career has also been going well, I love my job and my team is really incredible. My boss is the best, he’s been encouraging me to learn a ton of new stuff and I feel more and more like a real computer scientist (but I have a long way to go before I actually call myself that). The learning curve has also been steep, but I feel like I’m making progress, which is really rewarding. I love computers and I love CS, so I really want to explore it more…maybe I’ll pursue a third masters in CS or EECS (Electrical Engineering and CS) and finally get into hardware.&lt;/p&gt;
 
 &lt;p&gt;That might be something I explore in the future. I love school, learning about new things, and getting a degree out of the whole thing, so maybe I will pursue a third masters, I guess we’ll see what 2017 holds.&lt;/p&gt;
 
-&lt;p&gt;Anyways, thanks for reading! I just wanted to take a second to review how simultaneously exhausting and wonderful this year has been. Going to school and working a full-time job is a handful, but I guess old habits die hard. &lt;/p&gt;
+&lt;p&gt;Anyways, thanks for reading! I just wanted to take a second to review how simultaneously exhausting and wonderful this year has been. Going to school and working a full-time job is a handful, but I guess old habits die hard.&lt;/p&gt;
 </description>
         <pubDate>Wed, 20 Jul 2016 00:00:00 -0400</pubDate>
-        <link>http://franciscojavierarceo.github.io/2016/07/20/Hectic-Year</link>
-        <guid isPermaLink="true">http://franciscojavierarceo.github.io/2016/07/20/Hectic-Year</guid>
+        <link>http://localhost:4000/2016/07/20/Hectic-Year</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/07/20/Hectic-Year</guid>
       </item>
     
       <item>
@@ -333,7 +324,7 @@ that takes in a column of text (from some arbitrary .csv file) and outputs a spa
 of unigrams/bag-of-words stored as binary variables (also called one-hot-encoding)
 that you can use for a simple regression (which is what this code does).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;import scipy
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import scipy
 import os, sys
 import numpy as np
 import pandas as pd
@@ -348,35 +339,35 @@ def roc_plot(actual,pred,ttl):
     print(&quot;The Area Under the ROC Curve : %f&quot; % roc_auc)
     # Plot ROC curve
 	plt.clf()
-    plt.plot(fpr, tpr, color=&#39;red&#39;,label=&#39;ROC curve (area = %0.2f)&#39; % roc_auc)
-    plt.plot([0, 1], [0, 1], &#39;k&#39;)
+    plt.plot(fpr, tpr, color='red',label='ROC curve (area = %0.2f)' % roc_auc)
+    plt.plot([0, 1], [0, 1], 'k')
     plt.xlim([0.0, 1.0])
     plt.ylim([0.0, 1.0])
 	plt.grid()
-	plt.xlabel(&#39;False Positive Rate&#39;)
-	plt.ylabel(&#39;True Positive Rate&#39;)
-    plt.title(&#39;ROC Curve&#39;+&#39;\n&#39;+ttl)
+	plt.xlabel('False Positive Rate')
+	plt.ylabel('True Positive Rate')
+    plt.title('ROC Curve'+'\n'+ttl)
     plt.legend(loc=&quot;lower right&quot;)
     plt.show()
 
 def Build_STDM(docs, **kwargs):
-	&#39;&#39;&#39; Build Sparse Term Document Matrix &#39;&#39;&#39;
+	''' Build Sparse Term Document Matrix '''
 	vectorizer = CountVectorizer(**kwargs)
 	sparsematrix= vectorizer.fit_transform(docs)
     vocab = vectorizer.vocabulary_.keys()
     return sparsematrix, vocab
 
-df1 = pd.read_csv(&#39;myregressiondata.csv&#39;,sep=&#39;,&#39;)
-varchar = df1[&#39;MyTextField&#39;]
+df1 = pd.read_csv('myregressiondata.csv',sep=',')
+varchar = df1['MyTextField']
 xs = xs[:,1:10]
 y = np.hstack((np.ones(100/2),np.zeros(100/2))).reshape((100,1))
 betas = scipy.sparse.linalg.inv(xs.T.dot(xs)).dot(xs.T).dot(y)
 bdf= pd.DataFrame()
-bdf[&#39;Words&#39;] = vocab[1:10]
-bdf[&#39;betas&#39;] = betas
+bdf['Words'] = vocab[1:10]
+bdf['betas'] = betas
 
 print bdf
-logistic = linear_model.LogisticRegression(penalty=&#39;l2&#39;,tol=0.0001,
+logistic = linear_model.LogisticRegression(penalty='l2',tol=0.0001,
                                        fit_intercept=True,intercept_scaling=1)
 MyModel = logistic.fit(xs,y)
 betas = MyModel.coef_.ravel()
@@ -387,12 +378,12 @@ ys = logistic.predict_proba(xs)[:,0]
 xs, vocab = Build_STDM(varchar)
 print xs[:,1:10]
 print vocab[0:10]
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 </description>
         <pubDate>Thu, 12 Nov 2015 00:00:00 -0500</pubDate>
-        <link>http://franciscojavierarceo.github.io/2015/11/12/First-Post</link>
-        <guid isPermaLink="true">http://franciscojavierarceo.github.io/2015/11/12/First-Post</guid>
+        <link>http://localhost:4000/2015/11/12/First-Post</link>
+        <guid isPermaLink="true">http://localhost:4000/2015/11/12/First-Post</guid>
       </item>
     
   </channel>
