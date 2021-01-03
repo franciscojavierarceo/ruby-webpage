@@ -1,8 +1,8 @@
 ## My GitHub Page Repo
 
-Feel free to visit my page at https://franciscojavierarceo.github.io
+This repository is now deprecated.
 
-This is the code to create my jekyll page! Feel free to copy this and use it as a template, I sure did.
+This is the code to create my old jekyll page! Feel free to copy this and use it as a template, I sure did.
 
 To run this in the terminal, just use
 
